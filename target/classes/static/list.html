@@ -1,24 +1,25 @@
 <html>
 <head>
-    <title>Bootstrap 4 Example</title>
+    <title>List Editor</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type = "text/css" href="listStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div class="container">
+<div class="container" id = "add">
     <h2>Add new student</h2>
     Name: <input type="text" id="name"/>
     <button onclick="add()">Add</button>
 
     <h2>List of students</h2>
     <div id="studentList"></div>
-    <p><strong>HEY DIT ME MAY MINH</strong></p>
+    <p><strong></strong></p>
 </div>
 
 
@@ -28,7 +29,6 @@
 <script>
 
 getStudents()
-
 
     function add(){ //post
 
@@ -71,7 +71,6 @@ getStudents()
         })
 
     }
-
 
     function deleteStudent(id){
           fetch('http://localhost:8080/students/'+id, {

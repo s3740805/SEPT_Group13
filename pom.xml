@@ -99,6 +99,12 @@
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>8.1.16.v20140903</version>
+                <configuration>
+                    <contextPath>/</contextPath>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
+                    <scanIntervalSeconds>5</scanIntervalSeconds>
+                </configuration>
             </plugin>
         </plugins>
     </pluginManagement>
