@@ -10,10 +10,8 @@ public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Patient patient;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Doctor doctor;
+    private int patient_id;
+    private int doctor_id;
     private Time time;
     private Date date;
 //  @ManyToOne(cascade = CascadeType.ALL)
@@ -29,20 +27,20 @@ public class Booking {
         this.id = id;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    public int getPatient_id() {
+        return patient_id;
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
+    public void setPatient_id(int patient_id) {
+        this.patient_id = patient_id;
     }
 
-    public Patient getPatient() {
-        return patient;
+    public int getDoctor_id() {
+        return doctor_id;
     }
 
-    public void setPatient(Patient patient) {
-        this.patient = patient;
+    public void setDoctor_id(int doctor_id) {
+        this.doctor_id = doctor_id;
     }
 
     public Time getTime() {

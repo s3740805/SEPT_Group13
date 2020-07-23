@@ -18,9 +18,7 @@
     <div id= "bookingBody"class="container-fluid">
         <h1>Booking Form</h1>
         <div class = "container">
-            <input id="inputID" type="text" class="form-control" placeholder="ID"/>
-            <br>
-            <input id="inputName" type="text" class="form-control" placeholder="Name"/>
+            <input id="inputID" type="text" class="form-control" placeholder="What's your ID bitch?"/>
             <br>
             <label for="doctors">
                 Select a doctor:
@@ -38,35 +36,37 @@
                 Select a time:
             </label>
             <select id="times" name="times" required>
-                <option value="900">9:00 - 9:30</option>
-                <option value="930">9:30 - 10:00</option>
-                <option value="1000">10:00 - 10:30</option>
-                <option value="1030">10:30 - 11:00</option>
-                <option value="1100">11:00 - 11:30</option>
-                <option value="1130">11:30 - 12:00</option>
-                <option value="1200">12:00 - 12:30</option>
-                <option value="1230">12:30 - 13:00</option>
-                <option value="1300">13:00 - 13:30</option>
-                <option value="1330">13:30 - 14:00</option>
-                <option value="1400">14:00 - 14:30</option>
-                <option value="1430">14:30 - 15:00</option>
-                <option value="1500">15:00 - 15:30</option>
-                <option value="1530">15:30 - 16:00</option>
-                <option value="1600">16:00 - 16:30</option>
-                <option value="1630">16:30 - 17:00</option>
-                <option value="1700">17:00 - 17:30</option>
-                <option value="1730">17:30 - 18:00</option>
-                <option value="1800">18:00 - 18:30</option>
-                <option value="1830">18:30 - 19:00</option>
-                <option value="1900">19:00 - 19:30</option>
-                <option value="1930">19:30 - 20:00</option>
+                <option value="09:00:00">9:00 - 9:30</option>
+                <option value="09:30:00">9:30 - 10:00</option>
+                <option value="10:00:00">10:00 - 10:30</option>
+                <option value="10:30:00">10:30 - 11:00</option>
+                <option value="11:00:00">11:00 - 11:30</option>
+                <option value="11:30:00">11:30 - 12:00</option>
+                <option value="12;00:00">12:00 - 12:30</option>
+                <option value="12:30:00">12:30 - 13:00</option>
+                <option value="13:00:00">13:00 - 13:30</option>
+                <option value="13:30:00">13:30 - 14:00</option>
+                <option value="14:00:00">14:00 - 14:30</option>
+                <option value="14:30:00">14:30 - 15:00</option>
+                <option value="15:00:00">15:00 - 15:30</option>
+                <option value="15:30:00">15:30 - 16:00</option>
+                <option value="16:00:00">16:00 - 16:30</option>
+                <option value="16:30:00">16:30 - 17:00</option>
+                <option value="17:00:00">17:00 - 17:30</option>
+                <option value="17:30:00">17:30 - 18:00</option>
+                <option value="18:00:00">18:00 - 18:30</option>
+                <option value="18:30:00">18:30 - 19:00</option>
+                <option value="19:00:00">19:00 - 19:30</option>
+                <option value="19:30:00">19:30 - 20:00</option>
             </select>
 
             <br>
 
-            <button type="submit">
-                Check availability LOL
+            <button type="submit" onclick="checkAvailable()">
+                Book Appointment
             </button>
+            <br>
+
         </div>
     </div>
 </div>
@@ -87,12 +87,38 @@
             })
     }
     function checkAvailable(){
+        let patientID = document.getElementById('inputID').value;
+        let doctorID = document.getElementById('doctors').value.split('.')[0];
+        let date = document.getElementById('appointmentDate').value;
+        let time = document.getElementById('times').value;
+        // console.log ( patientID , patientName,doctorID,date,time)
+        let booked = false;
         fetch('http://localhost:8080/bookings')
             .then(res => res.json())
             .then(json => {
-                for (let i = 0; i < json.length; i++){
-
+                for (let i = 0; i < json.length; i++) {
+                    // console.log(doctorID === json[i].doctor_id.toString())
+                    // console.log(time === json[i].time.toString())
+                    // console.log(date === json[i].date.toString())
+                    if (doctorID === json[i].doctor_id.toString()
+                        && date === json[i].date.toString()
+                        && time === json[i].time.toString()) {
+                        booked = true;
+                        alert("Can't book LOL. Choose something else")
+                        break;
+                    }
                 }
+            }).then( ()=> {if (booked === false){fetch('http://localhost:8080/bookings', {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                },
+            method: "POST",
+            body: JSON.stringify({patient_id:patientID,doctor_id:doctorID,time: time,date :date})
+
             })
+            alert('Booked successfully LOL')
+            }
+        })
     }
 </script>

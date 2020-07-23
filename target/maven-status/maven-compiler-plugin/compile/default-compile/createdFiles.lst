@@ -15,7 +15,6 @@ model\Booking.class
 config\AppConfig.class
 controller\StudentController.class
 model\Teacher.class
-model\Time.class
 model\ReceiptDetail.class
 test\MyTest.class
 service\AllService.class
