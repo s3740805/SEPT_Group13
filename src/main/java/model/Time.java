@@ -12,16 +12,8 @@ public class Time {
     private String date;
     @Column
     private String time;
-    @Column
-    private String status;
 
-    public String getStatus() {
-        return status;
-    }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     public String getTime() {
         return time;
