@@ -8,12 +8,13 @@ public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @OneToOne
-    private Time time;
-    @OneToOne
-    private Doctor doctor;
-    @OneToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Patient patient;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Doctor doctor;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Time time;
+
 
     public int getId() {
         return id;
