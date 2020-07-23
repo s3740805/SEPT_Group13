@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bookingStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body onload="getDoctors()">
+
+<div class="container">
+    <div id= "bookingBody"class="container-fluid">
+        <h1>Booking Form</h1>
+        <div class = "container">
+            <input id="inputID" type="text" class="form-control" placeholder="ID"/>
+            <br>
+            <input id="inputName" type="text" class="form-control" placeholder="Name"/>
+            <br>
+            <label for="doctors">
+                Select a doctor:
+            </label>
+            <select id="doctors" name="doctors" required>
+
+            </select>
+            <br>
+            <label for="appointmentDate">
+                Select a date:
+            </label>
+            <input type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate" required>
+            <br>
+            <label for="times">
+                Select a time:
+            </label>
+            <select id="times" name="times" required>
+                <option value="900">9:00 - 9:30</option>
+                <option value="930">9:30 - 10:00</option>
+                <option value="1000">10:00 - 10:30</option>
+                <option value="1030">10:30 - 11:00</option>
+                <option value="1100">11:00 - 11:30</option>
+                <option value="1130">11:30 - 12:00</option>
+                <option value="1200">12:00 - 12:30</option>
+                <option value="1230">12:30 - 13:00</option>
+                <option value="1300">13:00 - 13:30</option>
+                <option value="1330">13:30 - 14:00</option>
+                <option value="1400">14:00 - 14:30</option>
+                <option value="1430">14:30 - 15:00</option>
+                <option value="1500">15:00 - 15:30</option>
+                <option value="1530">15:30 - 16:00</option>
+                <option value="1600">16:00 - 16:30</option>
+                <option value="1630">16:30 - 17:00</option>
+                <option value="1700">17:00 - 17:30</option>
+                <option value="1730">17:30 - 18:00</option>
+                <option value="1800">18:00 - 18:30</option>
+                <option value="1830">18:30 - 19:00</option>
+                <option value="1900">19:00 - 19:30</option>
+                <option value="1930">19:30 - 20:00</option>
+            </select>
+
+            <br>
+
+            <button type="submit">
+                Check availability LOL
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    function getDoctors(){
+        let doctorList = document.getElementById('doctors')
+        doctorList.innerHTML = ''
+        fetch('http://localhost:8080/doctors')
+            .then(res => res.json())
+            .then(json => {
+                for(let i=0; i<json.length; i++){
+                    let id = json[i].id
+                    doctorList.innerHTML += '<option>' + id + '. ' + json[i].name + '</option>'
+                }
+            })
+    }
+    function checkAvailable(){
+        fetch('http://localhost:8080/bookings')
+            .then(res => res.json())
+            .then(json => {
+                for (let i = 0; i < json.length; i++){
+
+                }
+            })
+    }
+</script>
