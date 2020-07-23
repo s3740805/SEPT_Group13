@@ -1,1 +1,1 @@
-# SEPT_Group13
+# group_project
