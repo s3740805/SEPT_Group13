@@ -19,4 +19,3 @@ service/AllService.class
 test/TestConfig.class
 model/Receipt.class
 model/Patient.class
-service/StudentService.class
