@@ -15,6 +15,7 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column
+    private String name;
     private Blob image;
     private String username;
     private String password;
@@ -36,6 +37,14 @@ public class Patient {
 
 
     public Patient() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     // Patient UserName

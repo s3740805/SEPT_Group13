@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 E:\Study\Course\SEPT\Assignment\SEPT_Group13\src\main\java\controller\TeacherController.java
 E:\Study\Course\SEPT\Assignment\SEPT_Group13\src\main\java\model\Product.java
 E:\Study\Course\SEPT\Assignment\SEPT_Group13\src\main\java\service\TeacherService.java
@@ -19,3 +20,26 @@ E:\Study\Course\SEPT\Assignment\SEPT_Group13\src\main\java\model\Booking.java
 E:\Study\Course\SEPT\Assignment\SEPT_Group13\src\main\java\model\Receipt.java
 E:\Study\Course\SEPT\Assignment\SEPT_Group13\src\main\java\service\AllService.java
 E:\Study\Course\SEPT\Assignment\SEPT_Group13\src\main\java\test\TestConfig.java
+=======
+/Users/linhnguyen/sept13/src/main/java/model/Patient.java
+/Users/linhnguyen/sept13/src/main/java/controller/HMSController.java
+/Users/linhnguyen/sept13/src/main/java/model/Product.java
+/Users/linhnguyen/sept13/src/main/java/controller/TeacherController.java
+/Users/linhnguyen/sept13/src/main/java/model/ReceiptDetail.java
+/Users/linhnguyen/sept13/src/main/java/Main.java
+/Users/linhnguyen/sept13/src/main/java/test/MyTest.java
+/Users/linhnguyen/sept13/src/main/java/model/Teacher.java
+/Users/linhnguyen/sept13/src/main/java/model/Doctor.java
+/Users/linhnguyen/sept13/src/main/java/model/Time.java
+/Users/linhnguyen/sept13/src/main/java/service/AllService.java
+/Users/linhnguyen/sept13/src/main/java/model/Student.java
+/Users/linhnguyen/sept13/src/main/java/service/TeacherService.java
+/Users/linhnguyen/sept13/src/main/java/service/StudentService.java
+/Users/linhnguyen/sept13/src/main/java/config/WebAppInitializer.java
+/Users/linhnguyen/sept13/src/main/java/model/Receipt.java
+/Users/linhnguyen/sept13/src/main/java/controller/StudentController.java
+/Users/linhnguyen/sept13/src/main/java/test/TestConfig.java
+/Users/linhnguyen/sept13/src/main/java/controller/AllController.java
+/Users/linhnguyen/sept13/src/main/java/config/AppConfig.java
+/Users/linhnguyen/sept13/src/main/java/model/Booking.java
+>>>>>>> e84c45259264921d2f1f3adf7a7a667f8d3df217
