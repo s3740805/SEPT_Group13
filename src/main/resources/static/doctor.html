@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Doctor List</title>
   </head>
   <body>
@@ -16,9 +17,9 @@
     <div id='add-doctor'>
         <form id="doctor-form">
             <div class="input-group mb-3">
-                <input type="text" name="name" id="name" placeholder="Name" class="form-control">
-                <input type="email" name="email" id="email" placeholder="Email" class="form-control">
-                <input type="text" name="description" id="description" placeholder="Description" class="form-control">
+                <input required type="text" name="name" id="name" placeholder="Name" class="form-control">
+                <input required type="email" name="email" id="email" placeholder="Email" class="form-control">
+                <input required type="text" name="description" id="description" placeholder="Description" class="form-control">
                 <div class="input-group-prepend">
                     <input  class="btn btn-outline-primary" type="submit" value="Add Doctor">
                 </div>
@@ -46,6 +47,7 @@
     </div>
   </body>
   <script src="js/doctor.js"></script>
- 
-  </script>
+  
+  
+  
 </html>

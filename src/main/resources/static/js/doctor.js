@@ -3,7 +3,9 @@ const doctorEditor = document.querySelector('#edit-form')
 const doctorURL = `http://localhost:8080/doctors`
 const doctorForm = document.querySelector('#doctor-form')
 let allDoctors = []
+
 document.addEventListener('DOMContentLoaded', function () {
+     
     //fetchDoctor
     fetchDoctors();
 
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }).then(response => {
             doctorForm.querySelector('#name').value = '',doctorForm.querySelector('#email').value='',doctorForm.querySelector('#description').value ='',
+            alert('New doctor have been added successfully.')
             fetchDoctors()
         })
 
@@ -50,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <input required id="edit-description" value="${doctorData.description}" class="form-control">
                     <div class="input-group-prepend">
                     <input class="btn btn-outline-primary" type="submit" value="Edit Doctor">
-                    <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+                    <a onclick="CloseInput()" aria-label="Close" data-toggle="tooltip" data-placement="top" title="Close edit">&#10006;</a>
                     </div>
                     </div>
                 </form>
@@ -75,7 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }).then(response => {
                     document.querySelector("#edit-name").value='',document.querySelector("#edit-email").value='',document.querySelector("#edit-description").value='',
-                        fetchDoctors()
+                    alert('Doctor information have been updated successfully.')
+                    fetchDoctors()
                 })
             })
         } else if (e.target.dataset.action === 'delete') {
@@ -100,7 +104,8 @@ function fetchDoctors() {
     doctorContainer.innerHTML = ''
     fetch(`${doctorURL}`)
         .then(response => response.json())
-        .then(function (doctor) {
+        .then(function (doc) {
+            let doctor = doc.filter(d => !(d.id == null)).sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
             for (var i = 0; i < doctor.length; i++) {
                 allDoctors = doctor
                 var n = doctor[i].name;
