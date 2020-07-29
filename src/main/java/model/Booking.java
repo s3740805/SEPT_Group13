@@ -1,6 +1,8 @@
 package model;
 
 import javax.persistence.*;
+import java.sql.Date;
+import java.sql.Time;
 
 @Entity
 @Table(name="booking")
@@ -8,12 +10,13 @@ public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Patient patient;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Doctor doctor;
-    @ManyToOne(cascade = CascadeType.ALL)
+    private int patient_id;
+    private int doctor_id;
     private Time time;
+    private Date date;
+//  @ManyToOne(cascade = CascadeType.ALL)
+//  private Time time;
+
 
 
     public int getId() {
@@ -24,6 +27,22 @@ public class Booking {
         this.id = id;
     }
 
+    public int getPatient_id() {
+        return patient_id;
+    }
+
+    public void setPatient_id(int patient_id) {
+        this.patient_id = patient_id;
+    }
+
+    public int getDoctor_id() {
+        return doctor_id;
+    }
+
+    public void setDoctor_id(int doctor_id) {
+        this.doctor_id = doctor_id;
+    }
+
     public Time getTime() {
         return time;
     }
@@ -32,20 +51,12 @@ public class Booking {
         this.time = time;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    public Date getDate() {
+        return date;
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
-    }
-
-    public Patient getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Booking() {

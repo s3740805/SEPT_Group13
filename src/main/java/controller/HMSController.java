@@ -3,7 +3,7 @@ package controller;
 import model.Booking;
 import model.Doctor;
 import model.Patient;
-import model.Time;
+import java.sql.Time;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,9 +83,9 @@ public class HMSController {
 
     @CrossOrigin
     @RequestMapping(path = "/times", method = RequestMethod.POST)
-    public int add(@RequestBody Time time){
+    public Time add(@RequestBody Time time){
         this.sessionFactory.getCurrentSession().saveOrUpdate(time);
-        return time.getId();
+        return time;
     }
 
     @CrossOrigin
