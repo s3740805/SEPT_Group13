@@ -18,7 +18,7 @@
     <div id= "bookingBody"class="container-fluid">
         <h1>Booking Form</h1>
         <div class = "container">
-            <input id="inputID" type="text" class="form-control" placeholder="What's your ID bitch?"/>
+            <input id="inputID" type="text" class="form-control" placeholder="What's your ID bitch?" required/>
             <br>
             <label for="doctors">
                 Select a doctor:
@@ -62,9 +62,8 @@
 
             <br>
 
-            <button type="submit" onclick="checkAvailable()">
-                Book Appointment
-            </button>
+            <input type="submit"  onclick="checkAvailable()" value="Book Appointment">
+
             <br>
 
         </div>
@@ -88,6 +87,10 @@
     }
     function checkAvailable(){
         let patientID = document.getElementById('inputID').value;
+        if (patientID === ""){
+            alert('Please fill in ID')
+            return
+        }
         let doctorID = document.getElementById('doctors').value.split('.')[0];
         let date = document.getElementById('appointmentDate').value;
         let time = document.getElementById('times').value;
