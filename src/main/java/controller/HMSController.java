@@ -45,6 +45,7 @@ public class HMSController {
 
         this.sessionFactory.getCurrentSession().delete(patient);
     }
+    
 
     //doctor
     @CrossOrigin
@@ -71,6 +72,15 @@ public class HMSController {
         Doctor doctor = (Doctor) query.uniqueResult();
 
         this.sessionFactory.getCurrentSession().delete(doctor);
+    }
+
+    @CrossOrigin
+    @RequestMapping(path = "/doctors/{id}", method = RequestMethod.PUT)
+    public void updateDoctor(@PathVariable int id, @RequestBody Doctor doctor) {
+        Query query =this.sessionFactory.getCurrentSession().createQuery("from Doctor where id=:id");;
+        //query.setInteger("id", id);
+        doctor.setId(id);
+        this.sessionFactory.getCurrentSession().update(doctor);
     }
 
     //time
