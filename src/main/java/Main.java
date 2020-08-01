@@ -3,8 +3,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import service.StudentService;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -22,29 +24,29 @@ public class Main {
 //        StudentService studentService = context.getBean(StudentService.class);
 //
 //        System.out.println(studentService.findStudents("Student"));
+        Print("students");
+        Print("doctors");
+        Print("bookings");
+        Print("patients");
+    }
 
+    public static void Print(String target) throws IOException {
+        URL url = new URL("http://localhost:8080/"+target);
 
+        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
-            URL url = new URL("http://localhost:8080/students");
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+        String line = "";
+        StringBuilder stringBuilder = new StringBuilder();
 
-            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+        while ((line = bufferedReader.readLine()) != null) {
+            System.out.println(target+" "+line);
+            stringBuilder.append(line);
+        }
 
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
-            String line = "";
+        String s = stringBuilder.toString();
 
-            StringBuilder stringBuilder = new StringBuilder();
-
-            while ((line = bufferedReader.readLine()) != null) {
-                System.out.println("line"+line);
-                stringBuilder.append(line);
-            }
-
-            String s = stringBuilder.toString();
-
-            System.out.println(s);
-
-
-
+        System.out.println(s);
     }
 
 }
