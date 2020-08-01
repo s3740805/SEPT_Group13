@@ -13,6 +13,22 @@ public class Doctor {
     private String email;
     private String description;
 
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
+    public Doctor(String name, String email, String description) {
+        this.name = name;
+        this.email = email;
+        this.description = description;
+    }
+
     public Doctor() {
     }
 

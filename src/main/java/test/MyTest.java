@@ -3,7 +3,7 @@ package test;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import model.Student;
+import model.Doctor;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,26 +19,27 @@ import java.util.List;
 public class MyTest {
 
     @Test
-    public void test1() throws IOException {
+    public void testDoctor() throws IOException {
 
         try{
-	        URL url = new URL(TestConfig.URL+"students");
+	        URL url = new URL(TestConfig.URL+"doctors");
 	        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 	        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
 	        String line = "";
 	        StringBuilder stringBuilder = new StringBuilder();
-	
+
 	        while((line = bufferedReader.readLine()) !=null){
 	            stringBuilder.append(line);
 	        }
-	
+
 	        Gson gson = new Gson();
 	        String json = stringBuilder.toString();
-	        List<Student> students = gson.fromJson(json, new TypeToken<List<Student>>(){}.getType());
-	        //String s = stringBuilder.toString();
-	        Assert.assertEquals(students.get(0).getName(), "Thanh");
-	        
-	    } catch (MalformedURLException e) {
+	        List<Doctor> doctors = gson.fromJson(json, new TypeToken<List<Doctor>>(){}.getType());
+	        System.out.println(doctors.get(0).getName());
+	        //Assert.assertEquals(doctors.get(0).getName(), "Linh Nguyen");
+
+
+		} catch (MalformedURLException e) {
 	        e.printStackTrace();
 	    } catch (IOException e) {
 	        e.printStackTrace();

@@ -8,7 +8,6 @@ model/Doctor.class
 Main.class
 controller/HMSController.class
 model/Student.class
-model/Time.class
 model/Booking.class
 controller/StudentController.class
 service/TeacherService.class
