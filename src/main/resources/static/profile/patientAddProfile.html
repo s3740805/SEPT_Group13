@@ -24,13 +24,13 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center">
-                            <input type="file" id="image" name="image" accept="image/*">
-                            <button id="" type="submit" class="btn btn-primary"  onclick="addProfile()"></button>
-                            <img id="myImage">
-                            <!--                            <img alt="User Pic" src="https://genk.mediacdn.vn/2019/7/17/screen-shot-2019-07-17-at-65546-pm-1563364577219920569996.jpg" class="img-circle img-responsive">-->
-                        </div>
-                        <div class=" col-md-4 col-lg-4 ">
+                        <!--                        <div class="col-md-3 col-lg-3 " align="center">-->
+                        <!--                            <input type="file" id="image" name="image" accept="image/*">-->
+                        <!--                            <button id="" type="submit" class="btn btn-primary"  onclick="addProfile()"></button>-->
+                        <!--                            <img id="myImage">-->
+                        <!--                            &lt;!&ndash;                            <img alt="User Pic" src="https://genk.mediacdn.vn/2019/7/17/screen-shot-2019-07-17-at-65546-pm-1563364577219920569996.jpg" class="img-circle img-responsive">&ndash;&gt;-->
+                        <!--                        </div>-->
+                        <div class=" col-md-6 col-lg-6 ">
                             <table class="table table-user-information">
                                 <tbody>
                                 <tr>
@@ -65,10 +65,10 @@
                                 </tr>
                                 <tr>
                                     <td>Email:</td>
-                                    <td><input type="text" id="email"/></a></td>
+                                    <td><input type="email" id="email"/></a></td>
                                 </tr>
                                 <td>Phone Number:</td>
-                                <td ><input type="text" id="phone"/></td>
+                                <td ><input type="number" id="phone"/></td>
                                 </tr>
 
                                 </tbody>
@@ -135,9 +135,9 @@
         var allergies = document.getElementById('allergies').value
         var healthStatus = document.getElementById('healthStatus').value
         var medicalHistory = document.getElementById('medicalHistory').value
-        var image=document.getElementById('image').value
-        var myImage = image.innerHTML
-        myImage.innerHTML=''
+
+
+
 
         var coffee = document.forms[0];
         for (i = 0; i < coffee.length; i++) {
@@ -148,10 +148,6 @@
 
 
 
-
-
-
-
         fetch('http://localhost:8080/patients', {
             headers: {
                 'Accept': 'application/json',
@@ -159,7 +155,7 @@
             },
             method: "POST",
             body: JSON.stringify({
-                image: image,
+
                 fname: fname,
                 lname: lname,
                 address:address,
