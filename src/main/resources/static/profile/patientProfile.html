@@ -26,15 +26,15 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center">
-                            <img alt="User Pic" src="https://genk.mediacdn.vn/2019/7/17/screen-shot-2019-07-17-at-65546-pm-1563364577219920569996.jpg" class="img-circle img-responsive">
-                        </div>
-                        <div class=" col-md-4 col-lg-4 ">
+                        <!--                        <div class="col-md-3 col-lg-3 " align="center">-->
+                        <!--                            <img alt="User Pic" src="https://genk.mediacdn.vn/2019/7/17/screen-shot-2019-07-17-at-65546-pm-1563364577219920569996.jpg" class="img-circle img-responsive">-->
+                        <!--                        </div>-->
+                        <div class=" col-md-6 col-lg-6 ">
                             <table class="table table-user-information">
                                 <tbody>
                                 <tr>
                                     <td>First Name:</td>
-                                    <td id="FirstName"></td>
+                                    <td id="FirstName"><td/>
                                 </tr>
                                 <tr>
                                     <td>Last Name:</td>
@@ -87,25 +87,21 @@
                                     <td>Health Status:</td>
                                     <td id="healthStatus"></td>
                                 </tr>
-
-
                                 </tbody>
                             </table>
+                            <div id="save"></div>
                         </div>
                     </div>
                     <div class="panel-footer">
                         <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
                         <span class="pull-right">
-                            <a href="http://localhost:8080/static/patientEditProfile.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
-                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning" onclick="patientEdit()"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" onclick="BackButton"><i class="glyphicon glyphicon-remove"></i></a>
                         </span>
                     </div>
 
                 </div>
             </div>
-            <button onclick="debug()">
-                For testing only
-            </button>
         </div>
     </div>
 </div>
@@ -113,8 +109,9 @@
 </html>
 
 <script>
+    let currentPatient = 3;
     function getPatients(){
-        let patientUserName = document.getElementById('patientUserName')
+        // let patientUserName = document.getElementById('patientUserName')
         let FirstName = document.getElementById('FirstName')
         let LastName = document.getElementById('LastName')
         let DOB = document.getElementById('DOB')
@@ -134,11 +131,12 @@
             .then(json => {
                 for(let i=0; i<json.length; i++){
                     let id = json[i].id
-                    if ( id === 3) {
+                    if ( id === currentPatient) {
                         patientUserName.innerHTML += '<div>' + json[i].fname + json[i].lname + '</div>';
-                        FirstName.innerHTML += '<div>' + json[i].fname + '</div>';
+                        // document.getElementById("FirstName").value =  json[i].fname  ;
+                        FirstName.innerHTML += '<div>' +  json[i].fname + '</div>';
                         LastName.innerHTML += '<div>' +  json[i].lname + '</div>';
-                        DOB.innerHTML ='<div>' + json[i].dob.toString() +'</div>';
+                        DOB.innerHTML ='<div>' + json[i].dob+'</div>';
                         Gender.innerHTML += '<div>' +  json[i].gender + '</div>';
                         Address.innerHTML += '<div>' +  json[i].address + '</div>';
                         Email.innerHTML += '<div>' +  json[i].email + '</div>';
@@ -151,10 +149,98 @@
                 }
             })
     }
+    function patientEdit() {
+        document.getElementById("FirstName").innerHTML = `<input type="text" id="edit_fname">`
+        document.getElementById("LastName").innerHTML = `<input type="text" id="edit_lname">`
+        document.getElementById("DOB").innerHTML = `<input type="date" id="edit_dob">`
+        document.getElementById("Gender").innerHTML =
+            `<form id="edit_gender">
+                 <input type="radio" name="optradio"  value="Male" >Male</input>
+                 <input type="radio" name="optradio" value="Female" >Female</input>
+                 <input type="radio" name="optradio" value="Other">Other</input>
+             </form>`
+        document.getElementById("Address").innerHTML= `<input type="text" id="edit_address">`
+        document.getElementById("Email").innerHTML= `<input type="text" id="edit_email">`
+        document.getElementById("Phone").innerHTML= `<input type="number" id="edit_phone">`
+        document.getElementById("bloodType").innerHTML=`
+              <select id="edit_bloodType">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="O">O</option>
+                  <option value="AB">AB</option>
+              </select>`
+        document.getElementById("allergies").innerHTML= `<input type="text" id="edit_allergies">`
+        document.getElementById("healthStatus").innerHTML= `<input type="text" id="edit_healthStatus">`
+        document.getElementById("medicalHistory").innerHTML= `<input type="text" id="edit_medicalHistory">`
+        document.getElementById("save").innerHTML+= `<button type="submit" class="btn btn-success" onclick="saveEdit()">Save</button>`
 
-    function debug(){
-        let date = new Date('2020-10-10')
-        console.log(date.toString())
+        fetch('http://localhost:8080/patients')
+            .then(res => res.json())
+            .then(json => {
+                for(let i=0; i<json.length; i++) {
+                    let id = json[i].id
+                    if (id === currentPatient) {
+                        document.getElementById("edit_fname").value = json[i].fname;
+                        document.getElementById("edit_lname").value = json[i].lname;
+                        document.getElementById("edit_dob").value = json[i].dob;
+                        document.getElementById("edit_gender").value = json[i].gender;
+                        document.getElementById("edit_address").value = json[i].address;
+                        document.getElementById("edit_phone").value = json[i].phone;
+                        document.getElementById("edit_bloodType").value = json[i].bloodType;
+                        document.getElementById("edit_allergies").value= json[i].allergies;
+                        document.getElementById("edit_healthStatus").value= json[i].healthStatus;
+                        document.getElementById("edit_medicalHistory").value= json[i].medicalHistory;
+
+
+                    }
+                }
+            })
+
     }
+
+    function saveEdit() {
+        let editFirstName = document.getElementById('edit_fname').value
+        let editLastName = document.getElementById('edit_lname').value
+        let editDOB = document.getElementById('edit_dob').value
+        var coffee = document.forms[0];
+        for (i = 0; i < coffee.length; i++) {
+            if (coffee[i].checked) {
+                var edit_gender = coffee[i].value;
+            }
+        }
+        let editAddress = document.getElementById('edit_address').value
+        let editEmail = document.getElementById('edit_email').value
+        let editPhone = document.getElementById('edit_phone').value
+        let editBloodType = document.getElementById('edit_bloodType').value
+        let editAllergies = document.getElementById('edit_allergies').value
+        let editHealthStatus = document.getElementById('edit_healthStatus').value
+        let editMedicalHistory = document.getElementById('edit_medicalHistory').value
+        fetch(`http://localhost:8080/patients/${currentPatient}`, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "PUT",
+            body: JSON.stringify({
+                fname: editFirstName,
+                lname: editLastName,
+                address:editAddress,
+                dob:editDOB,
+                gender: edit_gender,
+                bloodType:editBloodType,
+                phone:editPhone,
+                email:editEmail,
+                allergies:editAllergies,
+                healthStatus:editHealthStatus,
+                medicalHistory:editMedicalHistory
+            }),
+
+        }).then(res => getPatients())
+        location.reload()
+    }
+
+
+
+
 
 </script>
