@@ -61,4 +61,12 @@ public class Booking {
 
     public Booking() {
     }
+
+    public Booking(int id, int patient_id, int doctor_id, Time time, Date date) {
+        this.id = id;
+        this.patient_id = patient_id;
+        this.doctor_id = doctor_id;
+        this.time = time;
+        this.date = date;
+    }
 }

@@ -18,7 +18,7 @@
     <div id= "bookingBody"class="container-fluid">
         <h1>Booking Form</h1>
         <div class = "container">
-            <input id="inputID" type="text" class="form-control" placeholder="What's your ID bitch?" required/>
+            <input id="inputID" type="text" class="form-control" placeholder="Enter your patient ID" required/>
             <br>
             <label for="doctors">
                 Select a doctor:
@@ -90,7 +90,11 @@
         if (patientID === ""){
             alert('Please fill in ID')
             return
-        }
+        } // input is empty
+        if (isNaN(patientID) ){
+            alert('Invalid ID input')
+            return
+        } // input is not a number
         let doctorID = document.getElementById('doctors').value.split('.')[0];
         let date = document.getElementById('appointmentDate').value;
         let time = document.getElementById('times').value;
@@ -107,7 +111,7 @@
                         && date === json[i].date.toString()
                         && time === json[i].time.toString()) {
                         booked = true;
-                        alert("Can't book LOL. Choose something else")
+                        alert("Cannot confirm booking. Please choose a different date/time/doctor")
                         break;
                     }
                 }
@@ -120,7 +124,7 @@
             body: JSON.stringify({patient_id:patientID,doctor_id:doctorID,time: time,date :date})
 
             })
-            alert('Booked successfully LOL')
+            alert('Booked successfully')
             }
         })
     }
