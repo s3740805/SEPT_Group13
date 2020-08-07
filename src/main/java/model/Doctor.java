@@ -10,7 +10,7 @@ public class Doctor {
     private int id;
     @Column
     private String name;
-    private String email;
+    private String email;       
     private String description;
 
     @Override

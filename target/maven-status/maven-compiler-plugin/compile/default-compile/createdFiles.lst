@@ -11,6 +11,7 @@ controller\TeacherController.class
 service\TeacherService.class
 model\Doctor.class
 controller\AllController.class
+test\PatientModelTest.class
 config\WebAppInitializer.class
 model\Booking.class
 config\AppConfig.class

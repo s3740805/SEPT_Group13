@@ -16,6 +16,9 @@
 </head>
 <body onload="getPatients()">
 
+<!--<input type="text" placeholder="Type something..." id="myInput">-->
+<!--<button type="button" onclick="getInputValue();">Get Value</button>-->
+
 
 <div class="container">
     <div class="row">
@@ -93,9 +96,9 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+<!--                        <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>-->
                         <span class="pull-right">
-                            <a data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning" onclick="patientEdit()"><i class="glyphicon glyphicon-edit"></i></a>
+                            <a id="editButton" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning" onclick="patientEdit()"><i class="glyphicon glyphicon-edit" ></i></a>
                             <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" onclick="BackButton"><i class="glyphicon glyphicon-remove"></i></a>
                         </span>
                     </div>
@@ -109,9 +112,24 @@
 </html>
 
 <script>
-    let currentPatient = 3;
+
+
+    // function getInputValueWithId(id){
+    //     getPatients(parseInt(id))
+    // }
+    //
+    // function getInputValue(){
+    //     // Selecting the input element and get its value
+    //     var inputVal = document.getElementById("myInput").value;
+    //
+    //     getPatients(parseInt(inputVal))
+    //
+    //
+    // }
+
+    let currentPatient=3
     function getPatients(){
-        // let patientUserName = document.getElementById('patientUserName')
+        let patientUserName = document.getElementById('patientUserName')
         let FirstName = document.getElementById('FirstName')
         let LastName = document.getElementById('LastName')
         let DOB = document.getElementById('DOB')
@@ -132,8 +150,7 @@
                 for(let i=0; i<json.length; i++){
                     let id = json[i].id
                     if ( id === currentPatient) {
-                        patientUserName.innerHTML += '<div>' + json[i].fname + json[i].lname + '</div>';
-                        // document.getElementById("FirstName").value =  json[i].fname  ;
+                        patientUserName.innerHTML += '<div>' + json[i].username + '</div>';
                         FirstName.innerHTML += '<div>' +  json[i].fname + '</div>';
                         LastName.innerHTML += '<div>' +  json[i].lname + '</div>';
                         DOB.innerHTML ='<div>' + json[i].dob+'</div>';
@@ -150,6 +167,9 @@
             })
     }
     function patientEdit() {
+        // currentPatient = document.getElementById("myInput").value
+        // getInputValueWithId(currentPatient)
+        document.getElementById("editButton").style.display="none"
         document.getElementById("FirstName").innerHTML = `<input type="text" id="edit_fname">`
         document.getElementById("LastName").innerHTML = `<input type="text" id="edit_lname">`
         document.getElementById("DOB").innerHTML = `<input type="date" id="edit_dob">`
@@ -157,7 +177,7 @@
             `<form id="edit_gender">
                  <input type="radio" name="optradio"  value="Male" >Male</input>
                  <input type="radio" name="optradio" value="Female" >Female</input>
-                 <input type="radio" name="optradio" value="Other">Other</input>
+                 <input type="radio" name="optradio" value="Other" checked>Other</input>
              </form>`
         document.getElementById("Address").innerHTML= `<input type="text" id="edit_address">`
         document.getElementById("Email").innerHTML= `<input type="text" id="edit_email">`
