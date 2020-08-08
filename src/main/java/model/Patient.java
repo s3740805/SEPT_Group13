@@ -1,9 +1,7 @@
 package model;
 
 import javax.persistence.*;
-import javax.swing.*;
-import java.awt.*;
-import java.sql.Date;
+import java.util.Date;
 
 
 @Entity
@@ -14,68 +12,24 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column
-
+    private String name;
     private String username;
     private String password;
     private String fname;
     private String lname;
-    private String gender;
     private Date dob;
-    private String bloodType;
-    private String email;
-    private Integer phone;
+    private String gender;
     private String address;
+    private String email;
+    private Number phone;
     private String allergies;
-    private String medicalHistory;
+    private String bloodType;
     private String healthStatus;
-
-    @Override
-    public String toString() {
-        return "Patient{" +
-                "id='" + id + '\''+
-                ", fname='" +fname + '\''+
-                ", lname='" +lname + '\''+
-                ", gender='" +gender + '\''+
-                ", dob='" +dob + '\''+
-                ", bloodType='" +bloodType + '\''+
-                ", email='" +email + '\''+
-                ", phone='" +phone + '\''+
-                ", address='" +address + '\''+
-                ", allergies='" +allergies + '\''+
-                ", medicalHistory='" +medicalHistory + '\''+
-                ", healthStatus='" +healthStatus + '\''+
-                '}';
-    }
-
-    public Patient(String fname, String lname, String gender, String dob, String bloodType,
-                   String email, Integer phone, String address, String allergies, String medicalHistory,
-                   String healthStatus){
-        this.fname = fname;
-        this.lname = lname;
-        this.gender = gender;
-        this.dob = Date.valueOf(dob);
-        this.bloodType = bloodType;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-        this.allergies= allergies;
-        this.medicalHistory= medicalHistory;
-        this.healthStatus = healthStatus;
-    }
+    private String medicalHistory;
 
     public Patient() {
     }
 
-    // Patient UserName
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    // Patient Id
     public int getId() {
         return id;
     }
@@ -84,37 +38,22 @@ public class Patient {
         this.id = id;
     }
 
-    //Patient FName
-    public String getFname() {
-        return fname;
+    public String getName() {
+        return name;
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    //Patient Lname
-    public String getLname() {
-        return lname;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-
-
-
-    //Patient Gender
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    // Patient Password
     public String getPassword() {
         return password;
     }
@@ -123,7 +62,22 @@ public class Patient {
         this.password = password;
     }
 
-    // Patient DOB
+    public String getFname() {
+        return fname;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    public String getLname() {
+        return lname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
     public Date getDob() {
         return dob;
     }
@@ -132,35 +86,14 @@ public class Patient {
         this.dob = dob;
     }
 
-
-    // Blood Type
-    public String getBloodType() {
-        return bloodType;
+    public String getGender() {
+        return gender;
     }
 
-    public void setBloodType(String bloodType) {
-        this.bloodType = bloodType;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    //Email
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    //Phone
-    public Integer getPhone() {
-        return phone;
-    }
-
-    public void setPhone(Integer phone) {
-        this.phone = phone;
-    }
-
-    //Address
     public String getAddress() {
         return address;
     }
@@ -169,7 +102,22 @@ public class Patient {
         this.address = address;
     }
 
-    // allergies
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Number getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Number phone) {
+        this.phone = phone;
+    }
+
     public String getAllergies() {
         return allergies;
     }
@@ -178,16 +126,14 @@ public class Patient {
         this.allergies = allergies;
     }
 
-    // Medical History
-    public String getMedicalHistory() {
-        return medicalHistory;
+    public String getBloodType() {
+        return bloodType;
     }
 
-    public void setMedicalHistory(String medicalHistory) {
-        this.medicalHistory = medicalHistory;
+    public void setBloodType(String bloodType) {
+        this.bloodType = bloodType;
     }
 
-    //Health Status
     public String getHealthStatus() {
         return healthStatus;
     }
@@ -196,6 +142,11 @@ public class Patient {
         this.healthStatus = healthStatus;
     }
 
+    public String getMedicalHistory() {
+        return medicalHistory;
+    }
 
-
+    public void setMedicalHistory(String medicalHistory) {
+        this.medicalHistory = medicalHistory;
+    }
 }
