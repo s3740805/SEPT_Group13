@@ -3,11 +3,14 @@ const doctorEditor = document.querySelector('#edit-form')
 const doctorURL = `http://localhost:8080/doctors`
 const doctorForm = document.querySelector('#doctor-form')
 let allDoctors = []
+const booking = document.querySelector('#booking')
 
 document.addEventListener('DOMContentLoaded', function () {
      
     //fetchDoctor
     fetchDoctors();
+
+
 
     //add new Doctors
     doctorForm.addEventListener('submit', (e) => {
@@ -33,14 +36,20 @@ document.addEventListener('DOMContentLoaded', function () {
         })
 
     })
+
+    //addEventlistener to 2 button edit and delete
     doctorContainer.addEventListener('click', (e) => {
+        //if click edit
         if (e.target.dataset.action === 'edit') {
+            //go to top of page
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
             console.log('press edit')
+            //get targeted doctor id
             const doctorData = allDoctors.find((doctor) => {
                 return doctor.id == e.target.dataset.id
             })
+            //show edit form
             document.getElementById('spoiler').style.display = 'block';
             self = this;
             doctorEditor.innerHTML = '';
@@ -59,13 +68,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 </form>
             </div>`
             console.log(doctorData)
+            //addEventlistener to submit button
             const editForm = document.querySelector(`#edit-doctor`)
             editForm.addEventListener("submit", (e) => {
                 event.preventDefault()
                 const nameInput = document.querySelector("#edit-name").value
                 const emailInput = document.querySelector("#edit-email").value
                 const descInput = document.querySelector("#edit-description").value
-                const editedDoctor = document.querySelector(`#doctor-${doctorData.id}`)
+                //const editedDoctor = document.querySelector(`#doctor-${doctorData.id}`)
                 fetch(`${doctorURL}/${doctorData.id}`, {
                     method: 'PUT',
                     body: JSON.stringify({
@@ -77,11 +87,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         'Content-Type': 'application/json'
                     }
                 }).then(response => {
+                    //refresh the form
                     document.querySelector("#edit-name").value='',document.querySelector("#edit-email").value='',document.querySelector("#edit-description").value='',
+                    //success alert
                     alert('Doctor information have been updated successfully.')
                     fetchDoctors()
                 })
             })
+            //if click delete
         } else if (e.target.dataset.action === 'delete') {
             if (confirm('Do you want to delete this doctor?')) {
                 console.log('press delete')
@@ -93,18 +106,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 }).then(response => fetchDoctors())
             }
         }
+        // else if (e.target.dataset.action === 'booking') {
+        //     console.log('booking')
+        //     fetch(`http://localhost:8080/bookings`)
+        //         .then(response => response.json())
+        //         .then(function (doc) {
+        //             let book = doc.filter(d => (d.doctor_id == e.target.dataset.id))
+        //             for (var i = 0; i < book.length; i++) {
+        //                 booking.innerHTML+= book[i].id;
+        //             }
+        //         })
+        //
+        // }
 
     })
 })
-function CloseInput(editButton) {
+//close edit form button
+function CloseInput() {
     document.getElementById('spoiler').style.display = 'none';
     doctorEditor.innerHTML = '';
 }
+//fetch Doctors
 function fetchDoctors() {
     doctorContainer.innerHTML = ''
     fetch(`${doctorURL}`)
         .then(response => response.json())
         .then(function (doc) {
+            //sort by doctor id small to large
             let doctor = doc.filter(d => !(d.id == null)).sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
             for (var i = 0; i < doctor.length; i++) {
                 allDoctors = doctor
@@ -112,12 +140,14 @@ function fetchDoctors() {
                 var listItem = document.createElement('tr');
                 var deleteLink = `<button class="btn btn-outline-primary" data-id="${doctor[i].id}" id="edit-${doctor[i].id}" data-action="edit">Edit</button>`
                 var editLink = `<button  class="btn btn-outline-primary" data-id="${doctor[i].id}" id="delete-${doctor[i].id}" data-action="delete">Delete</button>`
+                //var booking = `<button  class="btn btn-outline-primary" data-id="${doctor[i].id}" id="bookinhg-${doctor[i].id}" data-action="booking">Show Bookings</button>`
+                //var b = `<div id="booking"></div>`
                 listItem.innerHTML += '<td>' + doctor[i].name + '</td>';
                 listItem.innerHTML += '<td>' + doctor[i].email + '</td>';
                 listItem.innerHTML += '<td>' + doctor[i].description + '</td>';
+                //listItem.innerHTML += '<td>' + booking  + b + '</td>';
                 listItem.innerHTML += '<td>' + deleteLink + editLink + '</td>';
                 doctorContainer.appendChild(listItem);
-
             }
         })
 }

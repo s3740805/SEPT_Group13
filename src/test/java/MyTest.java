@@ -1,6 +1,3 @@
-package test;
-
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import model.Doctor;
@@ -37,6 +34,7 @@ public class MyTest {
 			String json = stringBuilder.toString();
 			List<Doctor> doctors = gson.fromJson(json, new TypeToken<List<Doctor>>(){}.getType());
 			System.out.println(doctors.get(0).getName());
+			//Actual value based on the database
 			//Assert.assertEquals(doctors.get(0).getName(), "Linh Nguyen");
 
 
@@ -50,7 +48,7 @@ public class MyTest {
 	@Test
 	public void testPation() throws IOException{
 		try{
-			URL url = new URL(TestConfig.URL+"patiens");
+			URL url = new URL(TestConfig.URL+"patients");
 			HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
 			String line = "";
@@ -64,7 +62,8 @@ public class MyTest {
 			String json = stringBuilder.toString();
 			List<Patient> patients = gson.fromJson(json, new TypeToken<List<Patient>>(){}.getType());
 			System.out.println(patients.get(0).getFname());
-			
+			//Actual value based on the database
+			//Assert.assertEquals(doctors.get(0).getFName(), "Cuong");
 
 
 		} catch (MalformedURLException e) {

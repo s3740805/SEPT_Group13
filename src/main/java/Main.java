@@ -1,12 +1,7 @@
-import config.AppConfig;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import service.StudentService;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -16,15 +11,6 @@ import java.net.URL;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-//        context.register(AppConfig.class);
-//
-//        context.refresh();
-//
-//        StudentService studentService = context.getBean(StudentService.class);
-//
-//        System.out.println(studentService.findStudents("Student"));
-        Print("students");
         Print("doctors");
         Print("bookings");
         Print("patients");
