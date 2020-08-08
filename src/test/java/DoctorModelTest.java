@@ -1,5 +1,3 @@
-package test;
-
 import model.Doctor;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -7,7 +5,6 @@ import static org.junit.Assert.*;
 
 public class DoctorModelTest {
     private Doctor doc = new Doctor("Linh", "Linh@gmail.com","abc");
-
     public DoctorModelTest() {
     }
 

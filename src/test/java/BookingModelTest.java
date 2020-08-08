@@ -1,4 +1,3 @@
-package test;
 
 import model.Booking;
 import org.junit.Assert;
@@ -17,35 +16,35 @@ public class BookingModelTest {
     public void bookingModelTest(){
     }
     @Test
-    void testGetId(){
+    public void testGetId(){
         int expected = 1;
         int actual = booking.getId();
         Assert.assertEquals(expected,actual);
     }
 
     @Test
-    void testGetPatientId(){
+    public void testGetPatientId(){
         int expected = 1;
         int actual = booking.getPatient_id();
         Assert.assertEquals(expected,actual);
     }
 
     @Test
-    void testGetDoctorId(){
+    public void testGetDoctorId(){
         int expected = 1;
         int actual = booking.getDoctor_id();
         Assert.assertEquals(expected,actual);
     }
 
     @Test
-    void testTime(){
+    public void testTime(){
         Time expected = new Time(9,30,0);
         Time actual = booking.getTime();
         Assert.assertEquals(expected,actual);
     }
 
     @Test
-    void testDate(){
+    public void testDate(){
         Date expected = new Date(2020,8,6);
         Date actual = booking.getDate();
         Assert.assertEquals(expected,actual);

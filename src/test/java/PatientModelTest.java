@@ -1,8 +1,6 @@
-package test;
 
 import model.Patient;
 import org.junit.Test;
-
 import java.sql.Date;
 
 import static org.junit.Assert.*;
@@ -11,8 +9,8 @@ import static org.junit.Assert.*;
 public class PatientModelTest {
 
 
-    private Patient doc = new Patient("Cuong","Truong","Male","2020-07-28","O","phucuong200297@gmail.com",349305195,"NVL","No","No","Not good");
-
+    //private Patient doc = new Patient("Cuong","Truong","Male","2020-07-28","O","phucuong200297@gmail.com",349305195,"NVL","No","No","Not good");
+    private Patient doc = new Patient("Cuong", "Cuong", "Truong", new Date(2020,8,6), "Male", "NVL", "phucuong200297@gmail.com", 349305195, "No","O","Not good","No");
 
 
     public PatientModelTest(){
@@ -74,16 +72,15 @@ public class PatientModelTest {
     @Test
     public void testGetDoB(){
         System.out.println("Get Date Of Birth");
-        String expect = "2020-07-28";
-        String actual = doc.getDob().toString();
+        Date expect = new Date(2020, 8, 6);
+        Date actual = doc.getDob();
         assertEquals(expect,actual);
-
     }
 
     @Test
     public void testSetDoB(){
         System.out.println("Set Date Of Birth");
-        Date newDoB  = new Date(1997-02-20);
+        Date newDoB  = new Date(1997, 2, 20);
         doc.setDob(newDoB);
         System.out.println(doc);
     }
@@ -117,16 +114,16 @@ public class PatientModelTest {
     @Test
     public void testSetEmail(){
         System.out.println("Set Email");
-        String newBloodType  = "s3713026@rmit.edu.vn";
-        doc.setBloodType(newBloodType);
+        String newEmail  = "s3713026@rmit.edu.vn";
+        doc.setEmail(newEmail);
         System.out.println(doc);
     }
 
     @Test
     public void testGetPhone(){
         System.out.println("Get Phone");
-        Integer expect = 349305195;
-        Integer actual = doc.getPhone();
+        Number expect = 349305195;
+        Number actual = doc.getPhone();
         assertEquals(expect,actual);
 
     }
@@ -134,8 +131,8 @@ public class PatientModelTest {
     @Test
     public void testSetPhone(){
         System.out.println("Set Phone");
-        String newPhone  = "93651763";
-        doc.setBloodType(newPhone);
+        Number newPhone  = 93651763;
+        doc.setPhone(newPhone);
         System.out.println(doc);
     }
 

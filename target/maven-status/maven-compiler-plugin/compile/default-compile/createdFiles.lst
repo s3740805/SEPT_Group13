@@ -1,4 +1,8 @@
-test/BookingModelTest.class
+model/Doctor.class
 Main.class
-test/DoctorModelTest.class
+config/WebAppInitializer.class
+controller/HMSController.class
+config/AppConfig.class
 controller/HomeController.class
+model/Booking.class
+model/Patient.class
