@@ -14,6 +14,8 @@ public class Booking {
     private int doctor_id;
     private Time time;
     private Date date;
+    private String userName;
+
 //  @ManyToOne(cascade = CascadeType.ALL)
 //  private Time time;
 
@@ -59,6 +61,13 @@ public class Booking {
         this.date = date;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
     public Booking() {
     }
 
