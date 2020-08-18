@@ -1,12 +1,12 @@
-#COSC2101 SEPT
+# COSC2101 SEPT
 
-#Doctor Appointment Booking System
+# Doctor Appointment Booking System
 
 ### Group 13
-> Nguyen Le Thuy Linh
-> Nguyen Phuoc Cuong
-> Truong Phu Cuong
-> Le Ngoc Danh
+> * Nguyen Le Thuy Linh
+> * Nguyen Phuoc Cuong
+> * Truong Phu Cuong
+> * Le Ngoc Danh
 
 ### Frontend with Registration & Login using:
 * MySQL
@@ -26,7 +26,7 @@
   spring.datasource.password=[your password]
   spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 ```
-###Running:
+### Running:
 - Open terminal
 ```
   cd [your path to ../Frontend+Register+Login]
@@ -36,8 +36,8 @@
 `Access through:` http://localhost:9090/
 
 `Default ADMIN account:`
->Username: admin
->Password: admin123
+> Username: admin
+> Password: admin123
 
     
    
