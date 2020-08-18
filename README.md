@@ -1,6 +1,6 @@
-#COSC2101 SEPT
+# COSC2101 SEPT
 
-#Doctor Appointment Booking System
+# Doctor Appointment Booking System
 
 ### Group 13
 > * Nguyen Le Thuy Linh
@@ -21,7 +21,7 @@
   dataSource.setUsername([your username]);
   dataSource.setPassword([your password]);
 ```
-###Running:
+### Running:
 - Open terminal
 ```
   cd [your path to ../Backend]
