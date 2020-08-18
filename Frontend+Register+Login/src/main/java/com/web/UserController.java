@@ -1,0 +1,93 @@
+package com.web;
+
+import com.model.User;
+import com.service.SecurityService;
+import com.service.UserService;
+import com.validator.UserValidator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
+
+@Controller
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private SecurityService securityService;
+
+    @Autowired
+    private UserValidator userValidator;
+
+    //GET register form
+    @GetMapping("/registration")
+    public String registration(Model model) {
+        model.addAttribute("userForm", new User());
+
+        return "registration";
+    }
+
+    //POST register form
+    @PostMapping("/registration")
+    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+        userValidator.validate(userForm, bindingResult);
+
+        if (bindingResult.hasErrors()) {
+            return "registration";
+        }
+        // save new user
+        userService.save(userForm);
+        // auto login
+        securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
+        return "redirect:/welcome";
+    }
+
+    // GET login form
+    @GetMapping("/login")
+    public String login(Model model, String error, String logout) {
+        if (error != null)
+            model.addAttribute("error", "Your username and password is invalid.");
+
+        if (logout != null)
+            model.addAttribute("message", "You have been logged out successfully.");
+
+        return "login";
+    }
+
+    //Navigation to pages
+    //General
+    @GetMapping({"/", "/welcome"})
+    public String welcome(Model model) {
+        return "welcome";
+    }
+
+    @GetMapping("/403")
+    public String accessDenied(Model model) {
+        return "403Page";
+    }
+    //Admin
+    @GetMapping("/admin/doctor")
+    public String doctor(Model model) {
+        return "admin/doctor";
+    }
+
+    //Patient/ User
+    @GetMapping("/patient/booking")
+    public String booking(Model model) {
+        return "patient/booking";
+    }
+    @GetMapping("/patient/profile")
+    public String profile(Model model) {
+        return "patient/profile";
+    }
+
+
+
+}
