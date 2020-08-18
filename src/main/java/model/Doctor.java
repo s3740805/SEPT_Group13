@@ -3,7 +3,7 @@ package model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="doctor")
+@Table(name = "doctor")
 public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,6 +12,7 @@ public class Doctor {
     private String name;
     private String email;
     private String description;
+    private String userName;
 
     @Override
     public String toString() {
@@ -32,19 +33,43 @@ public class Doctor {
     public Doctor() {
     }
 
-    public int getId() {return id;}
+    public int getId() {
+        return id;
+    }
 
-    public void setId(int id) {this.id = id;}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public void setName(String name) { this.name = name; }
-    
-    public String getEmail() { return email;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public void setEmail(String email) { this.email = email;}
+    public String getEmail() {
+        return email;
+    }
 
-    public String getDescription() { return description;}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-    public void setDescription(String description) { this.description = description;}
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 }

@@ -21,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableWebMvc
-@ComponentScan({"controller", "service"})
+@ComponentScan({"controller"})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Override
@@ -36,9 +36,9 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
         Properties properties = new Properties();
         //For Postgresql
-        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
+        //properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         //For mysql
-        //properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         properties.put("hibernate.show_sql", true);
         properties.put("hibernate.hbm2ddl.auto", "update");
 
@@ -48,9 +48,9 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("1");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/data");
+        dataSource.setUsername("root");
+        dataSource.setPassword("Rm!t123sept");
 
         sessionFactoryBean.setDataSource(dataSource);
         sessionFactoryBean.setHibernateProperties(properties);
