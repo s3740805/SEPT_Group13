@@ -1,5 +1,6 @@
 package com.service;
 
+import com.model.Role;
 import com.model.User;
 import com.repository.RoleRepository;
 import com.repository.UserRepository;
@@ -21,8 +22,13 @@ public class UserServiceImpl implements UserService {
     // Save to register
     @Override
     public void save(User user) {
+        if (roleRepository.findByName("ROLE_MEMBER") == null) {
+            roleRepository.save(new Role("ROLE_MEMBER"));
+        }
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        user.setRoles(new HashSet<>(roleRepository.findAll()));
+        HashSet<Role> roles = new HashSet<>();
+        roles.add(roleRepository.findByName("ROLE_MEMBER"));
+        user.setRoles(roles);
         userRepository.save(user);
     }
 

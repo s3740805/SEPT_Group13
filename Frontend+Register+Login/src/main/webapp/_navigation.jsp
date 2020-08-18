@@ -5,7 +5,7 @@
 <div id="navigation">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="https://image.flaticon.com/icons/svg/2957/2957872.svg" alt="logo" style="width:40px;">
             </a>
 

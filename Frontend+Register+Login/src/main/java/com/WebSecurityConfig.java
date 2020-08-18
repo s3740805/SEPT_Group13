@@ -28,13 +28,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         // restrict access
         http.authorizeRequests().antMatchers("/admin/**").access("hasRole('ADMIN')");
+        http.authorizeRequests().antMatchers("/patient/**").access("hasRole('ROLE_MEMBER')");
         // denied access handling
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
         // request login
         http
             .authorizeRequests()
                 .antMatchers("/resources/**", "/registration").permitAll()
-                //.antMatchers("/patient/**").authenticated()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
