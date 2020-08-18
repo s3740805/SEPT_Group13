@@ -3,10 +3,10 @@
 #Doctor Appointment Booking System
 
 ### Group 13
-> Nguyen Le Thuy Linh
-> Nguyen Phuoc Cuong
-> Truong Phu Cuong
-> Le Ngoc Danh
+> * Nguyen Le Thuy Linh
+> * Nguyen Phuoc Cuong
+> * Truong Phu Cuong
+> * Le Ngoc Danh
 
 ### Backend using:
 * MySQL
