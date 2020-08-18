@@ -17,7 +17,7 @@
 ### Before running:
 - Go to file `.../config/AppConfig.java` and make changes based on your database.    
 ```
-  dataSource.setDriverClassName("org.postgresql.Driver");
+  dataSource.setDriverClassName("com.mysql.jdbc.Driver");
   dataSource.setUrl("jdbc:mysql://localhost:[your port]/[your schema]");
   dataSource.setUsername([your username]);
   dataSource.setPassword([your password]);
