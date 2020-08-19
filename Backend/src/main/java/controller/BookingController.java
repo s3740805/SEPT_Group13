@@ -44,11 +44,13 @@ public class BookingController {
         this.sessionFactory.getCurrentSession().delete(booking);
     }
 
+
+
     @CrossOrigin
     @RequestMapping(path = "/bookings/{userName}", method = RequestMethod.GET)
     public List<Booking> getBookingbyUser(@PathVariable String userName) {
         Query query = this.sessionFactory.getCurrentSession()
-                .createQuery("from Bookings where userName=:userName");
+                .createQuery("from Booking where userName=:userName");
         query.setString("userName", userName);
         return query.list();
     }
