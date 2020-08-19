@@ -25,27 +25,27 @@
 <body>
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <div class="container">
-    <div id="bookingBody" class="container-fluid">
-        <h1>Booking Form</h1>
+    <div id="bookingBody" class="container-fluid" >
+        <h1 style="text-align: center">Booking Form</h1>
         <div class="container">
-            <%--<input id="inputID" type="text" class="form-control" placeholder="Enter your patient ID" required/>--%>
-            <%--<br>--%>
             <label for="doctors">
-                Select a doctor:
+                <h3>Available doctors:</h3>
             </label>
-            <select id="doctors" name="doctors" required>
+            <select class="form-control" id="doctors" name="doctors" required>
 
             </select>
             <br>
             <label for="appointmentDate">
-                Select a date:
+                <h3>Select date:</h3>
             </label>
-            <input type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate" required>
+            <br>
+            <input class="form-control" type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate" required>
             <br>
             <label for="times">
-                Select a time:
+                <h3>Select time:</h3>
             </label>
-            <select id="times" name="times" required>
+
+            <select class="form-control" id="times" name="times" required>
                 <option value="09:00:00">9:00 - 9:30</option>
                 <option value="09:30:00">9:30 - 10:00</option>
                 <option value="10:00:00">10:00 - 10:30</option>
@@ -72,7 +72,9 @@
 
             <br>
 
+            <div class="container-fluid" style="text-align: center">
                 <button class="btn btn-primary" type="submit" onclick="checkAvailable()" value="Book Appointment">Book Appointment</button>
+            </div>
 
             <br>
 
@@ -82,60 +84,5 @@
 </body>
 </html>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        getDoctors();
-    })
-
-    function checkAvailable() {
-        let state = sessionStorage.getItem("state");
-        let doctorID = document.getElementById('doctors').value.split('.')[0];
-        let date = document.getElementById('appointmentDate').value;
-        let time = document.getElementById('times').value;
-        // console.log ( patientID , patientName,doctorID,date,time)
-        let booked = false;
-        fetch('http://localhost:8080/bookings')
-            .then(res => res.json())
-            .then(json => {
-                for (let i = 0; i < json.length; i++) {
-                    // console.log(doctorID === json[i].doctor_id.toString())
-                    // console.log(time === json[i].time.toString())
-                    // console.log(date === json[i].date.toString())
-                    if (doctorID === json[i].doctor_id.toString()
-                        && date === json[i].date.toString()
-                        && time === json[i].time.toString()) {
-                        booked = true;
-                        alert("Cannot confirm booking. Please choose a different date/time/doctor")
-                        break;
-                    }
-                }
-            }).then(() => {
-            if (booked === false) {
-                fetch('http://localhost:8080/bookings', {
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    method: "POST",
-                    body: JSON.stringify({doctor_id: doctorID, time: time, date: date, userName: state})
-
-                })
-                alert('Booked successfully')
-            }
-        })
-    }
-    function getDoctors() {
-        let doctorList = document.getElementById('doctors')
-        doctorList.innerHTML = ''
-        fetch('http://localhost:8080/doctors')
-            .then(res => res.json())
-            .then(json => {
-                for (let i = 0; i < json.length; i++) {
-                    let id = json[i].id
-                    doctorList.innerHTML += '<option>' + id + '. ' + json[i].name + '</option>'
-                }
-            })
-    }
-
-
+<script src="${contextPath}/resources/js/booking.js">
 </script>
