@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+        body {
+            padding-top: 3.5rem;
+        }
+
+        #bookings:hover{
+            /*background-color: cornflowerblue;*/
+        }
+        #delete{
+            color: cornflowerblue;
+        }
+        #delete:hover {
+            color: cornflowerblue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #delete:active{
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+    <title>Doctor List</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="container" >
+        <h1 style="text-align: center" >Booking History</h1>
+        <h3> Upcoming appointments </h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Appointment Number</th>
+                <th>With doctor</th>
+                <th>Time</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody id="upcomingBookings" >
+
+            </tbody>
+        </table>
+        <h3> Previous appointments </h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Appointment Number</th>
+                <th>With doctor</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="pastBookings">
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</body>
+<script>
+    let doctors = []
+
+    document.addEventListener('DOMContentLoaded', function () {
+        sessionStorage.setItem("state","danh1215") //IMPORTANT: Set state to develop code
+        getBookings();
+    })
+
+    function cancelBooking(id){
+        if (confirm("Are you sure you want to cancel this appointment?\n *Note: You can rebook a new one")){
+            fetch(`http://localhost:8080/bookings/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(res => {alert("Booking successfully canceled.")}).then(res =>{location.reload()})
+        }
+    }
+
+    function getBookings(){
+        let state = sessionStorage.getItem("state")
+        let pastBookings = document.getElementById("pastBookings")
+        let upcomingBookings = document.getElementById("upcomingBookings")
+        let today = getTodayString()
+        fetch(`http://localhost:8080/doctors`).then(res =>  res.json())
+            .then(json=>{
+                json.sort((a,b) => {
+                    (parseInt(a.id) > parseInt(b.id)) ? 1 : -1
+                })
+                for (let i = 0; i < json.length ; i++) {
+                    let obj = {id : json[i].id, name : json[i].name}
+                    doctors.push(obj)
+                }
+            }).then (fetch(`http://localhost:8080/bookings/${state}`).then(res => res.json())
+            .then(json => {
+                // sort by date
+                json.sort((a,b)=>{
+                    if (new Date(parseInt(a.date.split("-")[0]),
+                        parseInt(a.date.split("-")[1]) -1 ,
+                        parseInt(a.date.split("-")[2]),
+                        parseInt(a.time.split(":")[0]),
+                        parseInt(a.time.split(":")[1])) >
+                        new Date(parseInt(b.date.split("-")[0]),
+                            parseInt(b.date.split("-")[1]) -1 ,
+                            parseInt(b.date.split("-")[2]),
+                            parseInt(b.time.split(":")[0]),
+                            parseInt(b.time.split(":")[1])))
+                        return -1
+                    else return 1
+                })
+                for (let i = 0; i < json.length ; i++) {
+                    if(compareDateString(today,json[i].date)){
+                        let doctorName = ""
+                        doctors.forEach(doc => {if(doc.id === json[i].doctor_id) doctorName = doc.name})
+                        pastBookings.innerHTML += '<tr id="pb">'+
+                            '<td>' + json[i].id + '</td>' +
+                            '<td>' + doctorName + '</td>' +
+                            '<td>' + json[i].time + '</td>' +
+                            '<td>' + json[i].date + '</td>' + '</tr>'
+                    }
+                    else{
+                        let id = json[i].id
+                        let cancel = `<div id="delete" onclick='cancelBooking(${id})'>Cancel</div>`
+                        let doctorName = ""
+                        doctors.forEach(doc => {if(doc.id === json[i].doctor_id) doctorName = doc.name})
+                        upcomingBookings.innerHTML += '<tr id="bookings">'+
+                            '<td>' + json[i].id + '</td>' +
+                            '<td>' + doctorName + '</td>' +
+                            '<td>' + json[i].time + '</td>' +
+                            '<td>' + json[i].date + '</td>' +
+                            '<td>' + cancel + '</td>' +
+                            '</tr>'
+                    }
+                }
+            }))
+
+    }
+    function getTodayString(){
+        let today = new Date()
+        let date = today.getDate().toString()
+        let month = "0" + (today.getMonth() + 1).toString()
+        let year = today.getFullYear().toString()
+        return year + "-" + month + "-" + date
+    }
+    function compareDateString(a,b){
+        //return true if date a is later than date b
+        return parseInt(a.split("-")[0]) > parseInt(b.split("-")[0]) ||
+            parseInt(a.split("-")[1]) > parseInt(b.split("-")[1]) ||
+            parseInt(a.split("-")[2]) > parseInt(b.split("-")[2])
+    }
+
+</script>
+</html>

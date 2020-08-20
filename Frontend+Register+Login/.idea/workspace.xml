@@ -41,10 +41,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5530246-c760-48fb-8bb9-2d9b55f821b5" name="Default Changelist" comment="danh commit">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/booking.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/patient/bookingHistory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend+Register+Login.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend+Register+Login.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/patient/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patient/booking.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +54,9 @@
       <list>
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pati</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -88,6 +82,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -96,7 +92,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597763534683" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../group_project-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -105,15 +101,15 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/mot" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/admin" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/mot" />
-    </key>
   </component>
-  <component name="RunManager" selected="Maven.springboot-registration-login [spring-boot:run]">
+  <component name="RunManager" selected="Maven.[jetty:run]">
     <configuration name="[jetty:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -204,6 +200,7 @@
       <workItem from="1597725608409" duration="8404000" />
       <workItem from="1597754837139" duration="4976000" />
       <workItem from="1597829981874" duration="1462000" />
+      <workItem from="1597877640026" duration="19935000" />
     </task>
     <task id="LOCAL-00001" summary="danh commit">
       <created>1597830445541</created>
@@ -228,16 +225,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="danh commit" />
     <option name="LAST_COMMIT_MESSAGE" value="danh commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="410" y="166" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597831024217">
+    <state x="410" y="166" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597877908614">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="410" y="166" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597831024217" />
+    <state x="410" y="166" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597877908614" />
     <state x="738" y="373" width="718" height="294" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1597831343754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -246,26 +244,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="407" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597831603298" />
-    <state x="686" y="216" key="FileChooserDialogImpl" timestamp="1597831004359">
+    <state x="686" y="216" key="FileChooserDialogImpl" timestamp="1597903332622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="686" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597831004359" />
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1597831717630">
+    <state x="686" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597903332622" />
+    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1597877700919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597831717630" />
-    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1597831717629">
+    <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700919" />
+    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1597877700918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597831717629" />
-    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1597831717629">
+    <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700918" />
+    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1597877700918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597831717629" />
-    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1597831717629">
+    <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700918" />
+    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1597877700918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597831717629" />
+    <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700918" />
     <state width="1865" height="267" key="GridCell.Tab.1.bottom" timestamp="1597830118248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
