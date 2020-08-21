@@ -94,7 +94,7 @@
         let state = sessionStorage.getItem("state")
         let pastBookings = document.getElementById("pastBookings")
         let upcomingBookings = document.getElementById("upcomingBookings")
-        let today = getTodayString()
+        let today = new Date()
         fetch(`http://localhost:8080/doctors`).then(res =>  res.json())
             .then(json=>{
                 json.sort((a,b) => {
@@ -121,8 +121,13 @@
                         return -1
                     else return 1
                 })
+
                 for (let i = 0; i < json.length ; i++) {
-                    if(compareDateString(today,json[i].date)){
+                    if(today > new Date(parseInt(json[i].date.split("-")[0]),
+                    parseInt(json[i].date.split("-")[1] - 1),
+                    parseInt(json[i].date.split("-")[2]),
+                    parseInt(json[i].time.split(":")[0]),
+                    parseInt(json[i].time.split(":")[1]))){
                         let doctorName = ""
                         doctors.forEach(doc => {if(doc.id === json[i].doctor_id) doctorName = doc.name})
                         pastBookings.innerHTML += '<tr id="pb">'+

@@ -40,9 +40,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5530246-c760-48fb-8bb9-2d9b55f821b5" name="Default Changelist" comment="danh commit">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/patient/bookingHistory.html" afterDir="false" />
+    <list default="true" id="d5530246-c760-48fb-8bb9-2d9b55f821b5" name="Default Changelist" comment="Booking History + Cancel in html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/patient/bookingHistory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patient/bookingHistory.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597763534683" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../group_project-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../labtest_4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -109,7 +109,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/admin" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.[jetty:run]">
+  <component name="RunManager" selected="Maven.springboot-registration-login [spring-boot:run]">
     <configuration name="[jetty:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -200,7 +200,10 @@
       <workItem from="1597725608409" duration="8404000" />
       <workItem from="1597754837139" duration="4976000" />
       <workItem from="1597829981874" duration="1462000" />
-      <workItem from="1597877640026" duration="19935000" />
+      <workItem from="1597877640026" duration="20284000" />
+      <workItem from="1597951158142" duration="63000" />
+      <workItem from="1597982602067" duration="877000" />
+      <workItem from="1597985802289" duration="1634000" />
     </task>
     <task id="LOCAL-00001" summary="danh commit">
       <created>1597830445541</created>
@@ -209,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597830445541</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Booking History + Cancel in html">
+      <created>1597916026195</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597916026195</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +239,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="danh commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="danh commit" />
+    <MESSAGE value="Booking History + Cancel in html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Booking History + Cancel in html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="410" y="166" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597877908614">
@@ -244,26 +255,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="407" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597831603298" />
-    <state x="686" y="216" key="FileChooserDialogImpl" timestamp="1597903332622">
+    <state x="686" y="216" key="FileChooserDialogImpl" timestamp="1597986421565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="686" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597903332622" />
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1597877700919">
+    <state x="686" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597986421565" />
+    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1597985830447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700919" />
-    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1597877700918">
+    <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597985830447" />
+    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1597985830446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700918" />
-    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1597877700918">
+    <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597985830446" />
+    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1597985830446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700918" />
-    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1597877700918">
+    <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597985830446" />
+    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1597985830446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597877700918" />
+    <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597985830446" />
     <state width="1865" height="267" key="GridCell.Tab.1.bottom" timestamp="1597830118248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -284,6 +295,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="312" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597831648205" />
+    <state x="735" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597951186639">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597951186639" />
     <state x="540" y="127" key="spring file set editor" timestamp="1597831643874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
