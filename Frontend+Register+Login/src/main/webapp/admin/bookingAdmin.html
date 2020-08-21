@@ -29,41 +29,27 @@
             cursor: pointer;
         }
     </style>
-    <title>Booking History</title>
+    <title>All bookings</title>
 </head>
 <body>
 
 <div class="container-fluid">
     <div class="container" >
-<!--        Heading-->
-        <h1 style="text-align: center" >Booking History</h1>
-<!--        Table for upcoming appointments-->
-        <h3> Upcoming appointments </h3>
+        <!--        Heading-->
+        <h1 style="text-align: center" >All appointments</h1>
+        <!--        Table for bookings-->
         <table class="table">
             <thead>
             <tr>
                 <th>Appointment Number</th>
-                <th>With doctor</th>
-                <th>Time</th>
-                <th>Date</th>
-            </tr>
-            </thead>
-            <tbody id="upcomingBookings" >
-            </tbody>
-        </table>
-<!--        Table for upcoming appointments-->
-        <h3> Previous appointments </h3>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Appointment Number</th>
+                <th>Patient username</th>
                 <th>With doctor</th>
                 <th>Time</th>
                 <th>Date</th>
                 <th></th>
             </tr>
             </thead>
-            <tbody id="pastBookings">
+            <tbody id="allBookings">
             </tbody>
         </table>
     </div>
@@ -74,26 +60,24 @@
     let doctors = []
     // function to run onload
     document.addEventListener('DOMContentLoaded', function () {
-        sessionStorage.setItem("state","danh1215") //IMPORTANT: Set state to develop code
+        sessionStorage.setItem("state","admin") //IMPORTANT: Set state to develop code
         getBookings();
     })
     // This is function to delete a booking
     function cancelBooking(id){
-        if (confirm("Are you sure you want to cancel this appointment?\n *Note: You can rebook a new one")){
+        if (confirm("Delete this appointment?")){
             fetch(`http://localhost:8080/bookings/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            }).then(res => {alert("Booking successfully canceled.")}).then(res =>{location.reload()})
+            }).then(res => {alert("Delete success.")}).then(res =>{location.reload()})
         }
     }
     // This is get booking function
     function getBookings(){
-        let state = sessionStorage.getItem("state")
-        let pastBookings = document.getElementById("pastBookings")
-        let upcomingBookings = document.getElementById("upcomingBookings")
-        let today = new Date()
+        // let state = sessionStorage.getItem("state")
+        let allBookings = document.getElementById("allBookings")
         fetch(`http://localhost:8080/doctors`).then(res =>  res.json()) // This is fetching doctors
             .then(json=>{
                 json.sort((a,b) => {
@@ -104,7 +88,7 @@
                     doctors.push(obj)
                 }
                 // This is fetching bookings from the user
-            }).then (fetch(`http://localhost:8080/bookings/${state}`).then(res => res.json())
+            }).then (fetch(`http://localhost:8080/bookings`).then(res => res.json())
             .then(json => {
                 // This sort the JSON by date, from most recently
                 json.sort((a,b)=>{
@@ -121,40 +105,22 @@
                         return -1
                     else return 1
                 })
-
                 for (let i = 0; i < json.length ; i++) {
-                    // if the bookings made later than the current time, move them to past bookings table
-                    if(today > new Date(parseInt(json[i].date.split("-")[0]),
-                    parseInt(json[i].date.split("-")[1]) -1,
-                    parseInt(json[i].date.split("-")[2]),
-                    parseInt(json[i].time.split(":")[0]),
-                    parseInt(json[i].time.split(":")[1]))){
-                        let doctorName = ""
-                        doctors.forEach(doc => {if(doc.id === json[i].doctor_id) doctorName = doc.name})
-                        pastBookings.innerHTML += '<tr id="pb">'+
-                            '<td>' + json[i].id + '</td>' +
-                            '<td>' + doctorName + '</td>' +
-                            '<td>' + json[i].time + '</td>' +
-                            '<td>' + json[i].date + '</td>' + '</tr>'
-                    }
-                    else{
-                        // if not, the bookings will be put in upcoming table
-                        let id = json[i].id
-                        let cancel = `<div id="delete" onclick='cancelBooking(${id})'>Cancel</div>`
-                        let doctorName = ""
-                        doctors.forEach(doc => {if(doc.id === json[i].doctor_id) doctorName = doc.name})
-                        upcomingBookings.innerHTML += '<tr id="bookings">'+
-                            '<td>' + json[i].id + '</td>' +
-                            '<td>' + doctorName + '</td>' +
-                            '<td>' + json[i].time + '</td>' +
-                            '<td>' + json[i].date + '</td>' +
-                            '<td>' + cancel + '</td>' +
-                            '</tr>'
-                    }
+                    console.log(json[i])
+                    let id = json[i].id
+                    let cancel = `<div id="delete" onclick='cancelBooking(${id})'>Delete</div>`
+                    let doctorName = ""
+                    doctors.forEach(doc => {if(doc.id === json[i].doctor_id) doctorName = doc.name})
+                    allBookings.innerHTML += '<tr id="bookings">'+
+                        '<td>' + json[i].id + '</td>' +
+                        '<td>' + json[i].userName + '</td>' +
+                        '<td>' + doctorName + '</td>' +
+                        '<td>' + json[i].time + '</td>' +
+                        '<td>' + json[i].date + '</td>' +
+                        '<td>' + cancel + '</td>' +
+                        '</tr>'
                 }
             }))
-
     }
-
 </script>
 </html>
