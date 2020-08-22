@@ -1,10 +1,5 @@
-controller\HomeController.class
-controller\DoctorController.class
-config\WebAppInitializer.class
-model\Booking.class
-config\AppConfig.class
-model\Patient.class
+controller/BookingController.class
+controller/DoctorController.class
+controller/PatientController.class
 Main.class
-controller\PatientController.class
-controller\BookingController.class
-model\Doctor.class
+controller/HomeController.class

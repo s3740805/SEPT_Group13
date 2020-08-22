@@ -32,8 +32,13 @@
             <div class="input-group mb-3">
                 <input required type="text" name="name" id="name" placeholder="Name" class="form-control">
                 <input required type="email" name="email" id="email" placeholder="Email" class="form-control">
-                <input required type="text" name="description" id="description" placeholder="Description"
-                       class="form-control">
+                <select class="form-control" id="description" name="description" required>
+                    <option value="Bone">Bone</option>
+                    <option value="General Physician">General Physician</option>
+                    <option value="Heart">Heart</option>
+                    <option value="Lung">Lung</option>
+                    <option value="Neurology">Neurology</option>
+                </select>
                 <div class="input-group-prepend">
                     <input class="btn btn-outline-primary" type="submit" value="Add Doctor">
                 </div>
@@ -50,6 +55,7 @@
     <table class="table">
         <thead>
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Description</th>

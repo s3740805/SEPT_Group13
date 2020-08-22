@@ -19,9 +19,9 @@
                             Admin
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/admin/doctor">Doctor</a>
-                            <a class="dropdown-item" href="#">Link 2</a>
-                            <a class="dropdown-item" href="#">Link 3</a>
+                            <a class="dropdown-item" href="/admin/doctor">Doctors</a>
+                            <a class="dropdown-item" href="/admin/booking">Bookings</a>
+                            <a class="dropdown-item" href="/admin/patient">Patients</a>
                         </div>
                     </li>
 
@@ -32,7 +32,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="/patient/booking">Book an appointment</a>
                             <a class="dropdown-item" href="/patient/profile">Profile</a>
-                            <a class="dropdown-item" href="#">Link 3</a>
+                            <a class="dropdown-item" href="/patient/bookinghistory">Booking History</a>
                         </div>
                     </li>
 

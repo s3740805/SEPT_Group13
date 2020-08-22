@@ -72,11 +72,14 @@ public class UserController {
     public String accessDenied(Model model) {
         return "403Page";
     }
+
     //Admin
     @GetMapping("/admin/doctor")
-    public String doctor(Model model) {
-        return "admin/doctor";
-    }
+    public String doctor(Model model) { return "admin/doctor"; }
+    @GetMapping("/admin/booking")
+    public String bookingAdmin(Model model) { return "admin/bookingAdmin"; }
+    @GetMapping("/admin/patient")
+    public String patientAdmin(Model model) { return "admin/patientAdmin"; }
 
     //Patient/ User
     @GetMapping("/patient/booking")
@@ -87,7 +90,10 @@ public class UserController {
     public String profile(Model model) {
         return "patient/profile";
     }
-
+    @GetMapping("/patient/bookinghistory")
+    public String bookingPatient(Model model) {
+        return "patient/bookingHistory";
+    }
 
 
 }
