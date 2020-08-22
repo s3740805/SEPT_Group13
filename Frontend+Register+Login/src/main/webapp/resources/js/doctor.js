@@ -19,23 +19,42 @@ document.addEventListener('DOMContentLoaded', function () {
         const nameInput = doctorForm.querySelector('#name').value
         const emailInput = doctorForm.querySelector('#email').value
         const descInput = doctorForm.querySelector('#description').value
-        fetch(`${doctorURL}`, {
-            method: 'POST',
-            body: JSON.stringify({
-                name: nameInput,
-                email: emailInput,
-                description: descInput,
-                userName: state
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(response => {
-            doctorForm.querySelector('#name').value = '', doctorForm.querySelector('#email').value = '', doctorForm.querySelector('#description').value = '',
-                alert('New doctor have been added successfully.')
-            fetchDoctors()
-        })
+        // check whether the doctor with name and email already existed
+        let doctorExist = false;
+        fetch(`${doctorURL}`)
+            .then(res => res.json())
+            .then(json => {
+                for (let i = 0; i < json.length; i++) {
+                    if (nameInput === json[i].name.toString()
+                        && emailInput === json[i].email.toString()) {
+                        doctorExist = true;
+                        alert("Doctor with the same name and email already existed")
+                        break;
+                    }
+                }
+            }).then(() => {
+                if (doctorExist === false) {
+                    fetch(`${doctorURL}`, {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            name: nameInput,
+                            email: emailInput,
+                            description: descInput,
+                            userName: state
+                        }),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(response => {
+                            doctorForm.querySelector('#name').value = '', doctorForm.querySelector('#email').value = '', doctorForm.querySelector('#description').value = '',
+                                alert('New doctor have been added successfully.')
+                            fetchDoctors()
+                        }
+                    )
 
+                }
+            }
+        )
     })
 
     //addEventlistener to 2 button edit and delete
@@ -60,7 +79,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="input-group mb-3">
                     <input required id="edit-name" value="${doctorData.name}" class="form-control">
                     <input required type="email" name="email" id="edit-email" value="${doctorData.email}" class="form-control">
-                    <input required id="edit-description" value="${doctorData.description}" class="form-control">
+                    <!--<input required id="edit-description" value="${doctorData.description}" class="form-control">-->
+                    <select class="form-control" id="edit-description" name="description" required>
+                        <option value="Bone">Bone</option>
+                        <option value="General Physician">General Physician</option>
+                        <option value="Heart">Heart</option>
+                        <option value="Lung">Lung</option>
+                        <option value="Neurology">Neurology</option>
+                    </select>
                     <div class="input-group-prepend">
                     <input class="btn btn-outline-primary" type="submit" value="Edit Doctor">
                     <a onclick="CloseInput()" aria-label="Close" data-toggle="tooltip" data-placement="top" title="Close edit">&#10006;</a>
@@ -146,6 +172,7 @@ function fetchDoctors() {
                 var editLink = `<button  class="btn btn-outline-primary" data-id="${doctor[i].id}" id="delete-${doctor[i].id}" data-action="delete">Delete</button>`
                 //var booking = `<button  class="btn btn-outline-primary" data-id="${doctor[i].id}" id="bookinhg-${doctor[i].id}" data-action="booking">Show Bookings</button>`
                 //var b = `<div id="booking"></div>`
+                listItem.innerHTML += '<td>' + doctor[i].id + '</td>';
                 listItem.innerHTML += '<td>' + doctor[i].name + '</td>';
                 listItem.innerHTML += '<td>' + doctor[i].email + '</td>';
                 listItem.innerHTML += '<td>' + doctor[i].description + '</td>';
@@ -155,7 +182,3 @@ function fetchDoctors() {
             }
         })
 }
-// function getAuth() {
-//     fetch(`http://localhost:8081/username`
-//         .then(data => console.log(data)))
-// }

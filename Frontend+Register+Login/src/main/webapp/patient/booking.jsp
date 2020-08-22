@@ -27,6 +27,7 @@
 <div class="container">
     <div id="bookingBody" class="container-fluid" >
         <h1 style="text-align: center">Booking Form</h1>
+        <br>
         <div class="container">
             <label for="doctors">
                 <h3>Available doctors:</h3>

@@ -1,0 +1,54 @@
+#loginStyle{
+    zoom: 1.5;
+    font-size: 700%;
+}
+#inputStyle{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#buttonStyle{
+    margin-top: 10px;
+    width: 35%;
+    margin-bottom: 10px;
+}
+
+#loginContainer{
+    border-style: double;
+    border-color: #ebebeb;
+    border-width: 2px;
+    border-radius: 5px;
+    max-width: 325px;
+}
+
+body{
+    background-color:#ebebeb;
+}
+#bodyContainer{
+    margin:auto;
+    padding: 100px 0;
+}
+
+.trouble-login{
+    color:gray;
+}
+.trouble-login:hover,.trouble-login:focus{
+    text-decoration: underline;
+    color: khaki;
+    cursor:pointer;
+}
+
+#buttonStyle{
+    margin: auto;
+    align-content: center;
+    transition: 0.1s;
+}
+#buttonStyle:hover{
+    transform: scale(1.1);
+}
+#inputPassword{
+    margin: 10px;
+}
+#inputUsername{
+    margin: 10px;
+}

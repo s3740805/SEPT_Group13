@@ -27,8 +27,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // restrict access
+        http.authorizeRequests().antMatchers("/patient/**").access("hasRole('MEMBER')");
         http.authorizeRequests().antMatchers("/admin/**").access("hasRole('ADMIN')");
-        http.authorizeRequests().antMatchers("/patient/**").access("hasRole('ROLE_MEMBER')");
         // denied access handling
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
         // request login
@@ -54,12 +54,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
         // Default ADMIN account
-        auth.inMemoryAuthentication().withUser("admin").password(encrytePassword("admin123")).roles("ADMIN");
+        //auth.inMemoryAuthentication().withUser("admin").password(encrytePassword("admin123")).roles("ADMIN");
+        //auth.inMemoryAuthentication().withUser("patient").password(encrytePassword("patient123")).roles("MEMBER");
     }
 
     // Encrypt password
-    public static String encrytePassword(String password) {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        return encoder.encode(password);
-    }
+//    public static String encrytePassword(String password) {
+//        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+//        return encoder.encode(password);
+//    }
 }
