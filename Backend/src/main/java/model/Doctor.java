@@ -24,6 +24,13 @@ public class Doctor {
                 '}';
     }
 
+    public Doctor(int id,String name, String email, String description) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.description = description;
+    }
+
     public Doctor(String name, String email, String description) {
         this.name = name;
         this.email = email;
@@ -32,6 +39,7 @@ public class Doctor {
 
     public Doctor() {
     }
+
 
     public int getId() {
         return id;

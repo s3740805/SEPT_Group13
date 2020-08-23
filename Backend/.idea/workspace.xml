@@ -2,46 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97217b02-e8fb-4fca-9666-6062ae927518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/DataSeeding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/patientAdmin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingHistory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/patientAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_assert_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_2_0_2_beta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/DoctorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/PatientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/controller/DoctorControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Time.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookingModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/BookingModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DoctorModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/DoctorModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PatientModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/PatientModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/WebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/WebAppInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/DoctorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/PatientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Doctor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Patient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/403Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/403Page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/RoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/validator/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/validator/UserValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BookingModelTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DoctorModelTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PatientModelTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,20 +52,97 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/profile/patientProfile.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/DoctorService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="53" />
+            <state relative-caret-position="-8">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/DoctorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/BookingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/PatientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/PatientController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="45" column="78" lean-forward="true" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Doctor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Doctor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/controller/DoctorControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/DoctorService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/BookingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/BookingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/DoctorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/PatientService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/PatientController.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -79,11 +157,15 @@
     <option name="width" value="1438" />
     <option name="height" value="835" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,6 +183,45 @@
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
@@ -139,21 +260,34 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598180096155" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -167,6 +301,97 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.DoctorControllerTest.shouldReturn404WhenListNotFound">
+    <configuration name="DoctorControllerTest.shouldAddNewDoctor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.DoctorControllerTest" />
+      <option name="METHOD_NAME" value="shouldAddNewDoctor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorControllerTest.shouldReturn404WhenListNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.DoctorControllerTest" />
+      <option name="METHOD_NAME" value="shouldReturn404WhenListNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorControllerTest.shouldUpdateDoctor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.DoctorControllerTest" />
+      <option name="METHOD_NAME" value="shouldUpdateDoctor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorControllerTest.shouldUpdateDoctorIfExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.DoctorControllerTest" />
+      <option name="METHOD_NAME" value="shouldUpdateDoctorIfExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoctorControllerTest.shouldreturnGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.DoctorControllerTest" />
+      <option name="METHOD_NAME" value="shouldreturnGetAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DoctorControllerTest.shouldReturn404WhenListNotFound" />
+        <item itemvalue="JUnit.DoctorControllerTest.shouldUpdateDoctor" />
+        <item itemvalue="JUnit.DoctorControllerTest.shouldUpdateDoctorIfExist" />
+        <item itemvalue="JUnit.DoctorControllerTest.shouldAddNewDoctor" />
+        <item itemvalue="JUnit.DoctorControllerTest.shouldreturnGetAll" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -178,46 +403,115 @@
       <option name="presentableId" value="Default" />
       <updated>1598105751888</updated>
       <workItem from="1598105753402" duration="4989000" />
+      <workItem from="1598125937203" duration="10309000" />
+      <workItem from="1598154046824" duration="8791000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="DoctorControllerTest_shouldUpdateDoctor - 2020.08.23 at 12h 03m 55s.xml">
+      <configuration name="DoctorControllerTest.shouldUpdateDoctor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldUpdateDoctor - 2020.08.23 at 12h 05m 43s.xml">
+      <configuration name="DoctorControllerTest.shouldUpdateDoctor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldUpdateDoctorIfExist - 2020.08.23 at 12h 08m 54s.xml">
+      <configuration name="DoctorControllerTest.shouldUpdateDoctorIfExist" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldUpdateDoctor - 2020.08.23 at 12h 09m 36s.xml">
+      <configuration name="DoctorControllerTest.shouldUpdateDoctor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldUpdateDoctor - 2020.08.23 at 12h 10m 18s.xml">
+      <configuration name="DoctorControllerTest.shouldUpdateDoctor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldUpdateDoctor - 2020.08.23 at 12h 11m 31s.xml">
+      <configuration name="DoctorControllerTest.shouldUpdateDoctor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldReturn404WhenListNotFound - 2020.08.23 at 16h 27m 55s.xml">
+      <configuration name="DoctorControllerTest.shouldReturn404WhenListNotFound" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldReturn404WhenListNotFound - 2020.08.23 at 16h 28m 42s.xml">
+      <configuration name="DoctorControllerTest.shouldReturn404WhenListNotFound" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldUpdateDoctor - 2020.08.23 at 16h 32m 06s.xml">
+      <configuration name="DoctorControllerTest.shouldUpdateDoctor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DoctorControllerTest_shouldReturn404WhenListNotFound - 2020.08.23 at 16h 34m 07s.xml">
+      <configuration name="DoctorControllerTest.shouldReturn404WhenListNotFound" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4989000" />
+    <option name="totallyTimeSpent" value="24089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1438" height="835" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32974428" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32974428" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32974428" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32974428" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -225,8 +519,114 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/profile/patientProfile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
+        <state relative-caret-position="1962">
           <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/config/WebAppInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/DoctorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Doctor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/DoctorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BookingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/BookingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="20" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/controller/DoctorControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1376">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/PatientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="45" column="78" lean-forward="true" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

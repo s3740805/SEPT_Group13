@@ -1,3 +1,4 @@
+package model;
 
 import model.Patient;
 import org.junit.Test;

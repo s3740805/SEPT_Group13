@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import service.BookingService;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -17,41 +18,30 @@ public class BookingController {
     @Autowired
     private SessionFactory sessionFactory;
 
-    //booking
+    @Autowired
+    private BookingService bookingService;
+
+    public BookingController(BookingService bookingService) { this.bookingService = bookingService; }
+
+    // get all booking
     @CrossOrigin
     @RequestMapping(path = "/bookings", method = RequestMethod.GET)
-    public List<Booking> getBooking() {
-        return this.sessionFactory.getCurrentSession().createQuery("from Booking").list();
+    public List<Booking> getBooking() {  return bookingService.getAllBooking();}
 
-    }
-
+    // Create new booking
     @CrossOrigin
     @RequestMapping(path = "/bookings", method = RequestMethod.POST)
-    public int add(@RequestBody Booking booking) {
-        this.sessionFactory.getCurrentSession().saveOrUpdate(booking);
-        return booking.getId();
-    }
+    public int addBooking(@RequestBody Booking booking) { return bookingService.addBooking(booking); }
 
+    // Delete booking by booking id
     @CrossOrigin
     @RequestMapping(path = "/bookings/{id}", method = RequestMethod.DELETE)
-    public void deleteBooking(@PathVariable int id) {
-        Query query = this.sessionFactory.getCurrentSession()
-                .createQuery("from Booking where id=:id");
-        query.setInteger("id", id);
+    public void deleteBooking(@PathVariable int id) { bookingService.deleteBooking(id); }
 
-        Booking booking = (Booking) query.uniqueResult();
-
-        this.sessionFactory.getCurrentSession().delete(booking);
-    }
-
+    // Get bookings by username of PATIENT
     @CrossOrigin
     @RequestMapping(path = "/bookings/{userName}", method = RequestMethod.GET)
-    public List<Booking> getBookingbyUser(@PathVariable String userName) {
-        Query query = this.sessionFactory.getCurrentSession()
-                .createQuery("from Booking where userName=:userName");
-        query.setString("userName", userName);
-        return query.list();
-    }
+    public List<Booking> getBookingbyUser(@PathVariable String userName) { return bookingService.getBookingbyUser(userName); }
 
 
     public SessionFactory getSessionFactory() {
