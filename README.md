@@ -63,6 +63,7 @@
 `Default ADMIN account:`
 > * Username: admin
 > * Password: admin123
+
 `Default PATIENT/USER account:`
 > * Username: patient
 > * Password: patient123
