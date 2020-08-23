@@ -61,5 +61,8 @@
 `Access through:` http://localhost:9090/
 
 `Default ADMIN account:`
->Username: admin
->Password: admin123
+> * Username: admin
+> * Password: admin123
+`Default PATIENT/USER account:`
+> * Username: patient
+> * Password: patient123
