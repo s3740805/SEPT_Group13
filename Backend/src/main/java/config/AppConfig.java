@@ -21,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableWebMvc
-@ComponentScan({"controller"})
+@ComponentScan({"controller","service"})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Override

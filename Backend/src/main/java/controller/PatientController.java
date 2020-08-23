@@ -8,6 +8,8 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import service.PatientService;
+
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -19,59 +21,36 @@ public class PatientController {
     @Autowired
     private SessionFactory sessionFactory;
 
-    // patient
+    @Autowired
+    private PatientService patientService;
+
+    public PatientController(PatientService patientService) { this.patientService = patientService; }
+
+    // Get all patient
     @CrossOrigin
     @RequestMapping(path = "/patients", method = RequestMethod.GET)
-    public List<Patient> getPatients() {
-        return this.sessionFactory.getCurrentSession().createQuery("from Patient").list();
+    public List<Patient> getPatients() { return patientService.getPatients(); }
 
-    }
-
+    // Create new patient
     @CrossOrigin
     @RequestMapping(path = "/patients", method = RequestMethod.POST)
-    public int add(@RequestBody Patient patient) {
-        this.sessionFactory.getCurrentSession().saveOrUpdate(patient);
-        return patient.getId();
-    }
+    public int add(@RequestBody Patient patient) { return patientService.addPatient(patient); }
 
+    // Delete patient by patient id
     @CrossOrigin
     @RequestMapping(path = "/patients/{id}", method = RequestMethod.DELETE)
-    public void deletePatient(@PathVariable int id) {
-        Query query = this.sessionFactory.getCurrentSession()
-                .createQuery("from Patient where id=:id");
-        query.setInteger("id", id);
+    public void deletePatient(@PathVariable int id) { patientService.deletePatient(id); }
 
-        Patient patient = (Patient) query.uniqueResult();
-
-        this.sessionFactory.getCurrentSession().delete(patient);
-    }
-
-//    @CrossOrigin
-//    @RequestMapping(path = "/patients/{id}", method = RequestMethod.PUT)
-//    public void updatePatient(@PathVariable int id, @RequestBody Patient patient) {
-//        Query query =this.sessionFactory.getCurrentSession().createQuery("from Patient where id=:id");;
-//        //query.setInteger("id", id);
-//        patient.setId(id);
-//        this.sessionFactory.getCurrentSession().update(patient);
-//    }
-
+    // Update patient by patient username
     @CrossOrigin
     @RequestMapping(path = "/patients/{username}", method = RequestMethod.PUT)
-    public void updatePatientbyUser(@PathVariable String username, @RequestBody Patient patient) {
-        Query query = this.sessionFactory.getCurrentSession().createQuery("from Patient where username=:username");
-        patient.setUsername(username);
-        this.sessionFactory.getCurrentSession().update(patient);
-    }
+    public void updatePatientbyUser(@PathVariable String username, @RequestBody Patient patient) { patientService.updatePatientbyUser(username,patient); }
 
+    // Get patient by patient username
     @CrossOrigin
     @RequestMapping(path = "/patients/{username}", method = RequestMethod.GET)
-    public Patient getPatientbyUser(@PathVariable String username) {
-        Query query = this.sessionFactory.getCurrentSession()
-                .createQuery("from Patient where username=:username");
-        query.setString("username", username);
-        Patient patient = (Patient) query.uniqueResult();
-        return patient;
-    }
+    public Patient getPatientbyUser(@PathVariable String username) { return patientService.getPatientbyUser(username); }
+
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;

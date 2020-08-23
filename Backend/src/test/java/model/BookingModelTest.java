@@ -1,3 +1,4 @@
+package model;
 
 import model.Booking;
 import org.junit.Assert;
