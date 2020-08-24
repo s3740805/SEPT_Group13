@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
         body {
             padding-top: 3.5rem;
@@ -22,11 +24,16 @@
 <body>
 <jsp:include page="_navigation.jsp"></jsp:include>
 <div class="container">
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
+    <div class="card" style="text-align: center">
+        <c:if test="${pageContext.request.userPrincipal.name != null}">
+            <h1 style="color: #4AA0B5; font-size: 70px">403</h1>
+            <h2 style="font-size: 50px">Sorry! Access denied :( </h2>
+            <h5>Hi <span id="name"
+                         value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}, </span>
+                You do not have permission to access this page!</h5>
+        </c:if>
+    </div>
 
-        <h2>Hi <span id="name" value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</span>
-            <div>You do not have permission to access this page!</div>
-    </c:if>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="${contextPath}/resources/js/bootstrap.min.js"></script>

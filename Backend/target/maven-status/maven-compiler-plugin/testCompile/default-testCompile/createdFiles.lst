@@ -1,8 +1,8 @@
-model\PatientModelTest.class
+model/BookingModelTest.class
 TestConfig.class
+controller/DoctorControllerTest.class
 MyTest.class
-model\BookingModelTest.class
-controller\DoctorControllerTest.class
 MyTest$2.class
-model\DoctorModelTest.class
+model/DoctorModelTest.class
 MyTest$1.class
+model/PatientModelTest.class

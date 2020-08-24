@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Frontend+Register+Login.iml" filepath="$PROJECT_DIR$/Frontend+Register+Login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-registration-login.iml" filepath="$PROJECT_DIR$/springboot-registration-login.iml" />
     </modules>
   </component>
 </project>

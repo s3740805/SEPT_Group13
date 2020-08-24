@@ -16,9 +16,14 @@
   <body>
 
     <div class="container">
+        <div style="text-align: center">
+            <img src="https://image.flaticon.com/icons/svg/2957/2957872.svg" alt="logo" style="width:60px;">
+            <h1>Doctor Appointment Booking System</h1>
+        </div>
+        <br>
 
-        <form:form method="POST" modelAttribute="userForm" class="form-signin">
-            <h2 class="form-signin-heading">Create your account</h2>
+        <form:form method="POST" modelAttribute="userForm" class="form-signin" style="background-color:white; border-radius: 5px">
+            <h2 class="form-signin-heading">Create new account</h2>
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Username"

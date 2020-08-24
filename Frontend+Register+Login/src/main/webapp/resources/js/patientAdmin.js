@@ -1,10 +1,15 @@
-const patientContainer = document.querySelector('#patient-container')
-const patientDetail = document.querySelector('#patient-details')
-const patientURL = `http://localhost:8080/patients`
-let allPatients = []
+const patientContainer = document.querySelector('#patient-container');
+const patientDetail = document.querySelector('#patient-details');
+const bookingContainer = document.querySelector('#bookings-container');
+const patientURL = `http://localhost:8080/patients`;
+const bookingURL = `http://localhost:8080/bookings`;
+const doctorURL = `http://localhost:8080/doctors`;
+let allPatients = [];
+let allDoctors = [];
 
 document.addEventListener('DOMContentLoaded', function () {
     fetchPatients();
+    fetchDoctors();
     patientContainer.addEventListener('click', (e) => {
         //if click view
         if (e.target.dataset.action === 'view') {
@@ -13,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const patientData = allPatients.find((patient) => {
                 return patient.id == e.target.dataset.id
             })
-            console.log(patientData.username)
+            console.log(patientData.username);
             // set info to the modal
             patientDetail.innerHTML = ''
             patientDetail.innerHTML +=
@@ -32,33 +37,93 @@ document.addEventListener('DOMContentLoaded', function () {
                     <tr><td>Medical History: </td><td>${patientData.medicalHistory}</td></tr>
                 </table>
                 `
+        }else if (e.target.dataset.action === 'booking') {
+            console.log('press booking')
+            // get info from the chosen patient
+            const patientData = allPatients.find((patient) => {
+                return patient.id == e.target.dataset.id
+            })
+            console.log(patientData.username)
+            // get bookings by username
+            fetchBookings(patientData.username)
 
         }
+
     })
 })
 
 //fetch Patients
 function fetchPatients() {
-    patientContainer.innerHTML = ''
+    patientContainer.innerHTML = '';
     fetch(`${patientURL}`)
         .then(response => response.json())
         .then(function (doc) {
             //sort by doctor id small to large
             let patient = doc.filter(d => !(d.id == null)).sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
             for (var i = 0; i < patient.length; i++) {
-                allPatients = patient
+                allPatients = patient;
                 var listItem = document.createElement('tr');
-                var view = `<button  class="btn btn-outline-primary" data-id="${patient[i].id}" id="view-${patient[i].id}" data-action="view" data-toggle="modal" data-target="#myModal">Details</button>`
+                var view = `<button  class="btn btn-outline-primary" data-id="${patient[i].id}" id="view-${patient[i].id}" data-action="view" data-toggle="modal" data-target="#patientModal">Details</button>`;
+                var booking = `<button  class="btn btn-outline-info" data-id="${patient[i].id}" id="booking-${patient[i].id}" data-action="booking" data-action="view" data-toggle="modal" data-target="#bookingModal">View Bookings</button>`;
                 listItem.innerHTML +=
                     `
+                    <td>${patient[i].id}</td>
                     <td>${patient[i].username}</td>
                     <td>${patient[i].fname} ${patient[i].lname}</td>
                     <td>${patient[i].email}</td>
-                    <td>${patient[i].phone}</td>
+                    <td>${booking}</td>
                     <td>${view}</td>
                     `
-
                 patientContainer.appendChild(listItem);
             }
+        })
+}
+
+// Get bookings by username
+function fetchBookings(username) {
+    bookingContainer.innerHTML = '';
+    // fetch all bookings
+    fetch(`${bookingURL}/${username}`)
+        .then(response => response.json())
+        .then(function (booking) {
+            // if no booking yet
+            if (booking.length === 0) {
+                bookingContainer.innerHTML += `<h6>No booking to show.</h6>`
+            } else {
+                // set bookings to modal
+                for (var i = 0; i < booking.length; i++) {
+                    // get doctor name based on doctor_id
+                    // let doctorName = ""
+                    // allDoctors.forEach(doc => {
+                    //     if (doc.id === booking[i].doctor_id) doctorName = doc.name
+                    // });
+                    const doctorData = allDoctors.find((doctor) => {
+                        return doctor.id == booking[i].doctor_id
+                    });
+                    // create row of booking info
+                    var listBook = document.createElement('tr');
+                    listBook.innerHTML +=
+                        `
+                        <td>${booking[i].id}</td>
+                        <td>${doctorData.name}</td>
+                        <td>${booking[i].time}</td>
+                        <td>${booking[i].date}</td>
+                        `
+                    bookingContainer.appendChild(listBook)
+                }
+            }
+        })
+}
+
+//fetch Doctors to get doctor name
+function fetchDoctors() {
+    fetch(`${doctorURL}`)
+        .then(response => response.json())
+        .then(function (json) {
+            // for (let i = 0; i < json.length; i++) {
+            //     let obj = {id: json[i].id, name: json[i].name}
+            //     allDoctors.push(obj)
+            // }
+            allDoctors =json;
         })
 }
