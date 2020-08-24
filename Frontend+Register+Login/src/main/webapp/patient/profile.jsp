@@ -14,7 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
         body {
             padding-top: 3.5rem;
@@ -27,6 +28,7 @@
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <%--Patient Profile Table--%>
 <div class="container">
+    <h3>Profile</h3>
     <div id="id_profile"></div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toppad" >
@@ -36,7 +38,7 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class=" col-md-6 col-lg-6 ">
+                        <div class="col-md-6 col-lg-6">
                             <table class="table table-user-information">
                                 <tbody>
                                 <tr>
@@ -73,7 +75,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class=" col-md-4 col-lg-4 ">
+                        <div class="col-md-5 col-lg-5">
                             <table class="table table-user-information">
                                 <tbody>
                                 <tr>
@@ -99,7 +101,7 @@
                             <div id="save"></div>
                         </div>
 
-                        <span class="pull-right">
+                        <span class="pull-right col-md-1 col-lg-1">
                         <a id="editButton" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning" onclick="patientEdit();changeVisibility()"><i class="glyphicon glyphicon-edit"></i>Edit</a>
                         <a id ="back"></a>
                     </span>
@@ -121,6 +123,7 @@
     })
     // Show Patient Profile
     function getPatient(username) {
+        let id = document.getElementById('id_profile')
         let FirstName = document.getElementById('FirstName')
         let LastName = document.getElementById('LastName')
         let DOB = document.getElementById('DOB')
@@ -132,9 +135,11 @@
         let bloodType =document.getElementById('bloodType')
         let healthStatus=document.getElementById('healthStatus')
         let medicalHistory=document.getElementById('medicalHistory')
+        id.innerHTML = ''
         fetch(`http://localhost:8080/patients/`+username)
             .then(response => response.json())
             .then(function (doc) {
+                id.value = doc.id;
                 FirstName.innerHTML += '<div>' +  doc.fname + '</div>';
                 LastName.innerHTML += '<div>' +  doc.lname + '</div>';
                 DOB.innerHTML ='<div>' + doc.dob+'</div>';
@@ -146,8 +151,6 @@
                 bloodType.innerHTML+= '<div>' +  doc.bloodType + '</div>';
                 healthStatus.innerHTML+= '<div>' +  doc.healthStatus + '</div>';
                 medicalHistory.innerHTML+= '<div>' +  doc.medicalHistory + '</div>';
-
-
 
             })
     }
@@ -165,7 +168,7 @@
               </select>`
         document.getElementById("Address").innerHTML= `<input type="text" id="edit_address">`
         document.getElementById("Email").innerHTML= `<input type="email" name="email" id="edit_email">`
-        document.getElementById("Phone").innerHTML= `<input maxlength="11"  id="edit_phone">`
+        document.getElementById("Phone").innerHTML= `<input type="text" maxlength="11" name="phone"  id="phone">`
         document.getElementById("bloodType").innerHTML=`
               <select id="edit_bloodType">
                   <option value="A">A</option>
@@ -189,7 +192,7 @@
                 document.getElementById("edit_email").value= doc.email;
                 document.getElementById("edit_gender").value = doc.gender;
                 document.getElementById("edit_address").value = doc.address;
-                document.getElementById("edit_phone").value = doc.phone;
+                document.getElementById("phone").value = doc.phone;
                 document.getElementById("edit_bloodType").value = doc.bloodType;
                 document.getElementById("edit_allergies").value= doc.allergies;
                 document.getElementById("edit_healthStatus").value= doc.healthStatus;
@@ -208,12 +211,11 @@
         let editGender = document.getElementById('edit_gender').value
         let editAddress = document.getElementById('edit_address').value
         let editEmail = document.getElementById('edit_email').value
-        let editPhone = document.getElementById('edit_phone').value
+        let editPhone = document.getElementById('phone').value
         let editBloodType = document.getElementById('edit_bloodType').value
         let editAllergies = document.getElementById('edit_allergies').value
         let editHealthStatus = document.getElementById('edit_healthStatus').value
         let editMedicalHistory = document.getElementById('edit_medicalHistory').value
-
 
         let id = document.getElementById('id_profile')
         if (confirm("Are you sure want to change your information")){
@@ -256,7 +258,7 @@
         var el=document.getElementById('edit_email').value;
         var character = el.indexOf("@");
         var dot = el.lastIndexOf(".");
-        var pe = document.getElementById('edit_phone').value;
+        var pe = document.getElementById('phone').value;
         var testphone = isNaN(pe); // This is checking the number
 
 
@@ -303,17 +305,17 @@
         // Checking null value
         if (pe ==""){
             alert("Please enter your phone number");
-            document.getElementById("edit_phone").style.borderColor = "red";// focus on wrong value
+            document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
         if( testphone == true)  {
             alert("Please input number only!");
-            document.getElementById("edit_phone").style.borderColor = "red";// focus on wrong value
+            document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
         if (pe.length < 10){
             alert("Phone number must have 10 numbers")
-            document.getElementById("edit_phone").style.borderColor = "red";// focus on wrong value
+            document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
 

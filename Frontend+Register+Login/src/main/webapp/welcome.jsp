@@ -13,6 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
         body {
             padding-top: 3.5rem;
@@ -22,13 +24,11 @@
 </head>
 
 <body>
-    <jsp:include page="_navigation.jsp"></jsp:include>
-  <div class="container">
+<jsp:include page="_navigation.jsp"></jsp:include>
+  <div class="container" style="text-align: center">
     <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <form id="logoutForm" method="POST" action="${contextPath}/logout">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-        </form>
-        <h2>Welcome <span id="name" value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}</span> | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
+        <h1 style="color: #4AA0B5; font-size: 50px">Hi <span id="name" value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}!</span></h1>
+        <h3>Welcome to our Doctor Appointment Booking System.</h3>
     </c:if>
   </div>
 

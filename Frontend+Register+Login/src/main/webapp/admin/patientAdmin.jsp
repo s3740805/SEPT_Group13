@@ -14,7 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
         body {
             padding-top: 3.5rem;
@@ -26,15 +27,16 @@
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <div class="container">
     <!--Doctor list table-->
-    <h1>Patient List</h1>
+    <h1 style="text-align: center">Patient List</h1>
     <br>
     <table class="table">
         <thead>
         <tr>
+            <th>ID</th>
             <th>Username</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Phone</th>
+            <th></th>
             <th></th>
         </tr>
         </thead>
@@ -42,7 +44,7 @@
         </tbody>
     </table>
     <!-- Patient Detail Modal -->
-    <div class="modal" id="myModal">
+    <div class="modal" id="patientModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
 
@@ -54,6 +56,41 @@
 
                 <!-- Modal body -->
                 <div class="modal-body" id="patient-details">
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Bookings Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Patient Details</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table" id="bookings-table">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Doctor</th>
+                            <th>Time</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody id="bookings-container">
+                        </tbody>
+                    </table>
                 </div>
 
                 <!-- Modal footer -->

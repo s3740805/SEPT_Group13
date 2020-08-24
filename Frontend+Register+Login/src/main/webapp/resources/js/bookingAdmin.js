@@ -55,7 +55,7 @@ function getBookings() {
             for (let i = 0; i < json.length; i++) {
                 console.log(json[i])
                 let id = json[i].id
-                let cancel = `<div id="delete" onclick='cancelBooking(${id})'>Delete</div>`
+                let cancel = `<button class="btn btn-outline-primary" id="delete" onclick='cancelBooking(${id})'>Delete</button>`
                 let doctorName = ""
                 doctors.forEach(doc => {
                     if (doc.id === json[i].doctor_id) doctorName = doc.name
