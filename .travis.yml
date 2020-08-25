@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - openjdk10
+  - openjdk11
+os:
+  - linux
+  - osx
+env:
+  - TEST_DIR=Backend
+  - TEST_DIR=Frontend+Register+Login
+before_script: cd $TEST_DIR
+script:
+  - mvn clean install
+  - mvn test
