@@ -1,6 +1,6 @@
 # COSC2101 SEPT
 
-# Doctor Appointment Booking System
+# Doctor Appointment Booking System [![Build Status](https://travis-ci.org/s3740805/SEPT_Group13.svg?branch=master)](https://travis-ci.org/s3740805/SEPT_Group13)
 
 ### Group 13
 > * Nguyen Le Thuy Linh
