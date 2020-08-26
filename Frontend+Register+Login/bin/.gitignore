@@ -1,0 +1,9 @@
+/.idea/
+/.project
+/Dockerfile
+/Frontend+Register+Login.iml
+/README.md
+/docker-compose.yml
+/pom.xml
+/src/
+/target/

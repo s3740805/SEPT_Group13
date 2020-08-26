@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="model.DoctorModelTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="model.DoctorModelTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
@@ -66,7 +66,7 @@
   <testcase classname="model.DoctorModelTest" name="testGetEmail" time="0"/>
   <testcase classname="model.DoctorModelTest" name="testSetDescription" time="0.001"/>
   <testcase classname="model.DoctorModelTest" name="testGetName" time="0"/>
-  <testcase classname="model.DoctorModelTest" name="testGetDescription" time="0"/>
-  <testcase classname="model.DoctorModelTest" name="testSetName" time="0.001"/>
-  <testcase classname="model.DoctorModelTest" name="testSetEmail" time="0"/>
+  <testcase classname="model.DoctorModelTest" name="testGetDescription" time="0.001"/>
+  <testcase classname="model.DoctorModelTest" name="testSetName" time="0.002"/>
+  <testcase classname="model.DoctorModelTest" name="testSetEmail" time="0.001"/>
 </testsuite>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="22" failures="0" name="model.PatientModelTest" time="0.013" errors="0" skipped="0">
+<testsuite tests="22" failures="0" name="model.PatientModelTest" time="0.034" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
@@ -65,24 +65,24 @@
   </properties>
   <testcase classname="model.PatientModelTest" name="testGetBloodType" time="0.001"/>
   <testcase classname="model.PatientModelTest" name="testSetMedicalHistory" time="0.001"/>
-  <testcase classname="model.PatientModelTest" name="testSetAllergies" time="0"/>
+  <testcase classname="model.PatientModelTest" name="testSetAllergies" time="0.002"/>
   <testcase classname="model.PatientModelTest" name="testGetEmail" time="0.001"/>
-  <testcase classname="model.PatientModelTest" name="testGetPhone" time="0.001"/>
-  <testcase classname="model.PatientModelTest" name="testSetFirstName" time="0.001"/>
+  <testcase classname="model.PatientModelTest" name="testGetPhone" time="0"/>
+  <testcase classname="model.PatientModelTest" name="testSetFirstName" time="0.002"/>
   <testcase classname="model.PatientModelTest" name="testSetHealthStatus" time="0.001"/>
   <testcase classname="model.PatientModelTest" name="testGetAddress" time="0"/>
   <testcase classname="model.PatientModelTest" name="testGetMedicalHistory" time="0"/>
-  <testcase classname="model.PatientModelTest" name="testSetBloodType" time="0.002"/>
-  <testcase classname="model.PatientModelTest" name="testSetLastName" time="0.001"/>
+  <testcase classname="model.PatientModelTest" name="testSetBloodType" time="0.003"/>
+  <testcase classname="model.PatientModelTest" name="testSetLastName" time="0.003"/>
   <testcase classname="model.PatientModelTest" name="testGetLastName" time="0"/>
   <testcase classname="model.PatientModelTest" name="testGetFistName" time="0"/>
-  <testcase classname="model.PatientModelTest" name="testSetGender" time="0.001"/>
+  <testcase classname="model.PatientModelTest" name="testSetGender" time="0.006"/>
   <testcase classname="model.PatientModelTest" name="testGetAllergies" time="0"/>
-  <testcase classname="model.PatientModelTest" name="testSetAddress" time="0.001"/>
+  <testcase classname="model.PatientModelTest" name="testSetAddress" time="0.005"/>
   <testcase classname="model.PatientModelTest" name="testGetGender" time="0"/>
-  <testcase classname="model.PatientModelTest" name="testGetDoB" time="0"/>
-  <testcase classname="model.PatientModelTest" name="testSetDoB" time="0.001"/>
+  <testcase classname="model.PatientModelTest" name="testGetDoB" time="0.001"/>
+  <testcase classname="model.PatientModelTest" name="testSetDoB" time="0.002"/>
   <testcase classname="model.PatientModelTest" name="testGetHealthStatus" time="0"/>
-  <testcase classname="model.PatientModelTest" name="testSetEmail" time="0.001"/>
-  <testcase classname="model.PatientModelTest" name="testSetPhone" time="0"/>
+  <testcase classname="model.PatientModelTest" name="testSetEmail" time="0.002"/>
+  <testcase classname="model.PatientModelTest" name="testSetPhone" time="0.004"/>
 </testsuite>
