@@ -13,8 +13,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import service.BookingService;
 
-import java.sql.Date;
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,12 +47,8 @@ public class BookingControllerTest {
     @Test
     public void shouldReturnGetAll() throws Exception{
         List<Booking> bookings = new ArrayList();
-        bookings.add(new Booking(1,1,1,
-                new Time(9,30,0),
-                new Date(2020,8,27)));
-        bookings.add(new Booking(2,2,1,
-                new Time(16,0,0),
-                new Date(2020,8,30)));
+        bookings.add(new Booking(1,1, null,null));
+        bookings.add(new Booking(2,1,null,null));
 
         given(bookingService.getAllBooking()).willReturn(bookings);
         mockMvc.perform(get("/bookings"))
@@ -68,10 +62,7 @@ public class BookingControllerTest {
 
     @Test
     public void shouldMakeNewBooking() throws Exception{
-        Booking booking = new Booking(1,1,1,
-                new Time(9,30,0),
-                new Date(2020,8,27));
-
+        Booking booking = new Booking(1,1,null,null);
         given(bookingService.addBooking(booking)).willReturn(booking.getId());
         mockMvc.perform(
                 post("/bookings")
@@ -79,15 +70,14 @@ public class BookingControllerTest {
                     .accept(MediaType.APPLICATION_JSON_UTF8)
                     .content(asJsonString(booking)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", is(0))); //changed to 0 worked, put booking.get => khong duoc
+                // Actual is 0. booking.getId() resulted in 0, because there is no id
+                .andExpect(jsonPath("$", is(booking.getId())));
         verify(bookingService, times(1)).addBooking(Mockito.any(Booking.class));
     }
 
     @Test
     public void shouldCancelBooking() throws Exception{
-        Booking booking = new Booking(1,1,1,
-                new Time(9,30,0),
-                new Date(2020,8,27));
+        Booking booking = new Booking(1,1, null, null);
         given(bookingService.addBooking(booking)).willReturn(booking.getId());
         doNothing().when(bookingService).deleteBooking(booking.getId());
         mockMvc.perform(
