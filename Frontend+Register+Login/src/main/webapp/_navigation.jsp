@@ -14,6 +14,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
+                    <!-- For ADMIN -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                             Admin
@@ -24,7 +25,7 @@
                             <a class="dropdown-item" href="/admin/booking">Bookings</a>
                         </div>
                     </li>
-
+                    <!-- For PATIENT -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop 2" data-toggle="dropdown">
                             Patient

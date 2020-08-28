@@ -20,6 +20,15 @@ public class User {
     @ManyToMany
     private Set<Role> roles;
 
+    public User(String username, String password, String passwordConfirm) {
+        this.username = username;
+        this.password = password;
+        this.passwordConfirm = passwordConfirm;
+    }
+
+    public User() {
+    }
+
     public Long getId() {
         return id;
     }

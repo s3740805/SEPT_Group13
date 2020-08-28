@@ -25,6 +25,7 @@
     <title>Profile</title>
 </head>
 <body>
+<!-- Navigation -->
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <%--Patient Profile Table--%>
 <div class="container">

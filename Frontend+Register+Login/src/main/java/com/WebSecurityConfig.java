@@ -52,15 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        // encode the password
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
-        // Default ADMIN account
-        //auth.inMemoryAuthentication().withUser("admin").password(encrytePassword("admin123")).roles("ADMIN");
-        //auth.inMemoryAuthentication().withUser("patient").password(encrytePassword("patient123")).roles("MEMBER");
     }
-
-    // Encrypt password
-//    public static String encrytePassword(String password) {
-//        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-//        return encoder.encode(password);
-//    }
 }

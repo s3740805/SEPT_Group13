@@ -35,8 +35,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public LocalSessionFactoryBean sessionFactory(){
 
         Properties properties = new Properties();
-        //For Postgresql
-        //properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         //For mysql
         properties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         properties.put("hibernate.show_sql", true);

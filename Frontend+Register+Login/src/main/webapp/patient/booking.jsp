@@ -24,17 +24,20 @@
     </style>
 </head>
 <body>
+<!--Navigation-->
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <div class="container">
     <div id="bookingBody" class="container-fluid" >
+        <!-- Booking form -->
         <h1 style="text-align: center">Booking Form</h1>
         <br>
         <div class="container">
+            <!-- Doctors -->
             <label for="doctors">
                 <h3>Available doctors:</h3>
             </label>
             <select class="form-control" id="doctors" name="doctors" required>
-
+            <!-- Date -->
             </select>
             <br>
             <label for="appointmentDate">
@@ -43,6 +46,7 @@
             <br>
             <input class="form-control" type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate" required>
             <br>
+            <!-- Time -->
             <label for="times">
                 <h3>Select time:</h3>
             </label>

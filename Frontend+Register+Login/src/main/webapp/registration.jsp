@@ -16,14 +16,16 @@
   <body>
 
     <div class="container">
+        <!-- Logo and name of system -->
         <div style="text-align: center">
             <img src="https://image.flaticon.com/icons/svg/2957/2957872.svg" alt="logo" style="width:60px;">
             <h1>Doctor Appointment Booking System</h1>
         </div>
         <br>
-
+        <!-- Registration form -->
         <form:form method="POST" modelAttribute="userForm" class="form-signin" style="background-color:white; border-radius: 5px">
             <h2 class="form-signin-heading">Create new account</h2>
+            <!-- username -->
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Username"
@@ -31,14 +33,14 @@
                     <form:errors path="username"></form:errors>
                 </div>
             </spring:bind>
-
+            <!-- password -->
             <spring:bind path="password">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
                     <form:errors path="password"></form:errors>
                 </div>
             </spring:bind>
-
+            <!-- repeat password-->
             <spring:bind path="passwordConfirm">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="password" path="passwordConfirm" class="form-control"
@@ -46,8 +48,9 @@
                     <form:errors path="passwordConfirm"></form:errors>
                 </div>
             </spring:bind>
-
+            <!-- Submit button -->
             <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+            <!-- login button -->
             <h5 class="text-center">Already have an account?  <a href="${contextPath}/login">Login here.</a></h5>
         </form:form>
 

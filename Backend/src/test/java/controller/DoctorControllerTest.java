@@ -52,6 +52,7 @@ public class DoctorControllerTest {
                 .build();
     }
 
+    // Test GET all doctors
     @Test
     public void shouldReturnGetAll() throws Exception {
         List<Doctor> datas = new ArrayList();
@@ -67,7 +68,7 @@ public class DoctorControllerTest {
         verify(doctorService, times(1)).getAllDoctors();
     }
 
-
+    // Test POST a doctor
     @Test
     public void shouldAddNewDoctor() throws Exception {
         Doctor doctor = new Doctor("linh1", null, null);
@@ -82,6 +83,7 @@ public class DoctorControllerTest {
         verify(doctorService, times(1)).addDoctor(Mockito.any(Doctor.class));
     }
 
+    // Test DELETE doctor by ID
     @Test
     public void shouldDeleteDoctor() throws Exception {
         Doctor doctor = new Doctor("linh1", null, null);
@@ -93,6 +95,7 @@ public class DoctorControllerTest {
         verify(doctorService, times(1)).deleteDoctor(doctor.getId());
     }
 
+    // Test PUT doctor by ID
     @Test
     public void shouldUpdateDoctor() throws Exception {
         Doctor doctor = new Doctor(1,"linh1", null, null);
