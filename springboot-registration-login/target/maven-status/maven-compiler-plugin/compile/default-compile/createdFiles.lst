@@ -1,0 +1,13 @@
+com/model/Role.class
+com/service/UserDetailsServiceImpl.class
+com/service/SecurityService.class
+com/repository/UserRepository.class
+com/WebSecurityConfig.class
+com/service/SecurityServiceImpl.class
+com/WebApplication.class
+com/model/User.class
+com/validator/UserValidator.class
+com/web/UserController.class
+com/service/UserServiceImpl.class
+com/service/UserService.class
+com/repository/RoleRepository.class

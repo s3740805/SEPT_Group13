@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d5530246-c760-48fb-8bb9-2d9b55f821b5" name="Default Changelist" comment="">
+      <change beforePath="$USER_HOME$/SEPT" beforeDir="false" afterPath="$USER_HOME$/SEPT" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gCzSoxXvhpon8ZrEZswkoaYeET" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/mot" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebApplication (1)">
+    <configuration name="WebApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-registration-login" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-registration-login" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hellokoding.auth.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5530246-c760-48fb-8bb9-2d9b55f821b5" name="Default Changelist" comment="" />
+      <created>1597633365657</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597633365657</updated>
+      <workItem from="1597633366755" duration="238000" />
+      <workItem from="1597633882168" duration="836000" />
+      <workItem from="1597634761288" duration="154000" />
+      <workItem from="1597634964149" duration="1331000" />
+      <workItem from="1597642260013" duration="2259000" />
+      <workItem from="1598541107881" duration="365000" />
+      <workItem from="1598541700000" duration="41000" />
+      <workItem from="1598541776292" duration="32000" />
+      <workItem from="1598541824459" duration="727000" />
+      <workItem from="1598622078262" duration="83000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="713" height="139" key="GridCell.Tab.0.bottom" timestamp="1598542889161">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1598542889161" />
+    <state width="713" height="139" key="GridCell.Tab.0.center" timestamp="1598542889158">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1598542889158" />
+    <state width="713" height="139" key="GridCell.Tab.0.left" timestamp="1598542889146">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1598542889146" />
+    <state width="713" height="139" key="GridCell.Tab.0.right" timestamp="1598542889160">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1598542889160" />
+    <state width="713" height="139" key="GridCell.Tab.1.bottom" timestamp="1598542889163">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.1.bottom/0.23.1280.716@0.23.1280.716" timestamp="1598542889163" />
+    <state width="713" height="139" key="GridCell.Tab.1.center" timestamp="1598542889162">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.1.center/0.23.1280.716@0.23.1280.716" timestamp="1598542889162" />
+    <state width="713" height="139" key="GridCell.Tab.1.left" timestamp="1598542889161">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.1.left/0.23.1280.716@0.23.1280.716" timestamp="1598542889161" />
+    <state width="713" height="139" key="GridCell.Tab.1.right" timestamp="1598542889162">
+      <screen x="0" y="23" width="1280" height="716" />
+    </state>
+    <state width="713" height="139" key="GridCell.Tab.1.right/0.23.1280.716@0.23.1280.716" timestamp="1598542889162" />
+    <state x="278" y="23" key="Maven.ArtifactSearchDialog" timestamp="1597644532038">
+      <screen x="0" y="23" width="1280" height="723" />
+    </state>
+    <state x="278" y="23" key="Maven.ArtifactSearchDialog/0.23.1280.723@0.23.1280.723" timestamp="1597644532038" />
+  </component>
+</project>
