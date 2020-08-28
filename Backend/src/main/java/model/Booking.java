@@ -85,4 +85,12 @@ public class Booking {
         this.time = time;
         this.date = date;
     }
+
+    public Booking(int patient_id, int doctor_id, Time time, Date date, String userName) {
+        this.patient_id = patient_id;
+        this.doctor_id = doctor_id;
+        this.time = time;
+        this.date = date;
+        this.userName = userName;
+    }
 }

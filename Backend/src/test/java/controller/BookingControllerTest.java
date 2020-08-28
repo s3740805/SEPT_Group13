@@ -61,6 +61,24 @@ public class BookingControllerTest {
         verify(bookingService,times(1)).getAllBooking();
     }
 
+    // Test GET bookings by username
+    @Test
+    public void shouldReturnGetBookingsbyUsername() throws Exception {
+        Booking booking1 = new Booking(1, 1, null, null, "patient123");
+        Booking booking2 = new Booking(1, 2, null, null, "patient123");
+        List<Booking> bookings = new ArrayList();
+        bookings.add(booking1);
+        bookings.add(booking2);
+        given(bookingService.getBookingbyUser(booking1.getUserName())).willReturn(bookings);
+        mockMvc.perform(get("/bookings/"+ booking1.getUserName()))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$", hasSize(2)))
+                .andExpect(jsonPath("$[0].userName", is(booking2.getUserName())))
+                .andExpect(jsonPath("$[1].userName", is(booking2.getUserName())));
+        verify(bookingService, times(1)).getBookingbyUser("patient123");
+    }
+
     // Test POST a booking
     @Test
     public void shouldMakeNewBooking() throws Exception{
