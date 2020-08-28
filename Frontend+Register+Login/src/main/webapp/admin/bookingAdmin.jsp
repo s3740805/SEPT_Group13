@@ -40,6 +40,7 @@
     <title>Booking List</title>
 </head>
 <body>
+<!--Navigation-->
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <div class="container">
     <!--        Heading-->

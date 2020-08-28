@@ -51,6 +51,7 @@ public class PatientControllerTest {
                 .build();
     }
 
+    // Test GET all patients
     @Test
     public void shouldReturnGetAll() throws Exception {
         List<Patient> datas = new ArrayList();
@@ -65,7 +66,8 @@ public class PatientControllerTest {
                 .andExpect(jsonPath("$[1].name",is("cuong2")));
         verify(patientService,times(1)).getPatients();
     }
-    
+
+    // Test POST a patient
     @Test
     public void shouldAddNewPatient() throws Exception{
         Patient patient =new Patient("cuong1",null,null,null,null,null,null,null,null,null,null,null);
@@ -81,6 +83,7 @@ public class PatientControllerTest {
         
     }
 
+    // Test DELETE patient by ID
     @Test
     public void shouldDeletePatient()throws Exception{
         Patient patient = new Patient("cuong1",null,null,null,null,null,null,null,null,null,null,null);
@@ -92,6 +95,7 @@ public class PatientControllerTest {
 
     }
 
+    // Test PUT patient by username
     @Test
     public void shouldUpdatePatient()throws Exception{
         Patient patient =new Patient("cuong","cuong1",null,null,null,null,null,null,null,null,null,null,null);

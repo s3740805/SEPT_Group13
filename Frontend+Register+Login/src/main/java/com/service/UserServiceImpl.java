@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    // Save to register
+    // Register new user with role ROLE_MEMBER (patient)
     @Override
     public void save(User user) {
         if (roleRepository.findByName("ROLE_MEMBER") == null) {

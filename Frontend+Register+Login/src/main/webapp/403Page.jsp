@@ -7,7 +7,6 @@
 <head>
     <meta charset="utf-8">
     <title>403 ERROR</title>
-    <%--<link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">--%>
     <%--boostrap--%>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,9 +21,11 @@
     </style>
 </head>
 <body>
+<!-- Navigation -->
 <jsp:include page="_navigation.jsp"></jsp:include>
 <div class="container">
     <div class="card" style="text-align: center">
+        <!-- If access with unexpected role -->
         <c:if test="${pageContext.request.userPrincipal.name != null}">
             <h1 style="color: #4AA0B5; font-size: 70px">403</h1>
             <h2 style="font-size: 50px">Sorry! Access denied :( </h2>

@@ -24,9 +24,12 @@
 </head>
 
 <body>
+<!-- Navigation -->
 <jsp:include page="_navigation.jsp"></jsp:include>
+<!-- Content -->
   <div class="container" style="text-align: center">
     <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <!-- welcome message with logged username -->
         <h1 style="color: #4AA0B5; font-size: 50px">Hi <span id="name" value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}!</span></h1>
         <h3>Welcome to our Doctor Appointment Booking System.</h3>
     </c:if>
@@ -34,7 +37,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
-      sessionStorage.setItem("state", document.getElementById('name').getAttribute('value'))
+      // Store username in sessionStorage for later use
+      sessionStorage.setItem("state", document.getElementById('name').getAttribute('value'));
+      // Create new patient with this.username if username is not existing (except admin)
       let state = sessionStorage.getItem("state");
       let havePatient = false;
       fetch('http://localhost:8080/patients')
@@ -55,7 +60,6 @@
                   },
                   method: "POST",
                   body: JSON.stringify({username: state})
-
               })
           }
       })

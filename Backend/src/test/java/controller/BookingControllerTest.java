@@ -44,6 +44,7 @@ public class BookingControllerTest {
         mockMvc = MockMvcBuilders.standaloneSetup(bookingController).build();
     }
 
+    // Test GET all bookings
     @Test
     public void shouldReturnGetAll() throws Exception{
         List<Booking> bookings = new ArrayList();
@@ -60,6 +61,7 @@ public class BookingControllerTest {
         verify(bookingService,times(1)).getAllBooking();
     }
 
+    // Test POST a booking
     @Test
     public void shouldMakeNewBooking() throws Exception{
         Booking booking = new Booking(1,1,null,null);
@@ -70,11 +72,11 @@ public class BookingControllerTest {
                     .accept(MediaType.APPLICATION_JSON_UTF8)
                     .content(asJsonString(booking)))
                 .andExpect(status().isOk())
-                // Actual is 0. booking.getId() resulted in 0, because there is no id
                 .andExpect(jsonPath("$", is(booking.getId())));
         verify(bookingService, times(1)).addBooking(Mockito.any(Booking.class));
     }
 
+    // Test DELETE booking by ID
     @Test
     public void shouldCancelBooking() throws Exception{
         Booking booking = new Booking(1,1, null, null);

@@ -1,7 +1,9 @@
+// Whenever load the page
 document.addEventListener('DOMContentLoaded', function () {
     getDoctors();
 })
 
+// Check booking that have booked or not
 function checkAvailable() {
     let state = sessionStorage.getItem("state");
     let doctorID = document.getElementById('doctors').value.split('.')[0];
@@ -9,6 +11,7 @@ function checkAvailable() {
     let time = document.getElementById('times').value;
     // console.log ( patientID , patientName,doctorID,date,time)
     let booked = false;
+    // GET booking to check
     fetch('http://localhost:8080/bookings')
         .then(res => res.json())
         .then(json => {
@@ -25,7 +28,8 @@ function checkAvailable() {
                 }
             }
         }).then(() => {
-        if (booked === false) {
+            // If have not been booked => POST
+            if (booked === false) {
             fetch('http://localhost:8080/bookings', {
                 headers: {
                     'Accept': 'application/json',
@@ -39,6 +43,8 @@ function checkAvailable() {
         }
     })
 }
+
+// GET doctors for the form
 function getDoctors() {
     let doctorList = document.getElementById('doctors')
     doctorList.innerHTML = ''
