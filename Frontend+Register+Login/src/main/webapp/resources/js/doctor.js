@@ -191,6 +191,21 @@ function fetchBookings(doctorId) {
             if (booking.length === 0){
                 bookingContainer.innerHTML += `<h6>No booking to show.</h6>`
             }else{
+                // sort bookings in descending
+                booking.sort((a, b) => {
+                    if (new Date(parseInt(a.date.split("-")[0]),
+                        parseInt(a.date.split("-")[1]) - 1,
+                        parseInt(a.date.split("-")[2]),
+                        parseInt(a.time.split(":")[0]),
+                        parseInt(a.time.split(":")[1])) >
+                        new Date(parseInt(b.date.split("-")[0]),
+                            parseInt(b.date.split("-")[1]) - 1,
+                            parseInt(b.date.split("-")[2]),
+                            parseInt(b.time.split(":")[0]),
+                            parseInt(b.time.split(":")[1])))
+                        return -1
+                    else return 1
+                })
                 // set bookings to modal
                 for (var i = 0; i < booking.length; i++) {
                     var listBook = document.createElement('tr');

@@ -90,13 +90,24 @@ function fetchBookings(username) {
             if (booking.length === 0) {
                 bookingContainer.innerHTML += `<h6>No booking to show.</h6>`
             } else {
+                // sort bookings in descending
+                booking.sort((a, b) => {
+                    if (new Date(parseInt(a.date.split("-")[0]),
+                        parseInt(a.date.split("-")[1]) - 1,
+                        parseInt(a.date.split("-")[2]),
+                        parseInt(a.time.split(":")[0]),
+                        parseInt(a.time.split(":")[1])) >
+                        new Date(parseInt(b.date.split("-")[0]),
+                            parseInt(b.date.split("-")[1]) - 1,
+                            parseInt(b.date.split("-")[2]),
+                            parseInt(b.time.split(":")[0]),
+                            parseInt(b.time.split(":")[1])))
+                        return -1
+                    else return 1
+                })
                 // set bookings to modal
                 for (var i = 0; i < booking.length; i++) {
                     // get doctor name based on doctor_id
-                    // let doctorName = ""
-                    // allDoctors.forEach(doc => {
-                    //     if (doc.id === booking[i].doctor_id) doctorName = doc.name
-                    // });
                     const doctorData = allDoctors.find((doctor) => {
                         return doctor.id == booking[i].doctor_id
                     });
@@ -120,10 +131,6 @@ function fetchDoctors() {
     fetch(`${doctorURL}`)
         .then(response => response.json())
         .then(function (json) {
-            // for (let i = 0; i < json.length; i++) {
-            //     let obj = {id: json[i].id, name: json[i].name}
-            //     allDoctors.push(obj)
-            // }
             allDoctors =json;
         })
 }
