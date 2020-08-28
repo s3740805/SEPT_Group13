@@ -187,6 +187,7 @@
         fetch(`http://localhost:8080/patients/`+state1)
             .then(response => response.json())
             .then(function (doc) {
+                document.getElementById("id_profile").value = doc.id;
                 document.getElementById("edit_fname").value = doc.fname;
                 document.getElementById("edit_lname").value = doc.lname;
                 document.getElementById("edit_dob").value = doc.dob;
@@ -217,14 +218,14 @@
         let editAllergies = document.getElementById('edit_allergies').value
         let editHealthStatus = document.getElementById('edit_healthStatus').value
         let editMedicalHistory = document.getElementById('edit_medicalHistory').value
-
-        let id = document.getElementById('id_profile')
+        let id = document.getElementById('id_profile').value;
         if (confirm("Are you sure want to change your information")){
             fetch(`http://localhost:8080/patients/`+state2, {
                 method: 'PUT',
                 body: JSON.stringify({
-                    id : parseInt(id.value),
+                    id : parseInt(id),
                     name: null,
+                    username : state2,
                     password: null,
                     fname: editFirstName,
                     lname: editLastName,
