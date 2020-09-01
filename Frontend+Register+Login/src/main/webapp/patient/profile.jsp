@@ -44,11 +44,11 @@
                                 <tbody>
                                 <tr>
                                     <td>First Name:</td>
-                                    <td id="FirstName"><td/>
+                                    <td><div id="FirstName"></div><td/>
                                 </tr>
                                 <tr>
                                     <td>Last Name:</td>
-                                    <td id="LastName"></td>
+                                    <td><div id="LastName"></div></td>
                                 </tr>
                                 <tr>
                                     <td>Date of Birth:</td>
@@ -158,8 +158,8 @@
 // Edit Patient Profile
     function patientEdit() {
         let state1 = sessionStorage.getItem("state");
-        document.getElementById("FirstName").innerHTML = `<form action="process-action.html" ><input type="text" id="edit_fname" required></form>`
-        document.getElementById("LastName").innerHTML = `<input type="text" id="edit_lname">`
+        document.getElementById("FirstName").innerHTML = `<input type="text" id="edit_fname"><div id="wFirstName" style="color: red"></div>`
+        document.getElementById("LastName").innerHTML = `<input type="text" id="edit_lname"><div id="wLastName" style="color: red"></div>`
         document.getElementById("DOB").innerHTML = `<input type="date" name="datemax" max = "2020-08-24" id="edit_dob">`
         document.getElementById("Gender").innerHTML =
             `<select id="edit_gender">
@@ -167,9 +167,9 @@
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
               </select>`
-        document.getElementById("Address").innerHTML= `<input type="text" id="edit_address">`
-        document.getElementById("Email").innerHTML= `<input type="email" name="email" id="edit_email">`
-        document.getElementById("Phone").innerHTML= `<input type="text" maxlength="11" name="phone"  id="phone">`
+        document.getElementById("Address").innerHTML= `<input type="text" id="edit_address"><div id="wAddress" style="color: red"></div>`
+        document.getElementById("Email").innerHTML= `<input type="email" name="email" id="edit_email"><div id="wEmail" style="color: red"></div>`
+        document.getElementById("Phone").innerHTML= `<input type="text" maxlength="11" name="phone"  id="phone"><div id="wPhone" style="color: red"></div>`
         document.getElementById("bloodType").innerHTML=`
               <select id="edit_bloodType">
                   <option value="A">A</option>
@@ -181,7 +181,7 @@
         document.getElementById("allergies").innerHTML= `<input type="text" id="edit_allergies">`
         document.getElementById("healthStatus").innerHTML= `<input type="text" id="edit_healthStatus">`
         document.getElementById("medicalHistory").innerHTML= `<input type="text" id="edit_medicalHistory">`
-        document.getElementById("save").innerHTML+= `<button type="submit" class="btn btn-success" onclick="validateForm()">Save</button>`
+        document.getElementById("save").innerHTML+= `<button type="submit" class="btn btn-success" onclick="validateFormFName();validateFormLName();validateFormAddress();validateFormEmail();validateFormPhone();saveValidation()">Save</button>`
         document.getElementById("back").innerHTML+=`<a data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back</a>`
 
         fetch(`http://localhost:8080/patients/`+state1)
@@ -252,80 +252,122 @@
     }
 
     // Validation input
-    function validateForm()  {
+
+    // Validation for first name
+    function validateFormFName() {
         var letters = /^[A-Za-z]+$/; // This value for checking the letter
         var fn = document.getElementById("edit_fname").value;
-        var ln = document.getElementById("edit_lname").value;
-        var ad = document.getElementById("edit_address").value;
-        var el=document.getElementById('edit_email').value;
-        var character = el.indexOf("@");
-        var dot = el.lastIndexOf(".");
-        var pe = document.getElementById('phone').value;
-        var testphone = isNaN(pe); // This is checking the number
-
-
-
         // Checking null value
         if(fn == "") {
-            alert("Please enter your First Name");
+            document.getElementById("wFirstName").innerHTML= "Please enter your First Name";
             document.getElementById("edit_fname").style.borderColor = "red";// focus on wrong value
             return false;
+
         }
         if(fn.match(letters) ){
         }else {
-            alert("Please input alphabet characters only")
+            document.getElementById("wFirstName").innerHTML="Please input alphabet characters only";
             document.getElementById("edit_fname").style.borderColor = "red";// focus on wrong value
             return false;}
+
+        document.getElementById("wFirstName").innerHTML= "";
+        document.getElementById("edit_fname").style.borderColor = "";
+        return true;
+
+
+    }
+    // Validation for Last Name
+    function validateFormLName() {
+        var letters = /^[A-Za-z]+$/; // This value for checking the letter
+        var ln = document.getElementById("edit_lname").value;
         // Checking null value
         if(ln == "") {
-            alert("Please enter your Last Name");
+            document.getElementById("wLastName").innerHTML="Please enter your Last Name";
             document.getElementById("edit_lname").style.borderColor = "red";// focus on wrong value
             return false;
         }
         if(ln.match(letters) ){
         }else {
-            alert("Please input alphabet characters only")
+            document.getElementById("wLastName").innerHTML="Please input alphabet characters only";
             document.getElementById("edit_lname").style.borderColor = "red";// focus on wrong value
             return false;}
+
+        document.getElementById("wLastName").innerHTML= "";
+        document.getElementById("edit_lname").style.borderColor = "";
+        return true;
+
+    }
+    // Validation for Address
+    function validateFormAddress() {
+        var ad = document.getElementById("edit_address").value;
         // Checking null value
         if(ad == ""){
-            alert("Please enter your Address");
+            document.getElementById("wAddress").innerHTML="Please enter your Address";
             document.getElementById("edit_address").style.borderColor = "red";// focus on wrong value
             return false
         }
+        document.getElementById("wAddress").innerHTML="";
+        document.getElementById("edit_address").style.borderColor = "";
+        return true;
+
+    }
+
+    // Validation for Email
+    function validateFormEmail() {
+        var el=document.getElementById('edit_email').value;
+        var character = el.indexOf("@");
+        var dot = el.lastIndexOf(".");
         // Checking null value
         if(el == ""){
-            alert("Please enter your Email");
+            document.getElementById("wEmail").innerHTML="Please enter your Email";
             document.getElementById("edit_email").style.borderColor = "red";// focus on wrong value
             return false;
         }
         if((character <1) || (dot<character+2) || (dot+2>el.length)) {
-            alert("Wrong email");
+            document.getElementById("wEmail").innerHTML="Wrong email";
             document.getElementById("edit_email").style.borderColor = "red";// focus on wrong value
             return false;
         }
+        document.getElementById("wEmail").innerHTML="";
+        document.getElementById("edit_email").style.borderColor = "";
+        return true;
+
+    }
+
+    // validation for Phone number
+    function validateFormPhone()  {
+        var pe = document.getElementById('phone').value;
+        var testphone = isNaN(pe); // This is checking the number
         // Checking null value
         if (pe ==""){
-            alert("Please enter your phone number");
+            document.getElementById("wPhone").innerHTML="Please enter your phone number";
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
         if( testphone == true)  {
-            alert("Please input number only!");
+            document.getElementById("wPhone").innerHTML="Please input number only!";
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
         if (pe.length < 10){
-            alert("Phone number must have 10 numbers")
+            document.getElementById("wPhone").innerHTML="Phone number must have 10 numbers";
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
 
-
-
-        editProfile();
+        document.getElementById("wPhone").innerHTML="";
+        document.getElementById("phone").style.borderColor = "";
 
         return true;
+    }
+
+
+    function saveValidation() {
+        if (validateFormFName()==true && validateFormLName()==true && validateFormAddress()==true && validateFormEmail()==true && validateFormPhone()==true){
+            editProfile();
+        }
+
+
     }
 </script>
 
