@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="model.BookingModelTest" time="0" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="controller.BookingControllerTest" time="0.77" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
@@ -63,10 +63,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="model.BookingModelTest" name="testGetDoctorId" time="0"/>
-  <testcase classname="model.BookingModelTest" name="testGetId" time="0"/>
-  <testcase classname="model.BookingModelTest" name="testDate" time="0"/>
-  <testcase classname="model.BookingModelTest" name="testTime" time="0"/>
-  <testcase classname="model.BookingModelTest" name="testGetPatientId" time="0"/>
-  <testcase classname="model.BookingModelTest" name="bookingModelTest" time="0"/>
+  <testcase classname="controller.BookingControllerTest" name="shouldReturnGetAll" time="0.652"/>
+  <testcase classname="controller.BookingControllerTest" name="shouldMakeNewBooking" time="0.067"/>
+  <testcase classname="controller.BookingControllerTest" name="shouldCancelBooking" time="0.027"/>
+  <testcase classname="controller.BookingControllerTest" name="shouldReturnGetBookingsbyUsername" time="0.024"/>
 </testsuite>
