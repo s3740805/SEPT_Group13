@@ -1,7 +1,8 @@
 let doctors = []
 // function to run onload
 document.addEventListener('DOMContentLoaded', function () {
-    let state = sessionStorage.getItem("state") //IMPORTANT: Set state to develop code
+    //sessionStorage.setItem("state","danh1215") //Comment this line when build
+    let state = sessionStorage.getItem("state")
     getBookings();
 })
 
@@ -79,11 +80,20 @@ function getBookings() {
                     doctors.forEach(doc => {
                         if (doc.id === json[i].doctor_id) doctorName = doc.name
                     })
+                    // status: null => Pending, "accepted" => Accepted, "rejected" => Rejected
+                    let status = `<p style="color: #ffdd83">Pending</p>`
+                    if (json[i].status === "accepted"){
+                        status = `<p style="color: limegreen">Accepted</p>`
+                    }
+                    if (json[i].status === "rejected"){
+                        status = `<p style="color: red">Rejected</p>`
+                    }
                     upcomingBookings.innerHTML += '<tr id="bookings">' +
                         '<td>' + json[i].id + '</td>' +
                         '<td>' + doctorName + '</td>' +
                         '<td>' + json[i].time + '</td>' +
                         '<td>' + json[i].date + '</td>' +
+                        '<td>' + status + '</td>' +
                         '<td>' + cancel + '</td>' +
                         '</tr>'
                 }

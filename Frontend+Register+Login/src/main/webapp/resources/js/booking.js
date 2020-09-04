@@ -3,11 +3,29 @@ document.addEventListener('DOMContentLoaded', function () {
     getDoctors();
 })
 
+// Remove error message
+function appointmentDateErrorOk(){
+    document.getElementById("appointmentDateError").style.display = "none"
+    document.getElementById("appointmentDate").style.boxShadow = ""
+}
 // Check booking that have booked or not
 function checkAvailable() {
     let state = sessionStorage.getItem("state");
     let doctorID = document.getElementById('doctors').value.split('.')[0];
     let date = document.getElementById('appointmentDate').value;
+    let today = new Date()
+    let bookingDate = new Date (date.split('-')[0],parseInt(date.split('-')[1]) - 1,
+        parseInt((date.split('-')[2])) + 1)
+    // if the date be booked is less than today, show error
+    if (bookingDate < today){
+        document.getElementById("appointmentDateError").style.display = "block"
+        document.getElementById("appointmentDate").style.boxShadow = "0 0 5px red"
+        return
+    }
+    else {
+        appointmentDateErrorOk()
+    }
+
     let time = document.getElementById('times').value;
     // console.log ( patientID , patientName,doctorID,date,time)
     let booked = false;
@@ -28,8 +46,8 @@ function checkAvailable() {
                 }
             }
         }).then(() => {
-            // If have not been booked => POST
-            if (booked === false) {
+        // If have not been booked => POST
+        if (booked === false) {
             fetch('http://localhost:8080/bookings', {
                 headers: {
                     'Accept': 'application/json',
@@ -40,6 +58,8 @@ function checkAvailable() {
 
             })
             alert('Booked successfully')
+            // Go back to home page ?!
+            window.location.replace("http://localhost:9090")
         }
     })
 }

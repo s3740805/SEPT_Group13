@@ -21,11 +21,17 @@
         body {
             padding-top: 3.5rem;
         }
+        #appointmentDateErrorOk:hover{
+            text-underline: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 <!--Navigation-->
 <jsp:include page="../_navigation.jsp"></jsp:include>
+<!-- Body -->
 <div class="container">
     <div id="bookingBody" class="container-fluid" >
         <!-- Booking form -->
@@ -37,7 +43,7 @@
                 <h3>Available doctors:</h3>
             </label>
             <select class="form-control" id="doctors" name="doctors" required>
-            <!-- Date -->
+                <!-- Date -->
             </select>
             <br>
             <label for="appointmentDate">
@@ -45,6 +51,9 @@
             </label>
             <br>
             <input class="form-control" type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate" required>
+            <small id="appointmentDateError" style="display: none;color: red">Invalid date selection. Date selected is already in the past.
+                <strong id="appointmentDateErrorOk" onclick="appointmentDateErrorOk()" style="color: blue">x</strong></small>
+
             <br>
             <!-- Time -->
             <label for="times">

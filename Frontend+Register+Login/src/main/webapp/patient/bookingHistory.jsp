@@ -55,6 +55,7 @@
             <th>With doctor</th>
             <th>Time</th>
             <th>Date</th>
+            <th>Status</th>
             <th>Action</th>
         </tr>
         </thead>
