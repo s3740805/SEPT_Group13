@@ -2,6 +2,7 @@ package controller;
 
 import model.Booking;
 
+import model.Doctor;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,10 @@ public class BookingController {
     @RequestMapping(path = "/bookings/{userName}", method = RequestMethod.GET)
     public List<Booking> getBookingbyUser(@PathVariable String userName) { return bookingService.getBookingbyUser(userName); }
 
+    //Update booking by booking Id
+    @CrossOrigin
+    @RequestMapping(path = "/bookings/{id}", method = RequestMethod.PUT)
+    public void updateBooking(@PathVariable int id, @RequestBody Booking booking) { bookingService.updateBooking(id,booking); }
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;

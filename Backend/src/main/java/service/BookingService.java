@@ -2,6 +2,7 @@ package service;
 
 import model.Booking;
 
+import model.Doctor;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,5 +44,13 @@ public class BookingService {
                 .createQuery("from Booking where userName=:userName");
         query.setString("userName", userName);
         return query.list(); }
+
+    // Update booking by booking id
+    public void updateBooking(int id, Booking booking) {
+        Query query = this.sessionFactory.getCurrentSession().createQuery("from Booking where id=:id");
+        //query.setInteger("id", id);
+        booking.setId(id);
+        this.sessionFactory.getCurrentSession().update(booking);
+    }
 
 }

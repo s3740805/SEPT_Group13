@@ -21,21 +21,29 @@
         body {
             padding-top: 3.5rem;
         }
-
-        #delete {
-            color: cornflowerblue;
+        button{
+            margin: 0 5px 0 0;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: white;
+            border-color: cornflowerblue;
+        }
+        #accept:hover{
+            background-color: limegreen;
+            color: white;
+            box-shadow: 0 0 5px limegreen;
+        }
+        #reject:hover{
+            background-color: #ffdd83;
+            color: white;
+            box-shadow: 0 0 5px #ffdd83;
+        }
+        #delete:hover{
+            background-color: red;
+            color: white;
+            box-shadow: 0 0 5px red;
         }
 
-        #delete:hover {
-            color: cornflowerblue;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-
-        #delete:active {
-            color: red;
-            cursor: pointer;
-        }
     </style>
     <title>Booking List</title>
 </head>
@@ -55,6 +63,7 @@
             <th>With doctor</th>
             <th>Time</th>
             <th>Date</th>
+            <th>Status</th>
             <th>Action</th>
         </tr>
         </thead>

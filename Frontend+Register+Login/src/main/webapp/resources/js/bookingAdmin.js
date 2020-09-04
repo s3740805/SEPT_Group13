@@ -21,6 +21,62 @@ function cancelBooking(id) {
     }
 }
 
+//This is function to accept a booking
+function acceptBooking(str){
+    let id = str.split(',')[0]
+    let date = str.split(',')[1]
+    let doctor_id = str.split(',')[2]
+    let patient_id = str.split(',')[3]
+    let time = str.split(',')[4]
+    let userName = str.split(',')[5]
+    fetch(`http://localhost:8080/bookings/${id}`,{
+        method: 'PUT',
+        body: JSON.stringify({
+            date: date,
+            doctor_id: doctor_id,
+            patient_id: patient_id,
+            time: time,
+            userName: userName,
+            status: "accepted"
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then( res =>{
+            location.reload()
+        }
+    )
+
+}
+
+//This is function to reject a booking
+function rejectBooking(str){
+    let id = str.split(',')[0]
+    let date = str.split(',')[1]
+    let doctor_id = str.split(',')[2]
+    let patient_id = str.split(',')[3]
+    let time = str.split(',')[4]
+    let userName = str.split(',')[5]
+    fetch(`http://localhost:8080/bookings/${id}`,{
+        method: 'PUT',
+        body: JSON.stringify({
+            date: date,
+            doctor_id: doctor_id,
+            patient_id: patient_id,
+            time: time,
+            userName: userName,
+            status: "rejected"
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then( res =>{
+            location.reload()
+        }
+    )
+
+}
+
 // This is get booking function
 function getBookings() {
     // let state = sessionStorage.getItem("state")
@@ -53,20 +109,31 @@ function getBookings() {
                 else return 1
             })
             for (let i = 0; i < json.length; i++) {
-                console.log(json[i])
+                //console.log(json[i])
                 let id = json[i].id
-                let cancel = `<button class="btn btn-outline-primary" id="delete" onclick='cancelBooking(${id})'>Delete</button>`
+                let cancel = `<button id="delete" onclick='cancelBooking(${id})'>Delete <i class="fas fa-trash"></i> </button>`
+                let str = id + ',' + json[i].date + ',' + json[i].doctor_id + ',' + json[i].patient_id + ',' + json[i].time+ ',' + json[i].userName
+                let accept = `<button id="accept" onclick="acceptBooking('${str}')">Accept <i class="fas fa-check"></i></button>`
+                let reject = `<button id="reject" onclick="rejectBooking('${str}')">Reject <i class="fas fa-times"></i></button>`
                 let doctorName = ""
                 doctors.forEach(doc => {
                     if (doc.id === json[i].doctor_id) doctorName = doc.name
                 })
+                let status = `<p style="color: #ffdd83">Pending</p>`
+                if (json[i].status === "accepted"){
+                    status = `<p style="color: limegreen">Accepted</p>`
+                }
+                if (json[i].status === "rejected"){
+                    status = `<p style="color: red">Rejected</p>`
+                }
                 allBookings.innerHTML += '<tr id="bookings">' +
                     '<td>' + json[i].id + '</td>' +
                     '<td>' + json[i].userName + '</td>' +
                     '<td>' + doctorName + '</td>' +
                     '<td>' + json[i].time + '</td>' +
                     '<td>' + json[i].date + '</td>' +
-                    '<td>' + cancel + '</td>' +
+                    '<td>' + status + '</td>' +
+                    '<td>' + accept+reject+cancel + '</td>' +
                     '</tr>'
             }
         }))

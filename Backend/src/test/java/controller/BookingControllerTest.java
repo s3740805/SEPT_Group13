@@ -2,6 +2,7 @@ package controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Booking;
+import model.Doctor;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -104,5 +105,19 @@ public class BookingControllerTest {
                 delete("/bookings/{id}",booking.getId()))
                 .andExpect(status().isOk());
         verify(bookingService,times(1)).deleteBooking(booking.getId());
+    }
+
+    // Test PUT booking by ID
+    @Test
+    public void shouldUpdateBooking() throws Exception {
+        Booking booking = new Booking(1,1, null, null);
+        given(bookingService.addBooking(booking)).willReturn(booking.getId());
+        doNothing().when(bookingService).updateBooking(booking.getId(),booking);
+        mockMvc.perform(
+                put("/bookings/{id}", booking.getId())
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)
+                        .accept(MediaType.APPLICATION_JSON_UTF8)
+                        .content(asJsonString(booking)))
+                .andExpect(status().isOk());
     }
 }

@@ -2,23 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97217b02-e8fb-4fca-9666-6062ae927518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/dataSources/b1552912-3e2c-4214-8c15-002619780470.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/dataSources/b1552912-3e2c-4214-8c15-002619780470/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdminTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Booking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/BookingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/BookingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/BookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controller/BookingControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controller/BookingControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingAdmin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +55,7 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookingControllerTest.shouldReturnGetBookingsbyUsername">
+  <component name="RunManager" selected="JUnit.BookingControllerTest.shouldUpdateBooking">
     <configuration name="BookingControllerTest.shouldReturnGetBookingsbyUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SampleHibernateSpringMVC" />
       <extension name="coverage">
@@ -69,6 +67,22 @@
       <option name="PACKAGE_NAME" value="controller" />
       <option name="MAIN_CLASS_NAME" value="controller.BookingControllerTest" />
       <option name="METHOD_NAME" value="shouldReturnGetBookingsbyUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookingControllerTest.shouldUpdateBooking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SampleHibernateSpringMVC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.BookingControllerTest" />
+      <option name="METHOD_NAME" value="shouldUpdateBooking" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,22 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoctorControllerTest.shouldUpdateDoctor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SampleHibernateSpringMVC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller" />
-      <option name="MAIN_CLASS_NAME" value="controller.DoctorControllerTest" />
-      <option name="METHOD_NAME" value="shouldUpdateDoctor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PatientControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SampleHibernateSpringMVC" />
       <extension name="coverage">
@@ -138,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookingControllerTest.shouldUpdateBooking" />
         <item itemvalue="JUnit.BookingControllerTest.shouldReturnGetBookingsbyUsername" />
         <item itemvalue="JUnit.PatientControllerTest" />
         <item itemvalue="JUnit.DoctorControllerTest" />
         <item itemvalue="JUnit.DoctorControllerTest.shouldReturn404WhenListNotFound" />
-        <item itemvalue="JUnit.DoctorControllerTest.shouldUpdateDoctor" />
       </list>
     </recent_temporary>
   </component>
@@ -165,41 +163,9 @@
       <workItem from="1598642843543" duration="1048000" />
       <workItem from="1598647123897" duration="712000" />
       <workItem from="1598651398318" duration="621000" />
-      <workItem from="1599205033885" duration="1994000" />
+      <workItem from="1599205033885" duration="3926000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="DoctorControllerTest_shouldReturn404WhenListNotFound - 2020.08.23 at 16h 27m 55s.xml">
-      <configuration name="DoctorControllerTest.shouldReturn404WhenListNotFound" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DoctorControllerTest_shouldReturn404WhenListNotFound - 2020.08.23 at 16h 28m 42s.xml">
-      <configuration name="DoctorControllerTest.shouldReturn404WhenListNotFound" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DoctorControllerTest_shouldUpdateDoctor - 2020.08.23 at 16h 32m 06s.xml">
-      <configuration name="DoctorControllerTest.shouldUpdateDoctor" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DoctorControllerTest_shouldReturn404WhenListNotFound - 2020.08.23 at 16h 34m 07s.xml">
-      <configuration name="DoctorControllerTest.shouldReturn404WhenListNotFound" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DoctorControllerTest - 2020.08.24 at 16h 40m 07s.xml">
-      <configuration name="DoctorControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookingControllerTest_shouldReturnGetBookingsbyUsername - 2020.08.29 at 03h 45m 57s.xml">
-      <configuration name="BookingControllerTest.shouldReturnGetBookingsbyUsername" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookingControllerTest_shouldReturnGetBookingsbyUsername - 2020.08.29 at 03h 46m 30s.xml">
-      <configuration name="BookingControllerTest.shouldReturnGetBookingsbyUsername" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookingControllerTest_shouldReturnGetBookingsbyUsername - 2020.08.29 at 03h 47m 41s.xml">
-      <configuration name="BookingControllerTest.shouldReturnGetBookingsbyUsername" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookingControllerTest_shouldReturnGetBookingsbyUsername - 2020.08.29 at 03h 48m 24s.xml">
-      <configuration name="BookingControllerTest.shouldReturnGetBookingsbyUsername" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookingControllerTest_shouldReturnGetBookingsbyUsername - 2020.08.29 at 03h 49m 58s.xml">
-      <configuration name="BookingControllerTest.shouldReturnGetBookingsbyUsername" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
@@ -209,6 +175,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="718" y="126" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599205082657" />
+    <state width="1865" height="267" key="GridCell.Tab.0.bottom" timestamp="1599212175857">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599212175857" />
+    <state width="1865" height="267" key="GridCell.Tab.0.center" timestamp="1599212175857">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599212175857" />
+    <state width="1865" height="267" key="GridCell.Tab.0.left" timestamp="1599212175856">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599212175856" />
+    <state width="1865" height="267" key="GridCell.Tab.0.right" timestamp="1599212175857">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599212175857" />
   </component>
   <component name="masterDetails">
     <states>
