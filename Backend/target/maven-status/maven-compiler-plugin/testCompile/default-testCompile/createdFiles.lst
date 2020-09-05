@@ -1,10 +1,10 @@
-controller\PatientControllerTest.class
-model\PatientModelTest.class
+model/BookingModelTest.class
 TestConfig.class
-controller\BookingControllerTest.class
+controller/DoctorControllerTest.class
+controller/PatientControllerTest.class
 MyTest.class
-model\BookingModelTest.class
-controller\DoctorControllerTest.class
+controller/BookingControllerTest.class
 MyTest$2.class
-model\DoctorModelTest.class
+model/DoctorModelTest.class
 MyTest$1.class
+model/PatientModelTest.class

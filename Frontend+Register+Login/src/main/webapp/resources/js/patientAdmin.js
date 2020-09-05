@@ -63,8 +63,8 @@ function fetchPatients() {
             for (var i = 0; i < patient.length; i++) {
                 allPatients = patient;
                 var listItem = document.createElement('tr');
-                var view = `<button  class="btn btn-outline-primary" data-id="${patient[i].id}" id="view-${patient[i].id}" data-action="view" data-toggle="modal" data-target="#patientModal">Details</button>`;
-                var booking = `<button  class="btn btn-outline-info" data-id="${patient[i].id}" id="booking-${patient[i].id}" data-action="booking" data-action="view" data-toggle="modal" data-target="#bookingModal">View Bookings</button>`;
+                var view = `<button  class="btn btn-outline-primary" data-id="${patient[i].id}" id="view-${patient[i].id}" data-action="view" data-toggle="modal" data-target="#patientModal" title="Click to see details">Details</button>`;
+                var booking = `<button  class="btn btn-outline-info" data-id="${patient[i].id}" id="booking-${patient[i].id}" data-action="booking" data-action="view" data-toggle="modal" data-target="#bookingModal" title="Click to view bookings">View Bookings</button>`;
                 listItem.innerHTML +=
                     `
                     <td>${patient[i].id}</td>
@@ -134,3 +134,4 @@ function fetchDoctors() {
             allDoctors =json;
         })
 }
+
