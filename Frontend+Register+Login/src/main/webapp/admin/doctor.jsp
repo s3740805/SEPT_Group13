@@ -28,12 +28,26 @@
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <div class="container">
     <!--Add doctor form-->
-    <h3>Add new doctor</h3>
-    <div id='add-doctor'>
-        <form id="doctor-form">
-            <div class="input-group mb-3">
-                <input required type="text" name="name" id="name" placeholder="Name" class="form-control">
-                <input required type="email" name="email" id="email" placeholder="Email" class="form-control">
+    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#add-doctor" title="Click to add new doctor">Add new doctor <i class="fas fa-user-plus"></i></button>
+    <div id='add-doctor' class="collapse">
+        <form class="form-horizontal" id="doctor-form">
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-2" for="name">Name:</label>
+                <div class="col-sm-10">
+                    <input required type="text" name="name" id="name" class="form-control" pattern="^[A-Za-z ]+$" title="Please input alphabet characters only"
+                           placeholder="Enter name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                <input required type="email" name="email" id="email" class="form-control" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2" for="description">Description:</label>
+                <div class="col-sm-10">
                 <select class="form-control" id="description" name="description" required>
                     <option value="Bone">Bone</option>
                     <option value="General Physician">General Physician</option>
@@ -41,15 +55,33 @@
                     <option value="Lung">Lung</option>
                     <option value="Neurology">Neurology</option>
                 </select>
+                </div>
+            </div>
+            <div class="form-group row justify-content-center">
                 <div class="input-group-prepend">
-                    <input class="btn btn-outline-primary" type="submit" value="Add Doctor">
+                    <input class="btn btn-outline-primary" type="submit" value="Add Doctor" title="Submit">
                 </div>
             </div>
         </form>
+
     </div>
     <br>
-    <div id="spoiler" role="aria-hidden">
-        <div id="edit-form"></div>
+    <div>
+        <div class="modal" id="editForm">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit doctor</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div id="edit-form"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <br>
     <!--Doctor list table-->
@@ -106,6 +138,5 @@
 </div>
 </body>
 <script src="${contextPath}/resources/js/doctor.js"></script>
-
 
 </html>

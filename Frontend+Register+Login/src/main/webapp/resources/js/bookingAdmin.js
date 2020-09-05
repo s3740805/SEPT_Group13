@@ -86,10 +86,12 @@ function getBookings() {
             json.sort((a, b) => {
                 (parseInt(a.id) > parseInt(b.id)) ? 1 : -1
             })
-            for (let i = 0; i < json.length; i++) {
-                let obj = {id: json[i].id, name: json[i].name}
-                doctors.push(obj)
-            }
+            // for (let i = 0; i < json.length; i++) {
+            //     let obj = {id: json[i].id, name: json[i].name}
+            //     doctors.push(obj)
+            // }
+            doctors = json;
+
             // This is fetching bookings from the user
         }).then(fetch(`http://localhost:8080/bookings`).then(res => res.json())
         .then(json => {
@@ -111,14 +113,18 @@ function getBookings() {
             for (let i = 0; i < json.length; i++) {
                 //console.log(json[i])
                 let id = json[i].id
-                let cancel = `<button id="delete" onclick='cancelBooking(${id})'>Delete <i class="fas fa-trash"></i> </button>`
+                let cancel = `<button id="delete" onclick='cancelBooking(${id})' title="Click to delete">Delete <i class="fas fa-trash"></i> </button>`
                 let str = id + ',' + json[i].date + ',' + json[i].doctor_id + ',' + json[i].patient_id + ',' + json[i].time+ ',' + json[i].userName
-                let accept = `<button id="accept" onclick="acceptBooking('${str}')">Accept <i class="fas fa-check"></i></button>`
-                let reject = `<button id="reject" onclick="rejectBooking('${str}')">Reject <i class="fas fa-times"></i></button>`
-                let doctorName = ""
-                doctors.forEach(doc => {
-                    if (doc.id === json[i].doctor_id) doctorName = doc.name
-                })
+                let accept = `<button id="accept" onclick="acceptBooking('${str}')" title="Click to accept">Accept <i class="fas fa-check"></i></button>`
+                let reject = `<button id="reject" onclick="rejectBooking('${str}')" title="Click to reject">Reject <i class="fas fa-times"></i></button>`
+                // let doctorName = ""
+                // doctors.forEach(doc => {
+                //     if (doc.id === json[i].doctor_id) doctorName = doc.name
+                // })
+                const doctorData = doctors.find((doctor) => {
+                    return doctor.id == json[i].doctor_id
+                });
+
                 let status = `<p style="color: #ffdd83">Pending</p>`
                 if (json[i].status === "accepted"){
                     status = `<p style="color: limegreen">Accepted</p>`
@@ -129,7 +135,7 @@ function getBookings() {
                 allBookings.innerHTML += '<tr id="bookings">' +
                     '<td>' + json[i].id + '</td>' +
                     '<td>' + json[i].userName + '</td>' +
-                    '<td>' + doctorName + '</td>' +
+                    '<td>' + doctorData.name + '</td>' +
                     '<td>' + json[i].time + '</td>' +
                     '<td>' + json[i].date + '</td>' +
                     '<td>' + status + '</td>' +

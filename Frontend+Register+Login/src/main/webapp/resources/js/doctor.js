@@ -69,29 +69,41 @@ document.addEventListener('DOMContentLoaded', function () {
             const doctorData = allDoctors.find((doctor) => {
                 return doctor.id == e.target.dataset.id
             })
-            //show edit form
-            document.getElementById('spoiler').style.display = 'block';
-            self = this;
             // this is edit form
             doctorEditor.innerHTML = '';
             doctorEditor.innerHTML += `
             <div id='edit-doctor'>
-                <form id="doctor-form">
-                    <div class="input-group mb-3">
-                    <input required id="edit-name" value="${doctorData.name}" class="form-control">
-                    <input required type="email" name="email" id="edit-email" value="${doctorData.email}" class="form-control">
-                    <select class="form-control" id="edit-description" name="description" required>
-                        <option value="Bone">Bone</option>
-                        <option value="General Physician">General Physician</option>
-                        <option value="Heart">Heart</option>
-                        <option value="Lung">Lung</option>
-                        <option value="Neurology">Neurology</option>
-                    </select>
+                <form class="form-horizontal" id="doctor-form">
+                    <br>
+                    <div class="form-group row">
+                        <label class="col-sm-2" for="name">Name:</label>
+                        <div class="col-sm-10">
+                            <input required id="edit-name" value="${doctorData.name}" class="form-control" disabled>
+                        </div>
+                </div>
+                <div class="form-group row">
+                        <label class="col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input required type="email" name="email" id="edit-email" value="${doctorData.email}" class="form-control">
+                        </div>
+                </div>
+                <div class="form-group row">
+                        <label class="col-sm-2" for="description">Description:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="edit-description" name="description" required>
+                                <option value="Bone">Bone</option>
+                                <option value="General Physician">General Physician</option>
+                                <option value="Heart">Heart</option>
+                                <option value="Lung">Lung</option>
+                                <option value="Neurology">Neurology</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="form-group row justify-content-center">
                     <div class="input-group-prepend">
                     <input class="btn btn-outline-primary" type="submit" value="Edit Doctor">
-                    <a onclick="CloseInput()" aria-label="Close" data-toggle="tooltip" data-placement="top" title="Close edit">&times;</a>
                     </div>
-                    </div>
+                </div>
                 </form>
             </div>`
             console.log(doctorData);
@@ -119,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.querySelector("#edit-name").value = '', document.querySelector("#edit-email").value = '', document.querySelector("#edit-description").value = '';
                         //success alert
                         alert('Doctor information have been updated successfully.');
-                    fetchDoctors()
+                    location.reload()
                 })
             })
             //if click delete button
@@ -148,11 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 });
 
-//close edit form button
-function CloseInput() {
-    document.getElementById('spoiler').style.display = 'none';
-    doctorEditor.innerHTML = '';
-}
 
 //fetch Doctors
 function fetchDoctors() {
@@ -165,9 +172,9 @@ function fetchDoctors() {
             for (var i = 0; i < doctor.length; i++) {
                 allDoctors = doctor;
                 var listItem = document.createElement('tr');
-                var editLink = `<button class="btn btn-outline-success" data-id="${doctor[i].id}" id="edit-${doctor[i].id}" data-action="edit">Edit</button>`;
-                var deleteLink = `<button  class="btn btn-outline-danger" data-id="${doctor[i].id}" id="delete-${doctor[i].id}" data-action="delete">Delete</button>`;
-                var booking = `<button  class="btn btn-outline-info" data-id="${doctor[i].id}" id="booking-${doctor[i].id}" data-action="booking" data-action="view" data-toggle="modal" data-target="#myModal">View Bookings</button>`;
+                var editLink = `<button class="btn btn-outline-success" data-id="${doctor[i].id}" id="edit-${doctor[i].id}" data-action="edit" data-action="view" data-toggle="modal" data-target="#editForm" title="Click to edit">Edit</button>`;
+                var deleteLink = `<button  class="btn btn-outline-danger" data-id="${doctor[i].id}" id="delete-${doctor[i].id}" data-action="delete" title="Click to delete">Delete</button>`;
+                var booking = `<button  class="btn btn-outline-info" data-id="${doctor[i].id}" id="booking-${doctor[i].id}" data-action="booking" data-action="view" data-toggle="modal" data-target="#myModal" title="Click to view bookings">View Bookings</button>`;
                 listItem.innerHTML += '<td>' + doctor[i].id + '</td>';
                 listItem.innerHTML += '<td>' + doctor[i].name + '</td>';
                 listItem.innerHTML += '<td>' + doctor[i].email + '</td>';

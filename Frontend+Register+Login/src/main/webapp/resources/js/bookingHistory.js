@@ -33,10 +33,11 @@ function getBookings() {
             json.sort((a, b) => {
                 (parseInt(a.id) > parseInt(b.id)) ? 1 : -1
             })
-            for (let i = 0; i < json.length; i++) {
-                let obj = {id: json[i].id, name: json[i].name}
-                doctors.push(obj)
-            }
+            // for (let i = 0; i < json.length; i++) {
+            //     let obj = {id: json[i].id, name: json[i].name}
+            //     doctors.push(obj)
+            // }
+            doctors = json;
             // This is fetching bookings from the user
         }).then(fetch('http://localhost:8080/bookings/' + state).then(res => res.json())
         .then(json => {
@@ -63,13 +64,16 @@ function getBookings() {
                     parseInt(json[i].date.split("-")[2]),
                     parseInt(json[i].time.split(":")[0]),
                     parseInt(json[i].time.split(":")[1]))) {
-                    let doctorName = ""
-                    doctors.forEach(doc => {
-                        if (doc.id === json[i].doctor_id) doctorName = doc.name
-                    })
+                    // let doctorName = ""
+                    // doctors.forEach(doc => {
+                    //     if (doc.id === json[i].doctor_id) doctorName = doc.name
+                    // })
+                    const doctorData = doctors.find((doctor) => {
+                        return doctor.id == json[i].doctor_id
+                    });
                     pastBookings.innerHTML += '<tr id="pb">' +
                         '<td>' + json[i].id + '</td>' +
-                        '<td>' + doctorName + '</td>' +
+                        '<td>' + doctorData.name + '</td>' +
                         '<td>' + json[i].time + '</td>' +
                         '<td>' + json[i].date + '</td>' + '</tr>'
                 } else {

@@ -41,26 +41,191 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5530246-c760-48fb-8bb9-2d9b55f821b5" name="Default Changelist" comment="Add status. fix book error">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b1552912-3e2c-4214-8c15-002619780470.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b1552912-3e2c-4214-8c15-002619780470/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/bookingAdminTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/test/java/controller/BookingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/test/java/controller/BookingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/SampleHibernateSpringMVC-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/SampleHibernateSpringMVC-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/config/WebAppInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/config/WebAppInitializer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/target/classes/controller/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/controller/BookingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/controller/DoctorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/controller/PatientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/model/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/model/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/model/Doctor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/model/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/model/Patient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/target/classes/service/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/service/BookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/service/DoctorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/service/DoctorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/classes/service/PatientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/classes/service/PatientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/MyTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/MyTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-MyTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-MyTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-controller.BookingControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-controller.BookingControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-controller.DoctorControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-controller.DoctorControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-controller.PatientControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-controller.PatientControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-model.BookingModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-model.BookingModelTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-model.DoctorModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-model.DoctorModelTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-model.PatientModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/TEST-model.PatientModelTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/controller.BookingControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/controller.BookingControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/controller.DoctorControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/controller.DoctorControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/controller.PatientControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/controller.PatientControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/surefire-reports/model.PatientModelTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/surefire-reports/model.PatientModelTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/MyTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/MyTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/MyTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/MyTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/MyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/TestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/TestConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/controller/BookingControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/controller/BookingControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/controller/DoctorControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/controller/DoctorControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/controller/PatientControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/controller/PatientControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/model/BookingModelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/model/BookingModelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/model/DoctorModelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/model/DoctorModelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/test-classes/model/PatientModelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/test-classes/model/PatientModelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/patient/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patient/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WebApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/SecurityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/SecurityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/SecurityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/validator/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/validator/UserValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/web/DataSeeding.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/web/DataSeeding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/web/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/model/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/model/UserTest.class" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-903" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2124">
+              <caret line="118" column="106" selection-start-line="118" selection-start-column="106" selection-end-line="118" selection-end-column="106" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5">
+              <caret line="73" column="62" lean-forward="true" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="288" column="60" selection-start-line="288" selection-start-column="60" selection-end-line="288" selection-end-column="97" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/validator/UserValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-25">
+              <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/welcome.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-566" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,16 +247,143 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/patient/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js" />
+      </list>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2" />
+    <option name="y" value="23" />
+    <option name="width" value="1438" />
+    <option name="height" value="835" />
   </component>
   <component name="ProjectId" id="1gCzSoxXvhpon8ZrEZswkoaYeET" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="patient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend+Register+Login" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend+Register+Login" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -138,6 +430,16 @@
       <set>
         <option value="SpringBootApplicationConfigurationType" />
       </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
     </option>
   </component>
   <component name="RunManager" selected="Maven.springboot-registration-login [spring-boot:run]">
@@ -234,7 +536,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -269,6 +571,7 @@
       <workItem from="1598651381491" duration="1248000" />
       <workItem from="1599204772817" duration="207000" />
       <workItem from="1599205137270" duration="13455000" />
+      <workItem from="1599336154804" duration="10078000" />
     </task>
     <task id="LOCAL-00001" summary="danh commit">
       <created>1597830445541</created>
@@ -309,15 +612,65 @@
       <configuration name="UserTest" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10078000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2" y="23" width="1438" height="835" extended-state="0" />
+    <layout>
+      <window_info id="Persistence" side_tool="true" />
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Capture Tool" />
+      <window_info id="Web" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49928367" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5007163" side_tool="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run Dashboard" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -336,7 +689,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="danh commit" />
@@ -406,6 +758,93 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="127" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1597831643874" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-566" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/validator/UserValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="288" column="60" selection-start-line="288" selection-start-column="60" selection-end-line="288" selection-end-column="97" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-903" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2124">
+          <caret line="118" column="106" selection-start-line="118" selection-start-column="106" selection-end-line="118" selection-end-column="106" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="73" column="62" lean-forward="true" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

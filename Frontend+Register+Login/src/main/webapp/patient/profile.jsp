@@ -140,14 +140,14 @@
         fetch(`http://localhost:8080/patients/`+username)
             .then(response => response.json())
             .then(function (doc) {
-                id.value = doc.id;
+                sessionStorage.setItem("patient_id", doc.id);
                 FirstName.innerHTML += '<div>' +  doc.fname + '</div>';
                 LastName.innerHTML += '<div>' +  doc.lname + '</div>';
                 DOB.innerHTML ='<div>' + doc.dob+'</div>';
                 Gender.innerHTML += '<div>' +  doc.gender + '</div>';
                 Address.innerHTML += '<div>' +  doc.address + '</div>';
                 Email.innerHTML += '<div>' +  doc.email + '</div>';
-                Phone.innerHTML += '<div>' +  doc.phone + '</div>';
+                Phone.innerHTML += '<div>' + 0 +  doc.phone + '</div>';
                 allergies.innerHTML+= '<div>' +  doc.allergies + '</div>';
                 bloodType.innerHTML+= '<div>' +  doc.bloodType + '</div>';
                 healthStatus.innerHTML+= '<div>' +  doc.healthStatus + '</div>';
@@ -187,14 +187,13 @@
         fetch(`http://localhost:8080/patients/`+state1)
             .then(response => response.json())
             .then(function (doc) {
-                document.getElementById("id_profile").value = doc.id;
                 document.getElementById("edit_fname").value = doc.fname;
                 document.getElementById("edit_lname").value = doc.lname;
                 document.getElementById("edit_dob").value = doc.dob;
                 document.getElementById("edit_email").value= doc.email;
                 document.getElementById("edit_gender").value = doc.gender;
                 document.getElementById("edit_address").value = doc.address;
-                document.getElementById("phone").value = doc.phone;
+                document.getElementById("phone").value = "0" + doc.phone;
                 document.getElementById("edit_bloodType").value = doc.bloodType;
                 document.getElementById("edit_allergies").value= doc.allergies;
                 document.getElementById("edit_healthStatus").value= doc.healthStatus;
@@ -207,6 +206,7 @@
 // Save Patient Profile
     function editProfile() {
         let state2 = sessionStorage.getItem("state");
+        let id = sessionStorage.getItem("patient_id");
         let editFirstName = document.getElementById('edit_fname').value
         let editLastName = document.getElementById('edit_lname').value
         let editDOB = document.getElementById('edit_dob').value
@@ -218,7 +218,6 @@
         let editAllergies = document.getElementById('edit_allergies').value
         let editHealthStatus = document.getElementById('edit_healthStatus').value
         let editMedicalHistory = document.getElementById('edit_medicalHistory').value
-        let id = document.getElementById('id_profile').value;
         if (confirm("Are you sure want to change your information")){
             fetch(`http://localhost:8080/patients/`+state2, {
                 method: 'PUT',
@@ -230,21 +229,20 @@
                     fname: editFirstName,
                     lname: editLastName,
                     address:editAddress,
-                    dob:editDOB,
+                    dob: editDOB,
                     gender: editGender,
-                    bloodType:editBloodType,
-                    phone:editPhone,
-                    email:editEmail,
-                    allergies:editAllergies,
-                    healthStatus:editHealthStatus,
-                    medicalHistory:editMedicalHistory
+                    bloodType: editBloodType,
+                    phone: editPhone,
+                    email: editEmail,
+                    allergies: editAllergies,
+                    healthStatus: editHealthStatus,
+                    medicalHistory: editMedicalHistory
                 }),
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
-            }).then(res => getPatient(username))
-            location.reload()
+            }).then(res => location.reload())
         }
     }
     function changeVisibility() {
