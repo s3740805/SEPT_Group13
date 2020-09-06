@@ -100,6 +100,7 @@
         <tbody id="doctor-container">
         </tbody>
     </table>
+
     <!-- Show Bookings Modal -->
     <div class="modal" id="myModal">
         <div class="modal-dialog modal-lg">
@@ -137,6 +138,12 @@
     </div>
 </div>
 </body>
+<script>
+    $(document).ready(function () {
+        $('body').tooltip({selector: ".btn", trigger: "hover"});
+    });
+</script>
+
 <script src="${contextPath}/resources/js/doctor.js"></script>
 
 </html>

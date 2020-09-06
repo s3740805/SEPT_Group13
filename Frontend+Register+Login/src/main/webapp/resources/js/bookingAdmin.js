@@ -113,10 +113,10 @@ function getBookings() {
             for (let i = 0; i < json.length; i++) {
                 //console.log(json[i])
                 let id = json[i].id
-                let cancel = `<button id="delete" onclick='cancelBooking(${id})' title="Click to delete">Delete <i class="fas fa-trash"></i> </button>`
+                let cancel = `<button class="btn" id="delete" onclick='cancelBooking(${id})' title="Click to delete">Delete <i class="fas fa-trash"></i> </button>`
                 let str = id + ',' + json[i].date + ',' + json[i].doctor_id + ',' + json[i].patient_id + ',' + json[i].time+ ',' + json[i].userName
-                let accept = `<button id="accept" onclick="acceptBooking('${str}')" title="Click to accept">Accept <i class="fas fa-check"></i></button>`
-                let reject = `<button id="reject" onclick="rejectBooking('${str}')" title="Click to reject">Reject <i class="fas fa-times"></i></button>`
+                let accept = `<button class="btn" id="accept" onclick="acceptBooking('${str}')" title="Click to accept">Accept <i class="fas fa-check"></i></button>`
+                let reject = `<button class="btn" id="reject" onclick="rejectBooking('${str}')" title="Click to reject">Reject <i class="fas fa-times"></i></button>`
                 // let doctorName = ""
                 // doctors.forEach(doc => {
                 //     if (doc.id === json[i].doctor_id) doctorName = doc.name
