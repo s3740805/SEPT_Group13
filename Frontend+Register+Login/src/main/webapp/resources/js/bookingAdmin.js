@@ -15,9 +15,7 @@ function cancelBooking(id) {
             }
         }).then(res => {
             alert("Delete success.")
-        }).then(res => {
-            location.reload()
-        })
+        }).then(res => location.reload())
     }
 }
 
@@ -42,9 +40,8 @@ function acceptBooking(str){
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then( res =>{
+    }).then( res =>
             location.reload()
-        }
     )
 
 }
@@ -70,11 +67,7 @@ function rejectBooking(str){
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then( res =>{
-            location.reload()
-        }
-    )
-
+    }).then( res => location.reload())
 }
 
 // This is get booking function

@@ -61,9 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     doctorContainer.addEventListener('click', (e) => {
         //if click edit
         if (e.target.dataset.action === 'edit') {
-            //go to top of page
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
             console.log('press edit');
             //get targeted doctor id
             const doctorData = allDoctors.find((doctor) => {
@@ -129,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 }).then(response => {
                     //refresh the form
                     document.querySelector("#edit-name").value = '', document.querySelector("#edit-email").value = '', document.querySelector("#edit-description").value = '';
-                        //success alert
-                        alert('Doctor information have been updated successfully.');
+                    //success alert
+                    alert('Doctor information have been updated successfully.');
                     location.reload()
                 })
             })
