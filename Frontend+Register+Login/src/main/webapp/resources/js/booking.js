@@ -59,7 +59,7 @@ function checkAvailable() {
             })
             alert('Booked successfully')
             // Go back to home page ?!
-            window.location.replace("http://localhost:9090") // ?!?
+            window.location.replace("/") // ?!?
         }
     })
 }

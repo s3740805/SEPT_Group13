@@ -25,7 +25,7 @@
 </head>
 <body>
 <!--Navigation-->
-<jsp:include page="../_navigation.jsp"></jsp:include>
+<jsp:include page="../_navigationAdmin.jsp"></jsp:include>
 <div class="container">
     <!--Add doctor form-->
     <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#add-doctor" title="Click to add new doctor">Add new doctor <i class="fas fa-user-plus"></i></button>
@@ -139,6 +139,7 @@
 </div>
 </body>
 <script>
+    // Hover simple hint
     $(document).ready(function () {
         $('body').tooltip({selector: ".btn", trigger: "hover"});
     });

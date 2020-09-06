@@ -16,9 +16,7 @@ function cancelBooking(id) {
             }
         }).then(res => {
             alert("Booking successfully canceled.")
-        }).then(res => {
-            location.reload()
-        })
+        }).then(res => location.reload())
     }
 }
 

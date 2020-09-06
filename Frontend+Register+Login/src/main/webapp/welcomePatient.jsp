@@ -35,7 +35,7 @@
     </c:if>
   </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
       // Store username in sessionStorage for later use
       sessionStorage.setItem("state", document.getElementById('name').getAttribute('value'));
@@ -64,7 +64,6 @@
           }
       })
   </script>
-
   <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 </body>
 </html>

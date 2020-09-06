@@ -49,7 +49,7 @@
 </head>
 <body>
 <!--Navigation-->
-<jsp:include page="../_navigation.jsp"></jsp:include>
+<jsp:include page="../_navigationAdmin.jsp"></jsp:include>
 <div class="container">
     <!--        Heading-->
     <h1 style="text-align: center">All appointments</h1>
@@ -75,6 +75,7 @@
 </div>
 </body>
 <script>
+    // Hover simple hint
     $(document).ready(function () {
         $('body').tooltip({selector: ".btn", trigger: "hover"});
     });
