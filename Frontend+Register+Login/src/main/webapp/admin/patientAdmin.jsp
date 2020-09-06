@@ -105,6 +105,11 @@
 
 </div>
 </body>
+<script>
+    $(document).ready(function () {
+        $('body').tooltip({selector: ".btn", trigger: "hover"});
+    });
+</script>
 <script src="${contextPath}/resources/js/patientAdmin.js"></script>
 
 
