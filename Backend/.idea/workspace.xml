@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97217b02-e8fb-4fca-9666-6062ae927518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/HandleErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigationAdmin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/404Page.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/500Page.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/ErrorPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomePatient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/403Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/403Page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/patientAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/patientAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/bookingHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomeAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,7 +92,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="2" />
     <option name="y" value="23" />
     <option name="width" value="1438" />
@@ -201,8 +189,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -347,17 +335,17 @@
       <workItem from="1599336173193" duration="2191000" />
       <workItem from="1599367327114" duration="1040000" />
       <workItem from="1599399070176" duration="670000" />
+      <workItem from="1599459844499" duration="737000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3901000" />
+    <option name="totallyTimeSpent" value="4638000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="23" width="1438" height="835" extended-state="1" />
-    <editor active="true" />
+    <frame x="2" y="23" width="1438" height="835" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.260745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
