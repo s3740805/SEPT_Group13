@@ -41,26 +41,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5530246-c760-48fb-8bb9-2d9b55f821b5" name="Default Changelist" comment="Add status. fix book error">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/web/HandleErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/_navigationAdmin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/404Page.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/500Page.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/error/ErrorPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/welcomePatient.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/403Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/error/403Page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/_navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/patientAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/patientAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/patient/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/patient/profile.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/booking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/welcomeAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/web/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,47 +62,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
+            <state relative-caret-position="1386">
               <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="69" column="35" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="2520">
+              <caret line="140" selection-start-line="140" selection-end-line="145" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/booking.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-649" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/patientAdmin.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
+            <state relative-caret-position="1944">
               <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1091">
-              <caret line="288" column="60" selection-start-line="288" selection-start-column="60" selection-end-line="288" selection-end-column="97" />
+            <state relative-caret-position="-3067">
+              <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="1296">
               <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
             </state>
           </provider>
@@ -131,7 +119,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/booking.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
+            <state relative-caret-position="1170">
               <caret line="65" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
@@ -140,13 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
+            <state relative-caret-position="324">
               <caret line="18" column="38" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -154,16 +137,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
+            <state relative-caret-position="1080">
               <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-672">
+            <state relative-caret-position="2340">
               <caret line="130" column="33" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="33" />
             </state>
           </provider>
@@ -187,6 +170,7 @@
       <find>spoiler</find>
       <find>edit_phone</find>
       <find>reload</find>
+      <find>tooltip</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,7 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/patient/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/_navigation.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp" />
@@ -205,12 +188,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/welcomeAdmin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/error/403Page.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/web/HandleErrorController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/booking.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/_navigationAdmin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/web/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/booking.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/patient/profile.jsp" />
       </list>
     </option>
   </component>
@@ -241,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -352,6 +335,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -549,6 +533,8 @@
       <workItem from="1599336154804" duration="10153000" />
       <workItem from="1599367312615" duration="1902000" />
       <workItem from="1599399090920" duration="3151000" />
+      <workItem from="1599459846662" duration="2351000" />
+      <workItem from="1599462211524" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="danh commit">
       <created>1597830445541</created>
@@ -590,11 +576,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15206000" />
+    <option name="totallyTimeSpent" value="17598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1438" height="835" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25358167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -616,7 +601,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007163" side_tool="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Spring" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928367" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49928367" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run Dashboard" order="14" />
@@ -633,7 +618,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25358167" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25358167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
@@ -653,7 +638,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5007163" side_tool="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Spring" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49928367" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49928367" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Run Dashboard" order="14" />
@@ -871,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2296">
-          <caret line="140" selection-start-line="140" selection-end-line="145" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-358">
@@ -892,81 +870,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/web/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+        <state relative-caret-position="1242">
+          <caret line="69" column="35" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="35" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/patientAdmin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1091">
-          <caret line="288" column="60" selection-start-line="288" selection-start-column="60" selection-end-line="288" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/booking.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-649" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/bookingAdmin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
+        <state relative-caret-position="1386">
           <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/doctor.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="2520">
+          <caret line="140" selection-start-line="140" selection-end-line="145" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="69" column="35" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/booking.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/booking.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin/patientAdmin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="1944">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/patientAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="1296">
           <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/booking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bookingHistory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/doctor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-672">
+        <state relative-caret-position="2340">
           <caret line="130" column="33" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/patient/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3067">
+          <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

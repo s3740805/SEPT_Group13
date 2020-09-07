@@ -23,7 +23,7 @@
         #tooltip {
             position: relative;
             display: inline-block;
-            border-bottom: 1px dotted black;
+            /*border-bottom: 1px dotted black;*/
         }
 
         #tooltip #tooltiptext {
@@ -112,7 +112,7 @@
                                     <td>Email:</td>
                                     <td id="Email"><a href="mailto:info@support.com"></a></td>
                                 </tr>
-                                <td>Phone Number(+84):</td>
+                                <td>Phone Number:</td>
                                 <td id="Phone"></td>
 
                                 </tr>
@@ -147,7 +147,7 @@
                         </div>
 
                         <span class="pull-right col-md-1 col-lg-1">
-                            <div id="tooltip"><a id="editButton" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning " onclick="patientEdit();changeVisibility()"><i class="glyphicon glyphicon-edit"></i>Edit <span id="tooltiptext">Click here to edit your profile</span></a></div>
+                            <div id="tooltip"><a id="editButton" type="button" class="btn btn-sm btn-warning " onclick="patientEdit();changeVisibility()"><i class="glyphicon glyphicon-edit"></i>Edit <span id="tooltiptext">Click here to edit your profile</span></a></div>
                             <a id ="back"></a>
                     </span>
                     </div>
@@ -191,40 +191,39 @@
                 Gender.innerHTML += '<div>' +  doc.gender + '</div>';
                 Address.innerHTML += '<div>' +  doc.address + '</div>';
                 Email.innerHTML += '<div>' +  doc.email + '</div>';
-                Phone.innerHTML += '<div>' +  doc.phone + '</div>';
+                Phone.innerHTML += '<div>' + "(+84)" +  doc.phone + '</div>';
                 allergies.innerHTML+= '<div>' +  doc.allergies + '</div>';
                 bloodType.innerHTML+= '<div>' +  doc.bloodType + '</div>';
                 healthStatus.innerHTML+= '<div>' +  doc.healthStatus + '</div>';
                 medicalHistory.innerHTML+= '<div>' +  doc.medicalHistory + '</div>';
-
             })
     }
     // Edit Patient Profile
     function patientEdit() {
         let state1 = sessionStorage.getItem("state");
-        document.getElementById("FirstName").innerHTML = `<input type="text" id="edit_fname"><div id="wFirstName" style="color: red"></div>`
-        document.getElementById("LastName").innerHTML = `<input type="text" id="edit_lname"><div id="wLastName" style="color: red"></div>`
-        document.getElementById("DOB").innerHTML = `<input type="date" name="datemax" max = "2020-08-24" id="edit_dob">`
+        document.getElementById("FirstName").innerHTML = `<input class="form-control" type="text" id="edit_fname"><div id="wFirstName" style="color: red"></div>`
+        document.getElementById("LastName").innerHTML = `<input class="form-control" type="text" id="edit_lname"><div id="wLastName" style="color: red"></div>`
+        document.getElementById("DOB").innerHTML = `<input class="form-control" type="date" name="datemax" max = "2020-08-24" id="edit_dob">`
         document.getElementById("Gender").innerHTML =
-            `<select id="edit_gender">
+            `<select class="form-control" id="edit_gender">
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
               </select>`
-        document.getElementById("Address").innerHTML= `<input type="text" id="edit_address"><div id="wAddress" style="color: red"></div>`
-        document.getElementById("Email").innerHTML= `<div id="tooltip"><input type="email" name="email" id="edit_email"><span id="tooltiptext">Input your email follow the form exam@gmail.com </span></div><div id="wEmail" style="color: red"></div>`
-        document.getElementById("Phone").innerHTML= `<div id="tooltip"><input type="text" maxlength="11" name="phone"  id="phone"><span id="tooltiptext"> Your phone number has to have 10 number </span></div><div id="wPhone" style="color: red"></div>`
+        document.getElementById("Address").innerHTML= `<input class="form-control" type="text" id="edit_address"><div id="wAddress" style="color: red"></div>`
+        document.getElementById("Email").innerHTML= `<div id="tooltip"><input class="form-control" type="email" name="email" id="edit_email"><span id="tooltiptext">Input your email follow the form exam@gmail.com </span></div><div id="wEmail" style="color: red"></div>`
+        document.getElementById("Phone").innerHTML= `<div id="tooltip"><div class="input-group"><div class="input-group-prepend"><span class="input-group-text">+84</span></div><input class="form-control" type="text" maxlength="11" name="phone"  id="phone"></div><span id="tooltiptext"> Please input your mobile phone number. </span></div><div id="wPhone" style="color: red"></div>`
         document.getElementById("bloodType").innerHTML=`
-              <select id="edit_bloodType">
+              <select class="form-control" id="edit_bloodType">
                   <option value="A">A</option>
                   <option value="B">B</option>
                   <option value="O">O</option>
                   <option value="AB">AB</option>
                   <option value="Don't know">Don't know</option>
               </select>`
-        document.getElementById("allergies").innerHTML= `<div id="tooltip"><input type="text" id="edit_allergies"><span id="tooltiptext"> Have you ever had an allergic or adverse reaction to any medication? </span></div>`
-        document.getElementById("healthStatus").innerHTML= `<div id="tooltip"><input type="text" id="edit_healthStatus"><span id="tooltiptext">Do you have any current medical problems?</span></div>`
-        document.getElementById("medicalHistory").innerHTML= `<div id="tooltip"><input type="text" id="edit_medicalHistory"><span id="tooltiptext">Have you ever received medical care and if so, what for?</span></div>`
+        document.getElementById("allergies").innerHTML= `<div id="tooltip"><input class="form-control" type="text" id="edit_allergies"><span id="tooltiptext"> Have you ever had an allergic or adverse reaction to any medication? </span></div>`
+        document.getElementById("healthStatus").innerHTML= `<div id="tooltip"><input class="form-control"  type="text" id="edit_healthStatus"><span id="tooltiptext">Do you have any current medical problems?</span></div>`
+        document.getElementById("medicalHistory").innerHTML= `<div id="tooltip"><input class="form-control" type="text" id="edit_medicalHistory"><span id="tooltiptext">Have you ever received medical care and if so, what for?</span></div>`
         document.getElementById("save").innerHTML+= `<button type="submit" class="btn btn-success" onclick="validateFormFName();validateFormLName();validateFormAddress();validateFormEmail();validateFormPhone();saveValidation()">Save</button>`
         document.getElementById("back").innerHTML+=`<a id="tooltip" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back<span id="tooltiptext">Click here to come back your profile </span></a>`
 
@@ -287,8 +286,7 @@
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
-            }).then(res => getPatient(username))
-            location.reload()
+            }).then(res => location.reload())
         }
     }
     function changeVisibility() {
@@ -368,7 +366,7 @@
             return false;
         }
         if((character <1) || (dot<character+2) || (dot+2>el.length)) {
-            document.getElementById("wEmail").innerHTML="Wrong email";
+            document.getElementById("wEmail").innerHTML="Please input valid email";
             document.getElementById("edit_email").style.borderColor = "red";// focus on wrong value
             return false;
         }
@@ -393,8 +391,8 @@
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
-        if (pe.length < 10){
-            document.getElementById("wPhone").innerHTML="Phone number must have 10 numbers";
+        if (pe.length < 9){
+            document.getElementById("wPhone").innerHTML="Please input valid phone number.";
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
@@ -414,6 +412,10 @@
 
     }
 </script>
-
-
+<script>
+    // Hover simple hint
+    $(document).ready(function () {
+        $('body').tooltip({selector: ".btn", trigger: "hover"});
+    });
+</script>
 </html>
