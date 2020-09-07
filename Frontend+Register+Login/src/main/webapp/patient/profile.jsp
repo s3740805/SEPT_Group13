@@ -20,6 +20,50 @@
         body {
             padding-top: 3.5rem;
         }
+        #tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        #tooltip #tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            top: 150%;
+            left: 50%;
+            margin-left: -60px;
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1s;
+
+        }
+
+        #tooltip #tooltiptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black transparent;
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1s;
+
+        }
+
+        #tooltip:hover #tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
 
     </style>
     <title>Profile</title>
@@ -68,7 +112,7 @@
                                     <td>Email:</td>
                                     <td id="Email"><a href="mailto:info@support.com"></a></td>
                                 </tr>
-                                <td>Phone Number:</td>
+                                <td>Phone Number(+84):</td>
                                 <td id="Phone"></td>
 
                                 </tr>
@@ -103,8 +147,8 @@
                         </div>
 
                         <span class="pull-right col-md-1 col-lg-1">
-                        <a id="editButton" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning" onclick="patientEdit();changeVisibility()"><i class="glyphicon glyphicon-edit"></i>Edit</a>
-                        <a id ="back"></a>
+                            <div id="tooltip"><a id="editButton" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning " onclick="patientEdit();changeVisibility()"><i class="glyphicon glyphicon-edit"></i>Edit <span id="tooltiptext">Click here to edit your profile</span></a></div>
+                            <a id ="back"></a>
                     </span>
                     </div>
 
@@ -140,14 +184,14 @@
         fetch(`http://localhost:8080/patients/`+username)
             .then(response => response.json())
             .then(function (doc) {
-                sessionStorage.setItem("patient_id", doc.id);
+                id.value = doc.id;
                 FirstName.innerHTML += '<div>' +  doc.fname + '</div>';
                 LastName.innerHTML += '<div>' +  doc.lname + '</div>';
                 DOB.innerHTML ='<div>' + doc.dob+'</div>';
                 Gender.innerHTML += '<div>' +  doc.gender + '</div>';
                 Address.innerHTML += '<div>' +  doc.address + '</div>';
                 Email.innerHTML += '<div>' +  doc.email + '</div>';
-                Phone.innerHTML += '<div>' + 0 +  doc.phone + '</div>';
+                Phone.innerHTML += '<div>' +  doc.phone + '</div>';
                 allergies.innerHTML+= '<div>' +  doc.allergies + '</div>';
                 bloodType.innerHTML+= '<div>' +  doc.bloodType + '</div>';
                 healthStatus.innerHTML+= '<div>' +  doc.healthStatus + '</div>';
@@ -155,7 +199,7 @@
 
             })
     }
-// Edit Patient Profile
+    // Edit Patient Profile
     function patientEdit() {
         let state1 = sessionStorage.getItem("state");
         document.getElementById("FirstName").innerHTML = `<input type="text" id="edit_fname"><div id="wFirstName" style="color: red"></div>`
@@ -168,8 +212,8 @@
                   <option value="Other">Other</option>
               </select>`
         document.getElementById("Address").innerHTML= `<input type="text" id="edit_address"><div id="wAddress" style="color: red"></div>`
-        document.getElementById("Email").innerHTML= `<input type="email" name="email" id="edit_email"><div id="wEmail" style="color: red"></div>`
-        document.getElementById("Phone").innerHTML= `<input type="text" maxlength="11" name="phone"  id="phone"><div id="wPhone" style="color: red"></div>`
+        document.getElementById("Email").innerHTML= `<div id="tooltip"><input type="email" name="email" id="edit_email"><span id="tooltiptext">Input your email follow the form exam@gmail.com </span></div><div id="wEmail" style="color: red"></div>`
+        document.getElementById("Phone").innerHTML= `<div id="tooltip"><input type="text" maxlength="11" name="phone"  id="phone"><span id="tooltiptext"> Your phone number has to have 10 number </span></div><div id="wPhone" style="color: red"></div>`
         document.getElementById("bloodType").innerHTML=`
               <select id="edit_bloodType">
                   <option value="A">A</option>
@@ -178,22 +222,23 @@
                   <option value="AB">AB</option>
                   <option value="Don't know">Don't know</option>
               </select>`
-        document.getElementById("allergies").innerHTML= `<input type="text" id="edit_allergies">`
-        document.getElementById("healthStatus").innerHTML= `<input type="text" id="edit_healthStatus">`
-        document.getElementById("medicalHistory").innerHTML= `<input type="text" id="edit_medicalHistory">`
+        document.getElementById("allergies").innerHTML= `<div id="tooltip"><input type="text" id="edit_allergies"><span id="tooltiptext"> Have you ever had an allergic or adverse reaction to any medication? </span></div>`
+        document.getElementById("healthStatus").innerHTML= `<div id="tooltip"><input type="text" id="edit_healthStatus"><span id="tooltiptext">Do you have any current medical problems?</span></div>`
+        document.getElementById("medicalHistory").innerHTML= `<div id="tooltip"><input type="text" id="edit_medicalHistory"><span id="tooltiptext">Have you ever received medical care and if so, what for?</span></div>`
         document.getElementById("save").innerHTML+= `<button type="submit" class="btn btn-success" onclick="validateFormFName();validateFormLName();validateFormAddress();validateFormEmail();validateFormPhone();saveValidation()">Save</button>`
-        document.getElementById("back").innerHTML+=`<a data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back</a>`
+        document.getElementById("back").innerHTML+=`<a id="tooltip" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back<span id="tooltiptext">Click here to come back your profile </span></a>`
 
         fetch(`http://localhost:8080/patients/`+state1)
             .then(response => response.json())
             .then(function (doc) {
+                document.getElementById("id_profile").value = doc.id;
                 document.getElementById("edit_fname").value = doc.fname;
                 document.getElementById("edit_lname").value = doc.lname;
                 document.getElementById("edit_dob").value = doc.dob;
                 document.getElementById("edit_email").value= doc.email;
                 document.getElementById("edit_gender").value = doc.gender;
                 document.getElementById("edit_address").value = doc.address;
-                document.getElementById("phone").value = "0" + doc.phone;
+                document.getElementById("phone").value = doc.phone;
                 document.getElementById("edit_bloodType").value = doc.bloodType;
                 document.getElementById("edit_allergies").value= doc.allergies;
                 document.getElementById("edit_healthStatus").value= doc.healthStatus;
@@ -203,10 +248,9 @@
 
     }
 
-// Save Patient Profile
+    // Save Patient Profile
     function editProfile() {
         let state2 = sessionStorage.getItem("state");
-        let id = sessionStorage.getItem("patient_id");
         let editFirstName = document.getElementById('edit_fname').value
         let editLastName = document.getElementById('edit_lname').value
         let editDOB = document.getElementById('edit_dob').value
@@ -218,6 +262,7 @@
         let editAllergies = document.getElementById('edit_allergies').value
         let editHealthStatus = document.getElementById('edit_healthStatus').value
         let editMedicalHistory = document.getElementById('edit_medicalHistory').value
+        let id = document.getElementById('id_profile').value;
         if (confirm("Are you sure want to change your information")){
             fetch(`http://localhost:8080/patients/`+state2, {
                 method: 'PUT',
@@ -229,24 +274,25 @@
                     fname: editFirstName,
                     lname: editLastName,
                     address:editAddress,
-                    dob: editDOB,
+                    dob:editDOB,
                     gender: editGender,
-                    bloodType: editBloodType,
-                    phone: editPhone,
-                    email: editEmail,
-                    allergies: editAllergies,
-                    healthStatus: editHealthStatus,
-                    medicalHistory: editMedicalHistory
+                    bloodType:editBloodType,
+                    phone:editPhone,
+                    email:editEmail,
+                    allergies:editAllergies,
+                    healthStatus:editHealthStatus,
+                    medicalHistory:editMedicalHistory
                 }),
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
-            }).then(res => location.reload())
+            }).then(res => getPatient(username))
+            location.reload()
         }
     }
     function changeVisibility() {
-        document.getElementById("editButton").style.visibility = "hidden";
+        document.getElementById("editButton").style.display = "none";
     }
 
     // Validation input
