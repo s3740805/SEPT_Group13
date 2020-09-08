@@ -49,7 +49,7 @@
                 </div>
             </spring:bind>
             <!-- Submit button -->
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" title="Click to register a new account">Submit</button>
             <!-- login button -->
             <h5 class="text-center">Already have an account?  <a href="${contextPath}/login">Login here.</a></h5>
         </form:form>
@@ -59,4 +59,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
   </body>
+  <script>
+      // Hover simple hint
+      $(document).ready(function () {
+          $('body').tooltip({selector: ".btn", trigger: "hover"});
+      });
+  </script>
 </html>

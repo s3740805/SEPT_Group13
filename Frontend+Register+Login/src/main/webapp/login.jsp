@@ -37,7 +37,7 @@
                     <span>${error}</span>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <!-- submit button -->
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" title="Click to login">Log In</button>
                     <!-- Register button -->
                     <h5 class="text-center">New user? <a href="${contextPath}/registration">Register here.</a></h5>
                 </div>
@@ -48,4 +48,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
   </body>
+  <script>
+      // Hover simple hint
+      $(document).ready(function () {
+          $('body').tooltip({selector: ".btn", trigger: "hover"});
+      });
+  </script>
 </html>
