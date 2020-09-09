@@ -26,7 +26,7 @@ public class BookingController {
 
     // get all booking
     @CrossOrigin
-    @RequestMapping(path = "/bookings", method = RequestMethod.GET)
+    @RequestMapping(path = {"/", "/bookings"}, method = RequestMethod.GET)
     public List<Booking> getBooking() {  return bookingService.getAllBooking();}
 
     // Create new booking

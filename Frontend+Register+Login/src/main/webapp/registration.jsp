@@ -29,7 +29,7 @@
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Username"
-                                autofocus="true"></form:input>
+                                autofocus="true" title="Please only use letter and number"></form:input>
                     <form:errors path="username"></form:errors>
                 </div>
             </spring:bind>

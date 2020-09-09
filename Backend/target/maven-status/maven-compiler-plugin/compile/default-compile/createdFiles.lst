@@ -8,6 +8,5 @@ service/DoctorService.class
 Main.class
 config/WebAppInitializer.class
 config/AppConfig.class
-controller/HomeController.class
 model/Booking.class
 model/Patient.class
