@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Remove error message
 function appointmentDateErrorOk(){
     document.getElementById("appointmentDateError").style.display = "none"
+    document.getElementById("appointmentDateErrorFuture").style.display = "none"
     document.getElementById("appointmentDate").style.boxShadow = ""
 }
 // Check booking that have booked or not
@@ -23,7 +24,16 @@ function checkAvailable() {
         return
     }
     else {
-        appointmentDateErrorOk()
+        // if the date be booked is over one week in advanced
+        today.setDate(today.getDate() + 7)
+        if (bookingDate > today){
+            document.getElementById("appointmentDateErrorFuture").style.display = "block"
+            document.getElementById("appointmentDate").style.boxShadow = "0 0 5px red"
+            return
+        }
+        else{
+            appointmentDateErrorOk()
+        }
     }
 
     let time = document.getElementById('times').value;

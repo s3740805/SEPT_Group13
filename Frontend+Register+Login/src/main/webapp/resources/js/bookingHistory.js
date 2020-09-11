@@ -77,7 +77,7 @@ function getBookings() {
                 } else {
                     // if not, the bookings will be put in upcoming table
                     let id = json[i].id
-                    let cancel = `<button class="btn btn-outline-primary" id="delete" onclick='cancelBooking(${id})'>Cancel</button>`
+                    let cancel = `<button class="btn btn-outline-primary" id="delete" title="Click to cancel appointment" onclick='cancelBooking(${id})'>Cancel</button>`
                     let doctorName = ""
                     doctors.forEach(doc => {
                         if (doc.id === json[i].doctor_id) doctorName = doc.name

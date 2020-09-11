@@ -27,9 +27,7 @@
         }
 
         #delete:hover {
-            color: cornflowerblue;
-            cursor: pointer;
-            text-decoration: underline;
+            color: white;
         }
 
         #delete:active {
@@ -80,6 +78,12 @@
     </table>
 </div>
 </body>
+<script>
+    // Hover simple hint
+    $(document).ready(function () {
+        $('body').tooltip({selector: ".btn", trigger: "hover"});
+    });
+</script>
 <script src="${contextPath}/resources/js/bookingHistory.js"></script>
 
 </html>

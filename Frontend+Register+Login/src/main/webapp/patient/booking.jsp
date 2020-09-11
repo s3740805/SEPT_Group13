@@ -21,7 +21,7 @@
         body {
             padding-top: 3.5rem;
         }
-        #appointmentDateErrorOk:hover{
+        strong:hover{
             text-underline: blue;
             text-decoration: underline;
             cursor: pointer;
@@ -40,24 +40,26 @@
         <div class="container">
             <!-- Doctors -->
             <label for="doctors">
-                <h3>Available doctors:</h3>
+                <h3 title="Available doctors">Available doctors:</h3>
             </label>
             <select class="form-control" id="doctors" name="doctors" required>
                 <!-- Date -->
             </select>
             <br>
             <label for="appointmentDate">
-                <h3>Select date:</h3>
+                <h3 title="Valid date are between today and one week in advance">Select date:</h3>
             </label>
             <br>
             <input class="form-control" type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate" required>
             <small id="appointmentDateError" style="display: none;color: red">Invalid date selection. Date selected is already in the past.
-                <strong id="appointmentDateErrorOk" onclick="appointmentDateErrorOk()" style="color: blue">x</strong></small>
+                <strong onclick="appointmentDateErrorOk()" style="color: blue">x</strong></small>
+            <small id="appointmentDateErrorFuture" style="display: none;color: red">Invalid date selection. Date selected is over one week in the future.
+                <strong onclick="appointmentDateErrorOk()" style="color: blue">x</strong></small>
 
             <br>
             <!-- Time -->
             <label for="times">
-                <h3>Select time:</h3>
+                <h3 title="Select time">Select time:</h3>
             </label>
 
             <select class="form-control" id="times" name="times" required>
@@ -88,7 +90,7 @@
             <br>
 
             <div class="container-fluid" style="text-align: center">
-                <button class="btn btn-primary" type="submit" onclick="checkAvailable()" value="Book Appointment">Book Appointment</button>
+                <button class="btn btn-primary" type="submit" onclick="checkAvailable()" value="Book Appointment"  title="Click here to book appointment">Book Appointment</button>
             </div>
 
             <br>
@@ -98,6 +100,5 @@
 </div>
 </body>
 </html>
-
 <script src="${contextPath}/resources/js/booking.js">
 </script>
