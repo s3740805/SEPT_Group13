@@ -4,34 +4,33 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 // Remove error message
-function appointmentDateErrorOk(){
+function appointmentDateErrorOk() {
     document.getElementById("appointmentDateError").style.display = "none"
     document.getElementById("appointmentDateErrorFuture").style.display = "none"
     document.getElementById("appointmentDate").style.boxShadow = ""
 }
+
 // Check booking that have booked or not
 function checkAvailable() {
     let state = sessionStorage.getItem("state");
     let doctorID = document.getElementById('doctors').value.split('.')[0];
     let date = document.getElementById('appointmentDate').value;
     let today = new Date()
-    let bookingDate = new Date (date.split('-')[0],parseInt(date.split('-')[1]) - 1,
+    let bookingDate = new Date(date.split('-')[0], parseInt(date.split('-')[1]) - 1,
         parseInt((date.split('-')[2])) + 1)
     // if the date be booked is less than today, show error
-    if (bookingDate < today){
+    if (bookingDate < today) {
         document.getElementById("appointmentDateError").style.display = "block"
         document.getElementById("appointmentDate").style.boxShadow = "0 0 5px red"
         return
-    }
-    else {
+    } else {
         // if the date be booked is over one week in advanced
         today.setDate(today.getDate() + 7)
-        if (bookingDate > today){
+        if (bookingDate > today) {
             document.getElementById("appointmentDateErrorFuture").style.display = "block"
             document.getElementById("appointmentDate").style.boxShadow = "0 0 5px red"
             return
-        }
-        else{
+        } else {
             appointmentDateErrorOk()
         }
     }
@@ -83,7 +82,7 @@ function getDoctors() {
         .then(json => {
             for (let i = 0; i < json.length; i++) {
                 let id = json[i].id
-                doctorList.innerHTML += '<option>' + id + '. ' + json[i].name + " -- <i> " + json[i].email + " </i> " +  '</option>'
+                doctorList.innerHTML += '<option>' + id + '. ' + json[i].name + " -- <i> " + json[i].email + " </i> " + '</option>'
             }
         })
 }

@@ -72,7 +72,7 @@ public class UserController {
         // If user is admin
         if (isAdmin)
             return "welcomeAdmin";
-        // If user is patient
+            // If user is patient
         else return "welcomePatient";
     }
 
@@ -84,21 +84,31 @@ public class UserController {
 
     //Admin
     @GetMapping("/admin/doctor")
-    public String doctor(Model model) { return "admin/doctor"; }
+    public String doctor(Model model) {
+        return "admin/doctor";
+    }
+
     @GetMapping("/admin/booking")
-    public String bookingAdmin(Model model) { return "admin/bookingAdmin"; }
+    public String bookingAdmin(Model model) {
+        return "admin/bookingAdmin";
+    }
+
     @GetMapping("/admin/patient")
-    public String patientAdmin(Model model) { return "admin/patientAdmin"; }
+    public String patientAdmin(Model model) {
+        return "admin/patientAdmin";
+    }
 
     //Patient/ User
     @GetMapping("/patient/booking")
     public String booking(Model model) {
         return "patient/booking";
     }
+
     @GetMapping("/patient/profile")
     public String profile(Model model) {
         return "patient/profile";
     }
+
     @GetMapping("/patient/bookinghistory")
     public String bookingPatient(Model model) {
         return "patient/bookingHistory";

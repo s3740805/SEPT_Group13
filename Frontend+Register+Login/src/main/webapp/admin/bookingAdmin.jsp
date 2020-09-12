@@ -21,24 +21,28 @@
         body {
             padding-top: 3.5rem;
         }
-        button{
+
+        button {
             margin: 0 5px 0 0;
             padding: 5px;
             border-radius: 5px;
             background-color: white;
             border-color: cornflowerblue;
         }
-        #accept:hover{
+
+        #accept:hover {
             background-color: limegreen;
             color: white;
             box-shadow: 0 0 5px limegreen;
         }
-        #reject:hover{
+
+        #reject:hover {
             background-color: #ffdd83;
             color: white;
             box-shadow: 0 0 5px #ffdd83;
         }
-        #delete:hover{
+
+        #delete:hover {
             background-color: red;
             color: white;
             box-shadow: 0 0 5px red;

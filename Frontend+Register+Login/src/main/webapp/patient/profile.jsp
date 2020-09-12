@@ -20,6 +20,7 @@
         body {
             padding-top: 3.5rem;
         }
+
         #tooltip {
             position: relative;
             display: inline-block;
@@ -76,7 +77,7 @@
     <h3>Profile</h3>
     <div id="id_profile"></div>
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toppad" >
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toppad">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title" id="patientUserName"></h3>
@@ -88,11 +89,15 @@
                                 <tbody>
                                 <tr>
                                     <td>First Name:</td>
-                                    <td><div id="FirstName"></div><td/>
+                                    <td>
+                                        <div id="FirstName"></div>
+                                    <td/>
                                 </tr>
                                 <tr>
                                     <td>Last Name:</td>
-                                    <td><div id="LastName"></div></td>
+                                    <td>
+                                        <div id="LastName"></div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Date of Birth:</td>
@@ -147,8 +152,10 @@
                         </div>
 
                         <span class="pull-right col-md-1 col-lg-1">
-                            <div id="tooltip"><a id="editButton" type="button" class="btn btn-sm btn-warning " onclick="patientEdit();changeVisibility()"><i class="glyphicon glyphicon-edit"></i>Edit <span id="tooltiptext">Click here to edit your profile</span></a></div>
-                            <a id ="back"></a>
+                            <div id="tooltip"><a id="editButton" type="button" class="btn btn-sm btn-warning "
+                                                 onclick="patientEdit();changeVisibility()"><i
+                                    class="glyphicon glyphicon-edit"></i>Edit <span id="tooltiptext">Click here to edit your profile</span></a></div>
+                            <a id="back"></a>
                     </span>
                     </div>
 
@@ -166,6 +173,7 @@
         let state = sessionStorage.getItem("state");
         getPatient(state);
     })
+
     // Show Patient Profile
     function getPatient(username) {
         let id = document.getElementById('id_profile')
@@ -176,28 +184,29 @@
         let Address = document.getElementById('Address')
         let Email = document.getElementById('Email')
         let Phone = document.getElementById('Phone')
-        let allergies =document.getElementById('allergies')
-        let bloodType =document.getElementById('bloodType')
-        let healthStatus=document.getElementById('healthStatus')
-        let medicalHistory=document.getElementById('medicalHistory')
+        let allergies = document.getElementById('allergies')
+        let bloodType = document.getElementById('bloodType')
+        let healthStatus = document.getElementById('healthStatus')
+        let medicalHistory = document.getElementById('medicalHistory')
         id.innerHTML = ''
-        fetch(`http://localhost:8080/patients/`+username)
+        fetch(`http://localhost:8080/patients/` + username)
             .then(response => response.json())
             .then(function (doc) {
                 id.value = doc.id;
-                FirstName.innerHTML += '<div>' +  doc.fname + '</div>';
-                LastName.innerHTML += '<div>' +  doc.lname + '</div>';
-                DOB.innerHTML ='<div>' + doc.dob+'</div>';
-                Gender.innerHTML += '<div>' +  doc.gender + '</div>';
-                Address.innerHTML += '<div>' +  doc.address + '</div>';
-                Email.innerHTML += '<div>' +  doc.email + '</div>';
-                Phone.innerHTML += '<div>' + "(+84)" +  doc.phone + '</div>';
-                allergies.innerHTML+= '<div>' +  doc.allergies + '</div>';
-                bloodType.innerHTML+= '<div>' +  doc.bloodType + '</div>';
-                healthStatus.innerHTML+= '<div>' +  doc.healthStatus + '</div>';
-                medicalHistory.innerHTML+= '<div>' +  doc.medicalHistory + '</div>';
+                FirstName.innerHTML += '<div>' + doc.fname + '</div>';
+                LastName.innerHTML += '<div>' + doc.lname + '</div>';
+                DOB.innerHTML = '<div>' + doc.dob + '</div>';
+                Gender.innerHTML += '<div>' + doc.gender + '</div>';
+                Address.innerHTML += '<div>' + doc.address + '</div>';
+                Email.innerHTML += '<div>' + doc.email + '</div>';
+                Phone.innerHTML += '<div>' + "(+84)" + doc.phone + '</div>';
+                allergies.innerHTML += '<div>' + doc.allergies + '</div>';
+                bloodType.innerHTML += '<div>' + doc.bloodType + '</div>';
+                healthStatus.innerHTML += '<div>' + doc.healthStatus + '</div>';
+                medicalHistory.innerHTML += '<div>' + doc.medicalHistory + '</div>';
             })
     }
+
     // Edit Patient Profile
     function patientEdit() {
         let state1 = sessionStorage.getItem("state");
@@ -210,10 +219,10 @@
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
               </select>`
-        document.getElementById("Address").innerHTML= `<input class="form-control" type="text" id="edit_address"><div id="wAddress" style="color: red"></div>`
-        document.getElementById("Email").innerHTML= `<div id="tooltip"><input class="form-control" type="email" name="email" id="edit_email"><span id="tooltiptext">Input your email follow the form exam@gmail.com </span></div><div id="wEmail" style="color: red"></div>`
-        document.getElementById("Phone").innerHTML= `<div id="tooltip"><div class="input-group"><div class="input-group-prepend"><span class="input-group-text">+84</span></div><input class="form-control" type="text" maxlength="11" name="phone"  id="phone"></div><span id="tooltiptext"> Please input your mobile phone number. </span></div><div id="wPhone" style="color: red"></div>`
-        document.getElementById("bloodType").innerHTML=`
+        document.getElementById("Address").innerHTML = `<input class="form-control" type="text" id="edit_address"><div id="wAddress" style="color: red"></div>`
+        document.getElementById("Email").innerHTML = `<div id="tooltip"><input class="form-control" type="email" name="email" id="edit_email"><span id="tooltiptext">Input your email follow the form exam@gmail.com </span></div><div id="wEmail" style="color: red"></div>`
+        document.getElementById("Phone").innerHTML = `<div id="tooltip"><div class="input-group"><div class="input-group-prepend"><span class="input-group-text">+84</span></div><input class="form-control" type="text" maxlength="11" name="phone"  id="phone"></div><span id="tooltiptext"> Please input your mobile phone number. </span></div><div id="wPhone" style="color: red"></div>`
+        document.getElementById("bloodType").innerHTML = `
               <select class="form-control" id="edit_bloodType">
                   <option value="A">A</option>
                   <option value="B">B</option>
@@ -221,27 +230,27 @@
                   <option value="AB">AB</option>
                   <option value="Don't know">Don't know</option>
               </select>`
-        document.getElementById("allergies").innerHTML= `<div id="tooltip"><input class="form-control" type="text" id="edit_allergies"><span id="tooltiptext"> Have you ever had an allergic or adverse reaction to any medication? </span></div>`
-        document.getElementById("healthStatus").innerHTML= `<div id="tooltip"><input class="form-control"  type="text" id="edit_healthStatus"><span id="tooltiptext">Do you have any current medical problems?</span></div>`
-        document.getElementById("medicalHistory").innerHTML= `<div id="tooltip"><input class="form-control" type="text" id="edit_medicalHistory"><span id="tooltiptext">Have you ever received medical care and if so, what for?</span></div>`
-        document.getElementById("save").innerHTML+= `<button type="submit" class="btn btn-success" onclick="validateFormFName();validateFormLName();validateFormAddress();validateFormEmail();validateFormPhone();saveValidation()">Save</button>`
-        document.getElementById("back").innerHTML+=`<a id="tooltip" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back<span id="tooltiptext">Click here to come back your profile </span></a>`
+        document.getElementById("allergies").innerHTML = `<div id="tooltip"><input class="form-control" type="text" id="edit_allergies"><span id="tooltiptext"> Have you ever had an allergic or adverse reaction to any medication? </span></div>`
+        document.getElementById("healthStatus").innerHTML = `<div id="tooltip"><input class="form-control"  type="text" id="edit_healthStatus"><span id="tooltiptext">Do you have any current medical problems?</span></div>`
+        document.getElementById("medicalHistory").innerHTML = `<div id="tooltip"><input class="form-control" type="text" id="edit_medicalHistory"><span id="tooltiptext">Have you ever received medical care and if so, what for?</span></div>`
+        document.getElementById("save").innerHTML += `<button type="submit" class="btn btn-success" onclick="validateFormFName();validateFormLName();validateFormAddress();validateFormEmail();validateFormPhone();saveValidation()">Save</button>`
+        document.getElementById("back").innerHTML += `<a id="tooltip" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back<span id="tooltiptext">Click here to come back your profile </span></a>`
 
-        fetch(`http://localhost:8080/patients/`+state1)
+        fetch(`http://localhost:8080/patients/` + state1)
             .then(response => response.json())
             .then(function (doc) {
                 document.getElementById("id_profile").value = doc.id;
                 document.getElementById("edit_fname").value = doc.fname;
                 document.getElementById("edit_lname").value = doc.lname;
                 document.getElementById("edit_dob").value = doc.dob;
-                document.getElementById("edit_email").value= doc.email;
+                document.getElementById("edit_email").value = doc.email;
                 document.getElementById("edit_gender").value = doc.gender;
                 document.getElementById("edit_address").value = doc.address;
                 document.getElementById("phone").value = doc.phone;
                 document.getElementById("edit_bloodType").value = doc.bloodType;
-                document.getElementById("edit_allergies").value= doc.allergies;
-                document.getElementById("edit_healthStatus").value= doc.healthStatus;
-                document.getElementById("edit_medicalHistory").value= doc.medicalHistory;
+                document.getElementById("edit_allergies").value = doc.allergies;
+                document.getElementById("edit_healthStatus").value = doc.healthStatus;
+                document.getElementById("edit_medicalHistory").value = doc.medicalHistory;
 
             })
 
@@ -262,25 +271,25 @@
         let editHealthStatus = document.getElementById('edit_healthStatus').value
         let editMedicalHistory = document.getElementById('edit_medicalHistory').value
         let id = document.getElementById('id_profile').value;
-        if (confirm("Are you sure want to change your information")){
-            fetch(`http://localhost:8080/patients/`+state2, {
+        if (confirm("Are you sure want to change your information")) {
+            fetch(`http://localhost:8080/patients/` + state2, {
                 method: 'PUT',
                 body: JSON.stringify({
-                    id : parseInt(id),
+                    id: parseInt(id),
                     name: null,
-                    username : state2,
+                    username: state2,
                     password: null,
                     fname: editFirstName,
                     lname: editLastName,
-                    address:editAddress,
-                    dob:editDOB,
+                    address: editAddress,
+                    dob: editDOB,
                     gender: editGender,
-                    bloodType:editBloodType,
-                    phone:editPhone,
-                    email:editEmail,
-                    allergies:editAllergies,
-                    healthStatus:editHealthStatus,
-                    medicalHistory:editMedicalHistory
+                    bloodType: editBloodType,
+                    phone: editPhone,
+                    email: editEmail,
+                    allergies: editAllergies,
+                    healthStatus: editHealthStatus,
+                    medicalHistory: editMedicalHistory
                 }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -289,6 +298,7 @@
             }).then(res => location.reload())
         }
     }
+
     function changeVisibility() {
         document.getElementById("editButton").style.display = "none";
     }
@@ -300,55 +310,59 @@
         var letters = /^[A-Za-z]+$/; // This value for checking the letter
         var fn = document.getElementById("edit_fname").value;
         // Checking null value
-        if(fn == "") {
-            document.getElementById("wFirstName").innerHTML= "Please enter your First Name";
+        if (fn == "") {
+            document.getElementById("wFirstName").innerHTML = "Please enter your First Name";
             document.getElementById("edit_fname").style.borderColor = "red";// focus on wrong value
             return false;
 
         }
-        if(fn.match(letters) ){
-        }else {
-            document.getElementById("wFirstName").innerHTML="Please input alphabet characters only";
+        if (fn.match(letters)) {
+        } else {
+            document.getElementById("wFirstName").innerHTML = "Please input alphabet characters only";
             document.getElementById("edit_fname").style.borderColor = "red";// focus on wrong value
-            return false;}
+            return false;
+        }
 
-        document.getElementById("wFirstName").innerHTML= "";
+        document.getElementById("wFirstName").innerHTML = "";
         document.getElementById("edit_fname").style.borderColor = "";
         return true;
 
 
     }
+
     // Validation for Last Name
     function validateFormLName() {
         var letters = /^[A-Za-z]+$/; // This value for checking the letter
         var ln = document.getElementById("edit_lname").value;
         // Checking null value
-        if(ln == "") {
-            document.getElementById("wLastName").innerHTML="Please enter your Last Name";
+        if (ln == "") {
+            document.getElementById("wLastName").innerHTML = "Please enter your Last Name";
             document.getElementById("edit_lname").style.borderColor = "red";// focus on wrong value
             return false;
         }
-        if(ln.match(letters) ){
-        }else {
-            document.getElementById("wLastName").innerHTML="Please input alphabet characters only";
+        if (ln.match(letters)) {
+        } else {
+            document.getElementById("wLastName").innerHTML = "Please input alphabet characters only";
             document.getElementById("edit_lname").style.borderColor = "red";// focus on wrong value
-            return false;}
+            return false;
+        }
 
-        document.getElementById("wLastName").innerHTML= "";
+        document.getElementById("wLastName").innerHTML = "";
         document.getElementById("edit_lname").style.borderColor = "";
         return true;
 
     }
+
     // Validation for Address
     function validateFormAddress() {
         var ad = document.getElementById("edit_address").value;
         // Checking null value
-        if(ad == ""){
-            document.getElementById("wAddress").innerHTML="Please enter your Address";
+        if (ad == "") {
+            document.getElementById("wAddress").innerHTML = "Please enter your Address";
             document.getElementById("edit_address").style.borderColor = "red";// focus on wrong value
             return false
         }
-        document.getElementById("wAddress").innerHTML="";
+        document.getElementById("wAddress").innerHTML = "";
         document.getElementById("edit_address").style.borderColor = "";
         return true;
 
@@ -356,48 +370,48 @@
 
     // Validation for Email
     function validateFormEmail() {
-        var el=document.getElementById('edit_email').value;
+        var el = document.getElementById('edit_email').value;
         var character = el.indexOf("@");
         var dot = el.lastIndexOf(".");
         // Checking null value
-        if(el == ""){
-            document.getElementById("wEmail").innerHTML="Please enter your Email";
+        if (el == "") {
+            document.getElementById("wEmail").innerHTML = "Please enter your Email";
             document.getElementById("edit_email").style.borderColor = "red";// focus on wrong value
             return false;
         }
-        if((character <1) || (dot<character+2) || (dot+2>el.length)) {
-            document.getElementById("wEmail").innerHTML="Please input valid email";
+        if ((character < 1) || (dot < character + 2) || (dot + 2 > el.length)) {
+            document.getElementById("wEmail").innerHTML = "Please input valid email";
             document.getElementById("edit_email").style.borderColor = "red";// focus on wrong value
             return false;
         }
-        document.getElementById("wEmail").innerHTML="";
+        document.getElementById("wEmail").innerHTML = "";
         document.getElementById("edit_email").style.borderColor = "";
         return true;
 
     }
 
     // validation for Phone number
-    function validateFormPhone()  {
+    function validateFormPhone() {
         var pe = document.getElementById('phone').value;
         var testphone = isNaN(pe); // This is checking the number
         // Checking null value
-        if (pe ==""){
-            document.getElementById("wPhone").innerHTML="Please enter your phone number";
+        if (pe == "") {
+            document.getElementById("wPhone").innerHTML = "Please enter your phone number";
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
-        if( testphone == true)  {
-            document.getElementById("wPhone").innerHTML="Please input number only!";
+        if (testphone == true) {
+            document.getElementById("wPhone").innerHTML = "Please input number only!";
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
-        if (pe.length < 9){
-            document.getElementById("wPhone").innerHTML="Please input valid phone number.";
+        if (pe.length < 9) {
+            document.getElementById("wPhone").innerHTML = "Please input valid phone number.";
             document.getElementById("phone").style.borderColor = "red";// focus on wrong value
             return false;
         }
 
-        document.getElementById("wPhone").innerHTML="";
+        document.getElementById("wPhone").innerHTML = "";
         document.getElementById("phone").style.borderColor = "";
 
         return true;
@@ -405,7 +419,7 @@
 
 
     function saveValidation() {
-        if (validateFormFName()==true && validateFormLName()==true && validateFormAddress()==true && validateFormEmail()==true && validateFormPhone()==true){
+        if (validateFormFName() == true && validateFormLName() == true && validateFormAddress() == true && validateFormEmail() == true && validateFormPhone() == true) {
             editProfile();
         }
 

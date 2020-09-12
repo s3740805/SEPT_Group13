@@ -31,9 +31,11 @@
                     <form id="logoutForm" method="POST" action="${contextPath}/logout">
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     </form>
-                    <span class="mr-sm-2" style="color: #37444C"><i class="fas fa-user-alt"> </i> ${pageContext.request.userPrincipal.name}</span>
+                    <span class="mr-sm-2" style="color: #37444C"><i
+                            class="fas fa-user-alt"> </i> ${pageContext.request.userPrincipal.name}</span>
                     <button class="btn btn-outline-dark my-2 my-sm-0"
-                            onclick="if (confirm('Do you want to logout?')) {document.forms['logoutForm'].submit()}" title="Click to logout">Logout
+                            onclick="if (confirm('Do you want to logout?')) {document.forms['logoutForm'].submit()}"
+                            title="Click to logout">Logout
                     </button>
                 </c:if>
             </div>

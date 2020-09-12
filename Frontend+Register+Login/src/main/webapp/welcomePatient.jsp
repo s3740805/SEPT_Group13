@@ -27,43 +27,45 @@
 <!-- Navigation -->
 <jsp:include page="_navigation.jsp"></jsp:include>
 <!-- Content -->
-  <div class="container" style="text-align: center">
+<div class="container" style="text-align: center">
     <c:if test="${pageContext.request.userPrincipal.name != null}">
         <!-- welcome message with logged username -->
-        <h1 style="color: #4AA0B5; font-size: 50px">Hi <span id="name" value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}!</span></h1>
+        <h1 style="color: #4AA0B5; font-size: 50px">Hi <span id="name"
+                                                             value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}!</span>
+        </h1>
         <h3>Welcome to our Doctor Appointment Booking System.</h3>
     </c:if>
-  </div>
+</div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-      // Store username in sessionStorage for later use
-      sessionStorage.setItem("state", document.getElementById('name').getAttribute('value'));
-      // Create new patient with this.username if username is not existing (except admin)
-      let state = sessionStorage.getItem("state");
-      let havePatient = false;
-      fetch('http://localhost:8080/patients')
-          .then(res => res.json())
-          .then(json => {
-              for (let i = 0; i < json.length; i++) {
-                  if (state === json[i].username || state === "admin") {
-                      havePatient = true;
-                      break;
-                  }
-              }
-          }).then(() => {
-          if (havePatient === false) {
-              fetch('http://localhost:8080/patients', {
-                  headers: {
-                      'Accept': 'application/json',
-                      'Content-Type': 'application/json'
-                  },
-                  method: "POST",
-                  body: JSON.stringify({username: state})
-              })
-          }
-      })
-  </script>
-  <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    // Store username in sessionStorage for later use
+    sessionStorage.setItem("state", document.getElementById('name').getAttribute('value'));
+    // Create new patient with this.username if username is not existing (except admin)
+    let state = sessionStorage.getItem("state");
+    let havePatient = false;
+    fetch('http://localhost:8080/patients')
+        .then(res => res.json())
+        .then(json => {
+            for (let i = 0; i < json.length; i++) {
+                if (state === json[i].username || state === "admin") {
+                    havePatient = true;
+                    break;
+                }
+            }
+        }).then(() => {
+        if (havePatient === false) {
+            fetch('http://localhost:8080/patients', {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                method: "POST",
+                body: JSON.stringify({username: state})
+            })
+        }
+    })
+</script>
+<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 </body>
 </html>

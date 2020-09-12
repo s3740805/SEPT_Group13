@@ -28,10 +28,11 @@
             <h1 style="color: #4AA0B5; font-size: 70px">404</h1>
             <h2 style="font-size: 50px">Page Not Found </h2>
             <h5>Sorry <span id="name"
-                         value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}, </span>
+                            value="${pageContext.request.userPrincipal.name}">${pageContext.request.userPrincipal.name}, </span>
                 the page you are looking for does not exist.</h5>
             <br>
-            <h6 style="color: #4AA0B5"><i class="fas fa-arrow-circle-right"></i> <a style="color: #4AA0B5" href="/">Go to Homepage</a></h6>
+            <h6 style="color: #4AA0B5"><i class="fas fa-arrow-circle-right"></i> <a style="color: #4AA0B5" href="/">Go
+                to Homepage</a></h6>
         </c:if>
     </div>
 

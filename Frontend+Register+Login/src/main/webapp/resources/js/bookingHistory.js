@@ -84,10 +84,10 @@ function getBookings() {
                     })
                     // status: null => Pending, "accepted" => Accepted, "rejected" => Rejected
                     let status = `<p style="color: #ffdd83">Pending</p>`
-                    if (json[i].status === "accepted"){
+                    if (json[i].status === "accepted") {
                         status = `<p style="color: limegreen">Accepted</p>`
                     }
-                    if (json[i].status === "rejected"){
+                    if (json[i].status === "rejected") {
                         status = `<p style="color: red">Rejected</p>`
                     }
                     upcomingBookings.innerHTML += '<tr id="bookings">' +

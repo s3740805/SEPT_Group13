@@ -28,7 +28,8 @@
             <h1 style="color: #4AA0B5; font-size: 70px">500</h1>
             <h2 style="font-size: 50px">Internal Server Error </h2>
             <br>
-            <h6 style="color: #4AA0B5"><i class="fas fa-arrow-circle-right"></i> <a style="color: #4AA0B5" href="/">Go to Homepage</a></h6>
+            <h6 style="color: #4AA0B5"><i class="fas fa-arrow-circle-right"></i> <a style="color: #4AA0B5" href="/">Go
+                to Homepage</a></h6>
         </c:if>
     </div>
 
