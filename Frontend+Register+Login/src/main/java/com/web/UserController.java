@@ -104,5 +104,11 @@ public class UserController {
         return "patient/bookingHistory";
     }
 
+    @GetMapping("/patient/about")
+    public String about(Model model) {
+        return "patient/about";
+    }
+
+
 
 }

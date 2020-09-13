@@ -57,9 +57,9 @@ function checkAvailable() {
                 body: JSON.stringify({doctor_id: doctorID, time: time, date: date, userName: state})
 
             })
-            alert('Booked successfully')
+            alert('Booked successfully.')
             // Go back to home page ?!
-            window.location.replace("/")
+            window.location.replace("/patient/bookinghistory")
         }
     })
 }

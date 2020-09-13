@@ -19,6 +19,7 @@
             padding-top: 3.5rem;
         }
     </style>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/2957/2957872.svg" sizes="16x16">
 </head>
 <body>
 <div class="container">
