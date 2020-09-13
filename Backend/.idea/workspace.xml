@@ -5,37 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97217b02-e8fb-4fca-9666-6062ae927518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jsp_jstl_javax_servlet_jsp_jstl_api_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SampleHibernateSpringMVC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SampleHibernateSpringMVC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SampleHibernateSpringMVC_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SampleHibernateSpringMVC_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/about.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0-SNAPSHOT/WEB-INF/classes/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SampleHibernateSpringMVC-1.0-SNAPSHOT/WEB-INF/classes/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/MyTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/MyTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-MyTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-MyTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controller.BookingControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controller.BookingControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controller.DoctorControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controller.DoctorControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controller.PatientControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controller.PatientControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.BookingModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.BookingModelTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.DoctorModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.DoctorModelTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.PatientModelTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.PatientModelTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controller.BookingControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controller.BookingControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controller.DoctorControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controller.DoctorControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controller.PatientControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controller.PatientControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.PatientModelTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.PatientModelTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigationAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigationAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/patientAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/patientAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/403Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/403Page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/404Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/404Page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/500Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/500Page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/ErrorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/ErrorPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomeAdmin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomePatient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomePatient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/validator/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/validator/UserValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/DataSeeding.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/DataSeeding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/HandleErrorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/HandleErrorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/test-classes/com/model/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/test-classes/com/model/UserTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/config/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="53" column="62" lean-forward="true" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+            <state relative-caret-position="337">
+              <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -59,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -91,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="2502">
               <caret line="139" column="21" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
             </state>
           </provider>
@@ -174,9 +185,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2" />
     <option name="y" value="23" />
-    <option name="width" value="1438" />
+    <option name="width" value="1440" />
     <option name="height" value="835" />
   </component>
   <component name="ProjectId" id="1h2N46bFPsqM66zevWLjYkTsfvw" />
@@ -211,27 +221,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -241,7 +236,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600021004289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600027163965" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -398,17 +393,18 @@
       <workItem from="1599637157901" duration="600000" />
       <workItem from="1599934582683" duration="4738000" />
       <workItem from="1600015271388" duration="5525000" />
+      <workItem from="1600026830363" duration="334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10863000" />
+    <option name="totallyTimeSpent" value="11197000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="835" extended-state="6" />
+    <frame x="2" y="23" width="1438" height="835" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30972818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31375358" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
@@ -424,7 +420,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.8277254" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2678331" />
       <window_info anchor="bottom" id="Docker" order="8" weight="0.32974428" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
@@ -587,6 +583,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/config/WebAppInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -622,38 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/WebAppInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="2502">
           <caret line="139" column="21" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="53" column="62" lean-forward="true" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
         </state>
       </provider>
     </entry>
