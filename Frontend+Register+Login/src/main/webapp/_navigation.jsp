@@ -23,6 +23,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/patient/bookinghistory">Booking History</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/patient/about">About us</a>
+                    </li>
                 </ul>
             </div>
 
@@ -45,7 +48,7 @@
     </nav>
     <!--header image-->
     <div class="jumbotron"
-         style="background-image: url(https://static.wixstatic.com/media/85baeb_d155e10f3b8d4aff829822a4b828a58a~mv2_d_2800_1273_s_2.jpg); background-size: cover; height: 300px">
+         style="background-image: url(https://i.ibb.co/S3BnnGT/Thie-t-ke-kho-ng-te-n-4.png); background-size: cover; height: 300px">
         <div class="container">
             <%--<h1>Doctor Appointment Booking System</h1>--%>
         </div>
