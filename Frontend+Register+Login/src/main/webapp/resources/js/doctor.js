@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     }).then(response => {
                             doctorForm.querySelector('#name').value = '', doctorForm.querySelector('#email').value = '', doctorForm.querySelector('#description').value = '';
-                                alert('New doctor have been added successfully.');
+                            alert('New doctor have been added successfully.');
                             fetchDoctors()
                         }
                     )
@@ -192,9 +192,9 @@ function fetchBookings(doctorId) {
             // filter booking with targeted doctor id
             let booking = doc.filter(d => (d.doctor_id == doctorId));
             // if no booking yet
-            if (booking.length === 0){
+            if (booking.length === 0) {
                 bookingContainer.innerHTML += `<h6>No booking to show.</h6>`
-            }else{
+            } else {
                 // sort bookings in descending
                 booking.sort((a, b) => {
                     if (new Date(parseInt(a.date.split("-")[0]),

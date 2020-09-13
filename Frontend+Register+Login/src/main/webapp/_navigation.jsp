@@ -32,9 +32,11 @@
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     </form>
                     <span class="mr-sm-2"><a style="color: #37444C"
-                                             href="/patient/profile"><i class="fas fa-user-alt"> </i> ${pageContext.request.userPrincipal.name}</a></span>
+                                             href="/patient/profile"><i
+                            class="fas fa-user-alt"> </i> ${pageContext.request.userPrincipal.name}</a></span>
                     <button class="btn btn-outline-dark my-2 my-sm-0"
-                            onclick="if (confirm('Do you want to logout?')) {document.forms['logoutForm'].submit()}" title="Click to logout">Logout
+                            onclick="if (confirm('Do you want to logout?')) {document.forms['logoutForm'].submit()}"
+                            title="Click to logout">Logout
                     </button>
                 </c:if>
             </div>
@@ -45,7 +47,7 @@
     <div class="jumbotron"
          style="background-image: url(https://static.wixstatic.com/media/85baeb_d155e10f3b8d4aff829822a4b828a58a~mv2_d_2800_1273_s_2.jpg); background-size: cover; height: 300px">
         <div class="container">
-            <h1>Doctor Appointment Booking System</h1>
+            <%--<h1>Doctor Appointment Booking System</h1>--%>
         </div>
     </div>
 </div>

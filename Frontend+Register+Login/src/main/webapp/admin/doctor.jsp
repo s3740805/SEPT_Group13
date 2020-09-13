@@ -28,33 +28,35 @@
 <jsp:include page="../_navigationAdmin.jsp"></jsp:include>
 <div class="container">
     <!--Add doctor form-->
-    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#add-doctor" title="Click to add new doctor">Add new doctor <i class="fas fa-user-plus"></i></button>
+    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#add-doctor"
+            title="Click to add new doctor">Add new doctor <i class="fas fa-user-plus"></i></button>
     <div id='add-doctor' class="collapse">
         <form class="form-horizontal" id="doctor-form">
             <br>
             <div class="form-group row">
                 <label class="col-sm-2" for="name">Name:</label>
                 <div class="col-sm-10">
-                    <input required type="text" name="name" id="name" class="form-control" pattern="^[A-Za-z ]+$" title="Please input alphabet characters only"
+                    <input required type="text" name="name" id="name" class="form-control" pattern="^[A-Za-z ]+$"
+                           title="Please input alphabet characters only"
                            placeholder="Enter name">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2" for="email">Email:</label>
                 <div class="col-sm-10">
-                <input required type="email" name="email" id="email" class="form-control" placeholder="Enter email">
+                    <input required type="email" name="email" id="email" class="form-control" placeholder="Enter email">
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2" for="description">Description:</label>
                 <div class="col-sm-10">
-                <select class="form-control" id="description" name="description" required>
-                    <option value="Bone">Bone</option>
-                    <option value="General Physician">General Physician</option>
-                    <option value="Heart">Heart</option>
-                    <option value="Lung">Lung</option>
-                    <option value="Neurology">Neurology</option>
-                </select>
+                    <select class="form-control" id="description" name="description" required>
+                        <option value="Bone">Bone</option>
+                        <option value="General Physician">General Physician</option>
+                        <option value="Heart">Heart</option>
+                        <option value="Lung">Lung</option>
+                        <option value="Neurology">Neurology</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group row justify-content-center">
@@ -113,7 +115,7 @@
                 </div>
 
                 <!-- Modal body -->
-                <div class="modal-body" >
+                <div class="modal-body">
                     <table class="table" id="bookings-table">
                         <thead>
                         <tr>

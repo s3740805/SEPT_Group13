@@ -5,7 +5,7 @@ import java.sql.Date;
 import java.sql.Time;
 
 @Entity
-@Table(name="booking")
+@Table(name = "booking")
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,7 +19,6 @@ public class Booking {
 
 //  @ManyToOne(cascade = CascadeType.ALL)
 //  private Time time;
-
 
 
     public int getId() {

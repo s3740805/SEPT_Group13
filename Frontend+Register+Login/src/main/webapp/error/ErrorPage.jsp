@@ -27,7 +27,8 @@
         <c:if test="${pageContext.request.userPrincipal.name != null}">
             <h1 style="color: #4AA0B5; font-size: 70px">ERROR</h1>
             <h2 style="font-size: 50px">Sorry, something went wrong.</h2>
-            <h6 style="color: #4AA0B5"><i class="fas fa-arrow-circle-right"></i> <a style="color: #4AA0B5" href="/">Go to Homepage</a></h6>
+            <h6 style="color: #4AA0B5"><i class="fas fa-arrow-circle-right"></i> <a style="color: #4AA0B5" href="/">Go
+                to Homepage</a></h6>
         </c:if>
     </div>
 

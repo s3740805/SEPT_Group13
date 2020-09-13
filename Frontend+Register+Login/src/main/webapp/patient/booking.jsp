@@ -21,7 +21,8 @@
         body {
             padding-top: 3.5rem;
         }
-        strong:hover{
+
+        strong:hover {
             text-underline: blue;
             text-decoration: underline;
             cursor: pointer;
@@ -33,7 +34,7 @@
 <jsp:include page="../_navigation.jsp"></jsp:include>
 <!-- Body -->
 <div class="container">
-    <div id="bookingBody" class="container-fluid" >
+    <div id="bookingBody" class="container-fluid">
         <!-- Booking form -->
         <h1 style="text-align: center">Booking Form</h1>
         <br>
@@ -50,10 +51,13 @@
                 <h3 title="Valid date are between today and one week in advance">Select date:</h3>
             </label>
             <br>
-            <input class="form-control" type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate" required>
-            <small id="appointmentDateError" style="display: none;color: red">Invalid date selection. Date selected is already in the past.
+            <input class="form-control" type="date" value="2020-08-01" id="appointmentDate" name="appointmentDate"
+                   required>
+            <small id="appointmentDateError" style="display: none;color: red">Invalid date selection. Date selected is
+                already in the past.
                 <strong onclick="appointmentDateErrorOk()" style="color: blue">x</strong></small>
-            <small id="appointmentDateErrorFuture" style="display: none;color: red">Invalid date selection. Date selected is over one week in the future.
+            <small id="appointmentDateErrorFuture" style="display: none;color: red">Invalid date selection. Date
+                selected is over one week in the future.
                 <strong onclick="appointmentDateErrorOk()" style="color: blue">x</strong></small>
 
             <br>
@@ -90,7 +94,9 @@
             <br>
 
             <div class="container-fluid" style="text-align: center">
-                <button class="btn btn-primary" type="submit" onclick="checkAvailable()" value="Book Appointment"  title="Click here to book appointment">Book Appointment</button>
+                <button class="btn btn-primary" type="submit" onclick="checkAvailable()" value="Book Appointment"
+                        title="Click here to book appointment">Book Appointment
+                </button>
             </div>
 
             <br>
@@ -99,6 +105,15 @@
     </div>
 </div>
 </body>
+
 </html>
+
 <script src="${contextPath}/resources/js/booking.js">
+
+</script>
+<script>
+    // Hover simple hint
+    $(document).ready(function () {
+        $('body').tooltip({selector: ".btn", trigger: "hover"});
+    });
 </script>

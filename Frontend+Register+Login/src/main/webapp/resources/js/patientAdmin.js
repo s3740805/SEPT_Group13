@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <tr><td>Medical History: </td><td>${patientData.medicalHistory}</td></tr>
                 </table>
                 `
-        }else if (e.target.dataset.action === 'booking') {
+        } else if (e.target.dataset.action === 'booking') {
             console.log('press booking')
             // get info from the chosen patient
             const patientData = allPatients.find((patient) => {
@@ -131,7 +131,7 @@ function fetchDoctors() {
     fetch(`${doctorURL}`)
         .then(response => response.json())
         .then(function (json) {
-            allDoctors =json;
+            allDoctors = json;
         })
 }
 

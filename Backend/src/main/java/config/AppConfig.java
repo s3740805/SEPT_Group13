@@ -21,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableWebMvc
-@ComponentScan({"controller","service"})
+@ComponentScan({"controller", "service"})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Override
@@ -32,7 +32,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
 
     @Bean
-    public LocalSessionFactoryBean sessionFactory(){
+    public LocalSessionFactoryBean sessionFactory() {
 
         Properties properties = new Properties();
         //For mysql
@@ -57,7 +57,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public HibernateTransactionManager transactionManager(SessionFactory sessionFactory){
+    public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
         HibernateTransactionManager tx = new HibernateTransactionManager(sessionFactory);
         return tx;
     }
