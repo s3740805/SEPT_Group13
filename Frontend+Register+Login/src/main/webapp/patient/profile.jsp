@@ -171,7 +171,7 @@
 <br><br><br><br><br>
 </body>
 <script>
-    let URL ='https://dabsbackend.herokuapp.com/';
+    let URL = 'https://dabsbackend.herokuapp.com/';
     document.addEventListener('DOMContentLoaded', function () {
         let state = sessionStorage.getItem("state");
         getPatient(state);
@@ -191,22 +191,36 @@
         let bloodType = document.getElementById('bloodType')
         let healthStatus = document.getElementById('healthStatus')
         let medicalHistory = document.getElementById('medicalHistory')
-        id.innerHTML = ''
-        fetch(URL+`patients/` + username)
+        id.innerHTML = '';
+        fetch(URL + `patients/` + username)
             .then(response => response.json())
             .then(function (doc) {
                 id.value = doc.id;
-                FirstName.innerHTML += '<div>' + doc.fname + '</div>';
-                LastName.innerHTML += '<div>' + doc.lname + '</div>';
-                DOB.innerHTML = '<div>' + doc.dob + '</div>';
-                Gender.innerHTML += '<div>' + doc.gender + '</div>';
-                Address.innerHTML += '<div>' + doc.address + '</div>';
-                Email.innerHTML += '<div>' + doc.email + '</div>';
-                Phone.innerHTML += '<div>' + "(+84)" + doc.phone + '</div>';
-                allergies.innerHTML += '<div>' + doc.allergies + '</div>';
-                bloodType.innerHTML += '<div>' + doc.bloodType + '</div>';
-                healthStatus.innerHTML += '<div>' + doc.healthStatus + '</div>';
-                medicalHistory.innerHTML += '<div>' + doc.medicalHistory + '</div>';
+                if (doc.fname == null) {
+                    FirstName.innerHTML += '';
+                    LastName.innerHTML += '';
+                    DOB.innerHTML = '';
+                    Gender.innerHTML += '';
+                    Address.innerHTML += '';
+                    Email.innerHTML += '';
+                    Phone.innerHTML += '';
+                    allergies.innerHTML += '';
+                    bloodType.innerHTML += '';
+                    healthStatus.innerHTML += '';
+                    medicalHistory.innerHTML += '';
+                } else {
+                    FirstName.innerHTML += '<div>' + doc.fname + '</div>';
+                    LastName.innerHTML += '<div>' + doc.lname + '</div>';
+                    DOB.innerHTML = '<div>' + doc.dob + '</div>';
+                    Gender.innerHTML += '<div>' + doc.gender + '</div>';
+                    Address.innerHTML += '<div>' + doc.address + '</div>';
+                    Email.innerHTML += '<div>' + doc.email + '</div>';
+                    Phone.innerHTML += '<div>' + "(+84)" + doc.phone + '</div>';
+                    allergies.innerHTML += '<div>' + doc.allergies + '</div>';
+                    bloodType.innerHTML += '<div>' + doc.bloodType + '</div>';
+                    healthStatus.innerHTML += '<div>' + doc.healthStatus + '</div>';
+                    medicalHistory.innerHTML += '<div>' + doc.medicalHistory + '</div>';
+                }
             })
     }
 
@@ -239,7 +253,7 @@
         document.getElementById("save").innerHTML += `<button type="submit" class="btn btn-success" onclick="validateFormFName();validateFormLName();validateFormAddress();validateFormEmail();validateFormPhone();saveValidation()">Save</button>`
         document.getElementById("back").innerHTML += `<a id="tooltip" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back<span id="tooltiptext">Click here to come back your profile </span></a>`
 
-        fetch(URL+`patients/` + state1)
+        fetch(URL + `patients/` + state1)
             .then(response => response.json())
             .then(function (doc) {
                 document.getElementById("id_profile").value = doc.id;
@@ -275,7 +289,7 @@
         let editMedicalHistory = document.getElementById('edit_medicalHistory').value
         let id = document.getElementById('id_profile').value;
         if (confirm("Are you sure want to change your information")) {
-            fetch(URL+`patients/` + state2, {
+            fetch(URL + `patients/` + state2, {
                 method: 'PUT',
                 body: JSON.stringify({
                     id: parseInt(id),

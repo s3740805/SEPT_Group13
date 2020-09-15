@@ -40,32 +40,40 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
-    // Store username in sessionStorage for later use
-    sessionStorage.setItem("state", document.getElementById('name').getAttribute('value'));
-    // Create new patient with this.username if username is not existing (except admin)
-    let state = sessionStorage.getItem("state");
-    let havePatient = false;
-    fetch('https://dabsbackend.herokuapp.com/patients')
-        .then(res => res.json())
-        .then(json => {
-            for (let i = 0; i < json.length; i++) {
-                if (state === json[i].username || state === "admin") {
-                    havePatient = true;
-                    break;
+    document.addEventListener('DOMContentLoaded', function () {
+        // Store username in sessionStorage for later use
+        sessionStorage.setItem("state", document.getElementById('name').getAttribute('value'));
+        // Create new patient with this.username if username is not existing (except admin)
+        let state = sessionStorage.getItem("state");
+        getPatient(state);
+
+    });
+    // Crete new Profile for user if don't have
+    function getPatient(state) {
+        let havePatient = false;
+        fetch('https://dabsbackend.herokuapp.com/patients')
+            .then(res => res.json())
+            .then(json => {
+                for (let i = 0; i < json.length; i++) {
+                    if (state === json[i].username || state === "admin") {
+                        havePatient = true;
+                        console.log("Have patient");
+                        break;
+                    }
                 }
+            }).then(() => {
+            if (havePatient === false) {
+                fetch('https://dabsbackend.herokuapp.com/patients', {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: "POST",
+                    body: JSON.stringify({username: state})
+                }).then (()=>console.log("New patient"));
             }
-        }).then(() => {
-        if (havePatient === false) {
-            fetch('https://dabsbackend.herokuapp.com/patients', {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                method: "POST",
-                body: JSON.stringify({username: state})
-            })
-        }
-    })
+        })
+    }
 </script>
 <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 </body>
