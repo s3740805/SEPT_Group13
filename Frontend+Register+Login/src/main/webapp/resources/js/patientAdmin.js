@@ -1,9 +1,9 @@
 const patientContainer = document.querySelector('#patient-container');
 const patientDetail = document.querySelector('#patient-details');
 const bookingContainer = document.querySelector('#bookings-container');
-const patientURL = `http://localhost:8080/patients`;
-const bookingURL = `http://localhost:8080/bookings`;
-const doctorURL = `http://localhost:8080/doctors`;
+const patientURL = `https://dabsbackend.herokuapp.com/patients`;
+const bookingURL = `https://dabsbackend.herokuapp.com/bookings`;
+const doctorURL = `https://dabsbackend.herokuapp.com/doctors`;
 let allPatients = [];
 let allDoctors = [];
 

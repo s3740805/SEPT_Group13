@@ -1,3 +1,4 @@
+let URL = 'https://dabsbackend.herokuapp.com/';
 // Whenever load the page
 document.addEventListener('DOMContentLoaded', function () {
     getDoctors();
@@ -39,7 +40,7 @@ function checkAvailable() {
     // console.log ( patientID , patientName,doctorID,date,time)
     let booked = false;
     // GET booking to check
-    fetch('http://localhost:8080/bookings')
+    fetch(URL+'bookings')
         .then(res => res.json())
         .then(json => {
             for (let i = 0; i < json.length; i++) {
@@ -57,7 +58,7 @@ function checkAvailable() {
         }).then(() => {
         // If have not been booked => POST
         if (booked === false) {
-            fetch('http://localhost:8080/bookings', {
+            fetch(URL+'bookings', {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
@@ -66,7 +67,7 @@ function checkAvailable() {
                 body: JSON.stringify({doctor_id: doctorID, time: time, date: date, userName: state})
 
             })
-            alert('Booked successfully')
+            alert('Booked successfully. Please check the status in Booking History.')
             // Go back to home page ?!
             window.location.replace("/patient/bookinghistory")
         }
@@ -77,7 +78,7 @@ function checkAvailable() {
 function getDoctors() {
     let doctorList = document.getElementById('doctors')
     doctorList.innerHTML = ''
-    fetch('http://localhost:8080/doctors')
+    fetch(URL+'doctors')
         .then(res => res.json())
         .then(json => {
             for (let i = 0; i < json.length; i++) {

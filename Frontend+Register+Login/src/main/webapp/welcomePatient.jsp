@@ -45,7 +45,7 @@
     // Create new patient with this.username if username is not existing (except admin)
     let state = sessionStorage.getItem("state");
     let havePatient = false;
-    fetch('http://localhost:8080/patients')
+    fetch('https://dabsbackend.herokuapp.com/patients')
         .then(res => res.json())
         .then(json => {
             for (let i = 0; i < json.length; i++) {
@@ -56,7 +56,7 @@
             }
         }).then(() => {
         if (havePatient === false) {
-            fetch('http://localhost:8080/patients', {
+            fetch('https://dabsbackend.herokuapp.com/patients', {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'

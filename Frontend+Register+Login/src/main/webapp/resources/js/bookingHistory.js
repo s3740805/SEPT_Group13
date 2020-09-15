@@ -1,4 +1,5 @@
-let doctors = []
+let doctors = [];
+let URL = 'https://dabsbackend.herokuapp.com/';
 // function to run onload
 document.addEventListener('DOMContentLoaded', function () {
     //sessionStorage.setItem("state","danh1215") //Comment this line when build
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // This is function to delete a booking
 function cancelBooking(id) {
     if (confirm("Are you sure you want to cancel this appointment?\n *Note: You can rebook a new one")) {
-        fetch(`http://localhost:8080/bookings/${id}`, {
+        fetch(URL+`bookings/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +27,7 @@ function getBookings() {
     let pastBookings = document.getElementById("pastBookings")
     let upcomingBookings = document.getElementById("upcomingBookings")
     let today = new Date()
-    fetch(`http://localhost:8080/doctors`).then(res => res.json()) // This is fetching doctors
+    fetch(URL+`doctors`).then(res => res.json()) // This is fetching doctors
         .then(json => {
             json.sort((a, b) => {
                 (parseInt(a.id) > parseInt(b.id)) ? 1 : -1
@@ -37,7 +38,7 @@ function getBookings() {
             // }
             doctors = json;
             // This is fetching bookings from the user
-        }).then(fetch('http://localhost:8080/bookings/' + state).then(res => res.json())
+        }).then(fetch(URL+'bookings/' + state).then(res => res.json())
         .then(json => {
             // This sort the JSON by date, from most recently
             json.sort((a, b) => {

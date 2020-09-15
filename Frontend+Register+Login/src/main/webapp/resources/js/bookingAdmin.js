@@ -1,4 +1,5 @@
-let doctors = []
+let doctors = [];
+let URL = 'https://dabsbackend.herokuapp.com/';
 // function to run onload
 document.addEventListener('DOMContentLoaded', function () {
     //sessionStorage.setItem("state", "admin") //IMPORTANT: Set state to develop code
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // This is function to delete a booking
 function cancelBooking(id) {
     if (confirm("Delete this appointment?")) {
-        fetch(`http://localhost:8080/bookings/${id}`, {
+        fetch(URL+`bookings/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -27,7 +28,7 @@ function acceptBooking(str) {
     let patient_id = str.split(',')[3]
     let time = str.split(',')[4]
     let userName = str.split(',')[5]
-    fetch(`http://localhost:8080/bookings/${id}`, {
+    fetch(URL+`bookings/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             date: date,
@@ -54,7 +55,7 @@ function rejectBooking(str) {
     let patient_id = str.split(',')[3]
     let time = str.split(',')[4]
     let userName = str.split(',')[5]
-    fetch(`http://localhost:8080/bookings/${id}`, {
+    fetch(URL+`bookings/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             date: date,
@@ -74,19 +75,15 @@ function rejectBooking(str) {
 function getBookings() {
     // let state = sessionStorage.getItem("state")
     let allBookings = document.getElementById("allBookings")
-    fetch(`http://localhost:8080/doctors`).then(res => res.json()) // This is fetching doctors
+    fetch(URL+`doctors`).then(res => res.json()) // This is fetching doctors
         .then(json => {
             json.sort((a, b) => {
                 (parseInt(a.id) > parseInt(b.id)) ? 1 : -1
-            })
-            // for (let i = 0; i < json.length; i++) {
-            //     let obj = {id: json[i].id, name: json[i].name}
-            //     doctors.push(obj)
-            // }
+            });
             doctors = json;
 
             // This is fetching bookings from the user
-        }).then(fetch(`http://localhost:8080/bookings`).then(res => res.json())
+        }).then(fetch(URL+`bookings`).then(res => res.json())
         .then(json => {
             // This sort the JSON by date, from most recently
             json.sort((a, b) => {

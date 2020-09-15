@@ -2,8 +2,8 @@ const doctorForm = document.querySelector('#doctor-form');
 const doctorContainer = document.querySelector('#doctor-container');
 const doctorEditor = document.querySelector('#edit-form');
 const bookingContainer = document.querySelector('#bookings-container');
-const doctorURL = `http://localhost:8080/doctors`;
-const bookingURL = `http://localhost:8080/bookings`;
+const doctorURL = `https://dabsbackend.herokuapp.com/doctors`;
+const bookingURL = `https://dabsbackend.herokuapp.com/bookings`;
 let allDoctors = [];
 const state = sessionStorage.getItem("state"); // get username
 

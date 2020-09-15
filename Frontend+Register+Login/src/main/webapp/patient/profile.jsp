@@ -170,6 +170,7 @@
 </div>
 </body>
 <script>
+    let URL ='https://dabsbackend.herokuapp.com/';
     document.addEventListener('DOMContentLoaded', function () {
         let state = sessionStorage.getItem("state");
         getPatient(state);
@@ -190,7 +191,7 @@
         let healthStatus = document.getElementById('healthStatus')
         let medicalHistory = document.getElementById('medicalHistory')
         id.innerHTML = ''
-        fetch(`http://localhost:8080/patients/` + username)
+        fetch(URL+`patients/` + username)
             .then(response => response.json())
             .then(function (doc) {
                 id.value = doc.id;
@@ -237,7 +238,7 @@
         document.getElementById("save").innerHTML += `<button type="submit" class="btn btn-success" onclick="validateFormFName();validateFormLName();validateFormAddress();validateFormEmail();validateFormPhone();saveValidation()">Save</button>`
         document.getElementById("back").innerHTML += `<a id="tooltip" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger" href="profile.jsp"><i class="glyphicon glyphicon-remove"></i>Back<span id="tooltiptext">Click here to come back your profile </span></a>`
 
-        fetch(`http://localhost:8080/patients/` + state1)
+        fetch(URL+`patients/` + state1)
             .then(response => response.json())
             .then(function (doc) {
                 document.getElementById("id_profile").value = doc.id;
@@ -273,7 +274,7 @@
         let editMedicalHistory = document.getElementById('edit_medicalHistory').value
         let id = document.getElementById('id_profile').value;
         if (confirm("Are you sure want to change your information")) {
-            fetch(`http://localhost:8080/patients/` + state2, {
+            fetch(URL+`patients/` + state2, {
                 method: 'PUT',
                 body: JSON.stringify({
                     id: parseInt(id),
