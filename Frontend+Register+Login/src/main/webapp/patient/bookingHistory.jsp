@@ -50,7 +50,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Appointment Number</th>
+            <th>ID</th>
             <th>With doctor</th>
             <th>Time</th>
             <th>Date</th>
@@ -78,6 +78,7 @@
         </tbody>
     </table>
 </div>
+<br><br><br><br><br><br><br>
 </body>
 <script>
     // Hover simple hint

@@ -4,6 +4,7 @@ let URL = 'https://dabsbackend.herokuapp.com/';
 document.addEventListener('DOMContentLoaded', function () {
     //sessionStorage.setItem("state","danh1215") //Comment this line when build
     let state = sessionStorage.getItem("state")
+    // fetchDoctor();
     getBookings();
 })
 
@@ -23,22 +24,12 @@ function cancelBooking(id) {
 
 // This is get booking function
 function getBookings() {
+    fetchDoctor();
     let state = sessionStorage.getItem("state")
     let pastBookings = document.getElementById("pastBookings")
     let upcomingBookings = document.getElementById("upcomingBookings")
     let today = new Date()
-    fetch(URL+`doctors`).then(res => res.json()) // This is fetching doctors
-        .then(json => {
-            json.sort((a, b) => {
-                (parseInt(a.id) > parseInt(b.id)) ? 1 : -1
-            })
-            // for (let i = 0; i < json.length; i++) {
-            //     let obj = {id: json[i].id, name: json[i].name}
-            //     doctors.push(obj)
-            // }
-            doctors = json;
-            // This is fetching bookings from the user
-        }).then(fetch(URL+'bookings/' + state).then(res => res.json())
+    fetch(URL+'bookings/' + state).then(res => res.json())
         .then(json => {
             // This sort the JSON by date, from most recently
             json.sort((a, b) => {
@@ -63,16 +54,16 @@ function getBookings() {
                     parseInt(json[i].date.split("-")[2]),
                     parseInt(json[i].time.split(":")[0]),
                     parseInt(json[i].time.split(":")[1]))) {
-                    // let doctorName = ""
-                    // doctors.forEach(doc => {
-                    //     if (doc.id === json[i].doctor_id) doctorName = doc.name
-                    // })
-                    const doctorData = doctors.find((doctor) => {
-                        return doctor.id == json[i].doctor_id
+                    let doctorName = "";
+                    doctors.forEach(doc => {
+                        if (doc.id === json[i].doctor_id) doctorName = doc.name
                     });
+                    // const doctorData = doctors.find((doctor) => {
+                    //     return doctor.id == json[i].doctor_id
+                    // });
                     pastBookings.innerHTML += '<tr id="pb">' +
                         '<td>' + json[i].id + '</td>' +
-                        '<td>' + doctorData.name + '</td>' +
+                        '<td>' + doctorName + '</td>' +
                         '<td>' + json[i].time + '</td>' +
                         '<td>' + json[i].date + '</td>' + '</tr>'
                 } else {
@@ -101,6 +92,17 @@ function getBookings() {
                         '</tr>'
                 }
             }
-        }))
+        })
 
+}
+
+function fetchDoctor() {
+    fetch(URL + `doctors`)
+        .then(res => res.json()) // This is fetching doctors
+        .then(json => {
+            for (let i = 0; i < json.length; i++) {
+                let obj = {id: json[i].id, name: json[i].name}
+                doctors.push(obj)
+            }
+        })
 }

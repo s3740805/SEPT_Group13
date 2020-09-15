@@ -131,7 +131,7 @@ function fetchDoctors() {
     fetch(`${doctorURL}`)
         .then(response => response.json())
         .then(function (json) {
-            allDoctors = json;
+                allDoctors = json;
         })
 }
 

@@ -3,8 +3,9 @@ let URL = 'https://dabsbackend.herokuapp.com/';
 // function to run onload
 document.addEventListener('DOMContentLoaded', function () {
     //sessionStorage.setItem("state", "admin") //IMPORTANT: Set state to develop code
+    fetchDoctor();
     getBookings();
-})
+});
 
 // This is function to delete a booking
 function cancelBooking(id) {
@@ -16,7 +17,9 @@ function cancelBooking(id) {
             }
         }).then(res => {
             alert("Delete success.")
-        }).then(res => location.reload())
+        }).then(res => {
+            fetchDoctor();
+            location.reload()})
     }
 }
 
@@ -41,9 +44,10 @@ function acceptBooking(str) {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(res =>
-        location.reload()
-    )
+    }).then(res =>{
+            fetchDoctor();
+            location.reload()
+    })
 
 }
 
@@ -68,22 +72,18 @@ function rejectBooking(str) {
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(res => location.reload())
+    }).then(res => {
+        fetchDoctor();
+        location.reload()
+    })
 }
 
 // This is get booking function
 function getBookings() {
+    fetchDoctor();
     // let state = sessionStorage.getItem("state")
     let allBookings = document.getElementById("allBookings")
-    fetch(URL+`doctors`).then(res => res.json()) // This is fetching doctors
-        .then(json => {
-            json.sort((a, b) => {
-                (parseInt(a.id) > parseInt(b.id)) ? 1 : -1
-            });
-            doctors = json;
-
-            // This is fetching bookings from the user
-        }).then(fetch(URL+`bookings`).then(res => res.json())
+    fetch(URL+`bookings`).then(res => res.json())
         .then(json => {
             // This sort the JSON by date, from most recently
             json.sort((a, b) => {
@@ -99,22 +99,21 @@ function getBookings() {
                         parseInt(b.time.split(":")[1])))
                     return -1
                 else return 1
-            })
+            });
             for (let i = 0; i < json.length; i++) {
                 //console.log(json[i])
                 let id = json[i].id
                 let cancel = `<button class="btn" id="delete" onclick='cancelBooking(${id})' title="Click to delete">Delete <i class="fas fa-trash"></i> </button>`
-                let str = id + ',' + json[i].date + ',' + json[i].doctor_id + ',' + json[i].patient_id + ',' + json[i].time + ',' + json[i].userName
+                let str = id + ',' + json[i].date + ',' + json[i].doctor_id + ',' + json[i].patient_id + ',' + json[i].time + ',' + json[i].userName;
                 let accept = `<button class="btn" id="accept" onclick="acceptBooking('${str}')" title="Click to accept">Accept <i class="fas fa-check"></i></button>`
                 let reject = `<button class="btn" id="reject" onclick="rejectBooking('${str}')" title="Click to reject">Reject <i class="fas fa-times"></i></button>`
-                // let doctorName = ""
-                // doctors.forEach(doc => {
-                //     if (doc.id === json[i].doctor_id) doctorName = doc.name
-                // })
-                const doctorData = doctors.find((doctor) => {
-                    return doctor.id == json[i].doctor_id
+                let doctorName = "";
+                doctors.forEach(doc => {
+                    if (doc.id === json[i].doctor_id) doctorName = doc.name
                 });
-
+                // const doctorData = doctors.find((doctor) => {
+                //     return doctor.id == json[i].doctor_id
+                // });
                 let status = `<p style="color: #ffdd83">Pending</p>`
                 if (json[i].status === "accepted") {
                     status = `<p style="color: limegreen">Accepted</p>`
@@ -125,12 +124,26 @@ function getBookings() {
                 allBookings.innerHTML += '<tr id="bookings">' +
                     '<td>' + json[i].id + '</td>' +
                     '<td>' + json[i].userName + '</td>' +
-                    '<td>' + doctorData.name + '</td>' +
+                    '<td>' + doctorName + '</td>' +
                     '<td>' + json[i].time + '</td>' +
                     '<td>' + json[i].date + '</td>' +
                     '<td>' + status + '</td>' +
                     '<td>' + accept + reject + cancel + '</td>' +
                     '</tr>'
             }
-        }))
+        })
+}
+
+function fetchDoctor() {
+    fetch(URL+`doctors`)
+        .then(response => response.json())
+        .then(function (json) {
+            // for (var i = 0; i < json.length; i++) {
+            //     doctors = json;
+            // }
+            for (let i = 0; i < json.length; i++) {
+                let obj = {id: json[i].id, name: json[i].name}
+                doctors.push(obj)
+            }
+        })
 }

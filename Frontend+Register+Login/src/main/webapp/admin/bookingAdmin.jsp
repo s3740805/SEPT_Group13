@@ -63,7 +63,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Appointment Number</th>
+            <th>ID</th>
             <th>Patient username</th>
             <th>With doctor</th>
             <th>Time</th>
