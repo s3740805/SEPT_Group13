@@ -47,6 +47,7 @@
         doctors and to manage their bookings. There are appropriate functions that allow users to cancel their
         bookings
         anytime.</h6>
+    <br><br><br><br><br><br><br>
 
 </div>
 
