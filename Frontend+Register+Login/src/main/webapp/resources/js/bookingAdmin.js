@@ -109,7 +109,7 @@ function getBookings() {
                 let reject = `<button class="btn" id="reject" onclick="rejectBooking('${str}')" title="Click to reject">Reject <i class="fas fa-times"></i></button>`
                 let doctorName = "";
                 doctors.forEach(doc => {
-                    if (doc.id === json[i].doctor_id) doctorName = doc.name
+                    if (doc.id === json[i].doctor_id) {doctorName = doc.name}
                 });
                 // const doctorData = doctors.find((doctor) => {
                 //     return doctor.id == json[i].doctor_id
@@ -124,7 +124,7 @@ function getBookings() {
                 allBookings.innerHTML += '<tr id="bookings">' +
                     '<td>' + json[i].id + '</td>' +
                     '<td>' + json[i].userName + '</td>' +
-                    '<td>' + doctorName + '</td>' +
+                    '<td>' + json[i].doctor_id + " " +doctorName + '</td>' +
                     '<td>' + json[i].time + '</td>' +
                     '<td>' + json[i].date + '</td>' +
                     '<td>' + status + '</td>' +

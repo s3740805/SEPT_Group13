@@ -83,7 +83,7 @@ function getDoctors() {
         .then(json => {
             for (let i = 0; i < json.length; i++) {
                 let id = json[i].id
-                doctorList.innerHTML += '<option>' + id + '. ' + json[i].name + " -- <i> " + json[i].email + " </i> " + '</option>'
+                doctorList.innerHTML += '<option>' + id + '. ' + json[i].name + " -- <i> " + json[i].description + " </i> " + '</option>'
             }
         })
 }

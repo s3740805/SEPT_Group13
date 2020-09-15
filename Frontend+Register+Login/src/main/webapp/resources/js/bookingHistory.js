@@ -56,14 +56,14 @@ function getBookings() {
                     parseInt(json[i].time.split(":")[1]))) {
                     let doctorName = "";
                     doctors.forEach(doc => {
-                        if (doc.id === json[i].doctor_id) doctorName = doc.name
+                        if (doc.id === json[i].doctor_id) {doctorName = doc.name}
                     });
                     // const doctorData = doctors.find((doctor) => {
                     //     return doctor.id == json[i].doctor_id
                     // });
                     pastBookings.innerHTML += '<tr id="pb">' +
                         '<td>' + json[i].id + '</td>' +
-                        '<td>' + doctorName + '</td>' +
+                        '<td>' + json[i].doctor_id + " "+ doctorName + '</td>' +
                         '<td>' + json[i].time + '</td>' +
                         '<td>' + json[i].date + '</td>' + '</tr>'
                 } else {
@@ -72,7 +72,7 @@ function getBookings() {
                     let cancel = `<button class="btn btn-outline-primary" id="delete" title="Click to cancel appointment" onclick='cancelBooking(${id})'>Cancel</button>`
                     let doctorName = ""
                     doctors.forEach(doc => {
-                        if (doc.id === json[i].doctor_id) doctorName = doc.name
+                        if (doc.id === json[i].doctor_id) {doctorName = doc.name}
                     })
                     // status: null => Pending, "accepted" => Accepted, "rejected" => Rejected
                     let status = `<p style="color: #ffdd83">Pending</p>`
@@ -84,7 +84,7 @@ function getBookings() {
                     }
                     upcomingBookings.innerHTML += '<tr id="bookings">' +
                         '<td>' + json[i].id + '</td>' +
-                        '<td>' + doctorName + '</td>' +
+                        '<td>' + json[i].doctor_id + " "+ doctorName + '</td>' +
                         '<td>' + json[i].time + '</td>' +
                         '<td>' + json[i].date + '</td>' +
                         '<td>' + status + '</td>' +
