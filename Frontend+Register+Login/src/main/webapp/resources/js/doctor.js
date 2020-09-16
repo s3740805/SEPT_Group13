@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //fetch Doctors
 function fetchDoctors() {
     doctorContainer.innerHTML = '';
-    fetch(`${doctorURL}/${state}`)
+    fetch(`${doctorURL}`)
         .then(response => response.json())
         .then(function (doc) {
             //sort by doctor id small to large

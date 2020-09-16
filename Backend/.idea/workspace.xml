@@ -4,50 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97217b02-e8fb-4fca-9666-6062ae927518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/java/com/web/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigation.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigationAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/_navigationAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/bookingAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/doctor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/patientAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/admin/patientAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/403Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/403Page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/404Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/404Page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/500Page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/500Page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/ErrorPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/error/ErrorPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/booking.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/bookingHistory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/patient/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/resources/js/booking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomeAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomeAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomePatient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/src/main/webapp/welcomePatient.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/RoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/SecurityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/validator/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/validator/UserValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/DataSeeding.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/DataSeeding.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/HandleErrorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/HandleErrorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/classes/com/web/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend+Register+Login/target/test-classes/com/model/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend+Register+Login/target/test-classes/com/model/UserTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="97217b02-e8fb-4fca-9666-6062ae927518" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/config/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="720">
               <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
             </state>
           </provider>
@@ -105,7 +62,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2502">
+            <state relative-caret-position="661">
               <caret line="139" column="21" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
             </state>
           </provider>
@@ -198,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,11 +179,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -394,17 +366,17 @@
       <workItem from="1599934582683" duration="4738000" />
       <workItem from="1600015271388" duration="5525000" />
       <workItem from="1600026830363" duration="334000" />
+      <workItem from="1600209714788" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11197000" />
+    <option name="totallyTimeSpent" value="11212000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="23" width="1438" height="835" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="835" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31375358" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31831187" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" side_tool="true" />
@@ -586,7 +558,7 @@
     <entry file="file://$PROJECT_DIR$/docker-compose.yml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="720">
           <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
         </state>
       </provider>
@@ -642,7 +614,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2502">
+        <state relative-caret-position="661">
           <caret line="139" column="21" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
         </state>
       </provider>
