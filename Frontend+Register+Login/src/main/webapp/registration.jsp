@@ -38,7 +38,8 @@
         <!-- password -->
         <spring:bind path="password">
             <div class="form-group ${status.error ? 'has-error' : ''}">
-                <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
+                <form:input type="password" path="password" class="form-control" placeholder="Password"
+                            title="Please use password with at least 8 characters."></form:input>
                 <form:errors path="password"></form:errors>
             </div>
         </spring:bind>
@@ -46,7 +47,7 @@
         <spring:bind path="passwordConfirm">
             <div class="form-group ${status.error ? 'has-error' : ''}">
                 <form:input type="password" path="passwordConfirm" class="form-control"
-                            placeholder="Confirm your password"></form:input>
+                            placeholder="Confirm your password" title="Please repeat your password"></form:input>
                 <form:errors path="passwordConfirm"></form:errors>
             </div>
         </spring:bind>
@@ -65,7 +66,7 @@
 <script>
     // Hover simple hint
     $(document).ready(function () {
-        $('body').tooltip({selector: ".btn", trigger: "hover"});
+        $('body').tooltip({selector: ".form-control", trigger: "hover"});
     });
 </script>
 </html>
