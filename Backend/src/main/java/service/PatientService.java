@@ -27,7 +27,7 @@ public class PatientService {
 
     // Create new patient
     public int addPatient(Patient patient) {
-        this.sessionFactory.getCurrentSession().saveOrUpdate(patient);
+        this.sessionFactory.getCurrentSession().save(patient);
         return patient.getId();
     }
 
